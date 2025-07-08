@@ -1,0 +1,116 @@
+[
+    {
+        "year": 1946,
+        "station_count": 779,
+        "transport_types": 5,
+        "types_available": [
+            "omnibus",
+            "ferry",
+            "s-bahn",
+            "tram",
+            "u-bahn"
+        ]
+    },
+    {
+        "year": 1951,
+        "station_count": 1226,
+        "transport_types": 5,
+        "types_available": [
+            "tram",
+            "u-bahn",
+            "autobus",
+            "s-bahn",
+            "ferry"
+        ]
+    },
+    {
+        "year": 1956,
+        "station_count": 1708,
+        "transport_types": 6,
+        "types_available": [
+            "tram",
+            "u-bahn",
+            "autobus",
+            "s-bahn",
+            "omnibus",
+            "ferry"
+        ]
+    },
+    {
+        "year": 1960,
+        "station_count": 2088,
+        "transport_types": 6,
+        "types_available": [
+            "tram",
+            "autobus",
+            "omnibus",
+            "ferry",
+            "u-bahn",
+            "s-bahn"
+        ]
+    },
+    {
+        "year": 1961,
+        "station_count": 1920,
+        "transport_types": 6,
+        "types_available": [
+            "tram",
+            "autobus",
+            "u-bahn",
+            "s-bahn",
+            "omnibus",
+            "ferry"
+        ]
+    },
+    {
+        "year": 1964,
+        "station_count": 2062,
+        "transport_types": 6,
+        "types_available": [
+            "tram",
+            "autobus",
+            "s-bahn",
+            "omnibus",
+            "u-bahn",
+            "ferry"
+        ]
+    },
+    {
+        "year": 1965,
+        "station_count": 2138,
+        "transport_types": 6,
+        "types_available": [
+            "u-bahn",
+            "tram",
+            "autobus",
+            "omnibus",
+            "s-bahn",
+            "ferry"
+        ]
+    },
+    {
+        "year": 1967,
+        "station_count": 1959,
+        "transport_types": 6,
+        "types_available": [
+            "tram",
+            "autobus",
+            "s-bahn",
+            "u-bahn",
+            "omnibus",
+            "ferry"
+        ]
+    },
+    {
+        "year": 1971,
+        "station_count": 1829,
+        "transport_types": 5,
+        "types_available": [
+            "autobus",
+            "ferry",
+            "s-bahn",
+            "tram",
+            "u-bahn"
+        ]
+    }
+]

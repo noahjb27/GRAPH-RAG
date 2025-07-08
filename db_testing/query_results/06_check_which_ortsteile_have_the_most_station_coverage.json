@@ -1,0 +1,324 @@
+[
+    {
+        "ortsteil_name": "Mitte",
+        "station_count": 1079,
+        "years_with_data": [
+            1946,
+            1951,
+            1956,
+            1960,
+            1961,
+            1964,
+            1965,
+            1967,
+            1971
+        ],
+        "transport_types": [
+            "omnibus",
+            "s-bahn",
+            "tram",
+            "u-bahn",
+            "autobus"
+        ]
+    },
+    {
+        "ortsteil_name": "Charlottenburg",
+        "station_count": 892,
+        "years_with_data": [
+            1946,
+            1951,
+            1956,
+            1960,
+            1961,
+            1964,
+            1965,
+            1967,
+            1971
+        ],
+        "transport_types": [
+            "omnibus",
+            "s-bahn",
+            "tram",
+            "u-bahn",
+            "autobus"
+        ]
+    },
+    {
+        "ortsteil_name": "Sch\u00f6neberg",
+        "station_count": 707,
+        "years_with_data": [
+            1946,
+            1951,
+            1956,
+            1960,
+            1961,
+            1964,
+            1965,
+            1967,
+            1971
+        ],
+        "transport_types": [
+            "s-bahn",
+            "tram",
+            "u-bahn",
+            "autobus"
+        ]
+    },
+    {
+        "ortsteil_name": "Kreuzberg",
+        "station_count": 616,
+        "years_with_data": [
+            1946,
+            1951,
+            1956,
+            1960,
+            1961,
+            1964,
+            1965,
+            1967,
+            1971
+        ],
+        "transport_types": [
+            "omnibus",
+            "s-bahn",
+            "tram",
+            "u-bahn",
+            "autobus"
+        ]
+    },
+    {
+        "ortsteil_name": "Prenzlauer Berg",
+        "station_count": 572,
+        "years_with_data": [
+            1946,
+            1951,
+            1956,
+            1960,
+            1961,
+            1964,
+            1965,
+            1967,
+            1971
+        ],
+        "transport_types": [
+            "s-bahn",
+            "tram",
+            "u-bahn",
+            "autobus",
+            "omnibus"
+        ]
+    },
+    {
+        "ortsteil_name": "Friedrichshain",
+        "station_count": 552,
+        "years_with_data": [
+            1946,
+            1951,
+            1956,
+            1960,
+            1961,
+            1964,
+            1965,
+            1967,
+            1971
+        ],
+        "transport_types": [
+            "omnibus",
+            "s-bahn",
+            "tram",
+            "u-bahn",
+            "autobus"
+        ]
+    },
+    {
+        "ortsteil_name": "Wilmersdorf",
+        "station_count": 443,
+        "years_with_data": [
+            1956,
+            1960,
+            1961,
+            1946,
+            1951,
+            1964,
+            1965,
+            1967,
+            1971
+        ],
+        "transport_types": [
+            "tram",
+            "u-bahn",
+            "autobus",
+            "s-bahn"
+        ]
+    },
+    {
+        "ortsteil_name": "Neuk\u00f6lln",
+        "station_count": 409,
+        "years_with_data": [
+            1946,
+            1951,
+            1956,
+            1960,
+            1961,
+            1964,
+            1965,
+            1967,
+            1971
+        ],
+        "transport_types": [
+            "s-bahn",
+            "tram",
+            "u-bahn",
+            "autobus"
+        ]
+    },
+    {
+        "ortsteil_name": "Spandau",
+        "station_count": 384,
+        "years_with_data": [
+            1946,
+            1951,
+            1956,
+            1960,
+            1961,
+            1964,
+            1965,
+            1967,
+            1971
+        ],
+        "transport_types": [
+            "s-bahn",
+            "tram",
+            "autobus"
+        ]
+    },
+    {
+        "ortsteil_name": "Lichterfelde",
+        "station_count": 373,
+        "years_with_data": [
+            1946,
+            1951,
+            1956,
+            1960,
+            1961,
+            1964,
+            1965,
+            1967,
+            1971
+        ],
+        "transport_types": [
+            "omnibus",
+            "s-bahn",
+            "tram",
+            "autobus"
+        ]
+    },
+    {
+        "ortsteil_name": "Wedding",
+        "station_count": 344,
+        "years_with_data": [
+            1946,
+            1951,
+            1956,
+            1960,
+            1961,
+            1964,
+            1965,
+            1967,
+            1971
+        ],
+        "transport_types": [
+            "s-bahn",
+            "tram",
+            "u-bahn",
+            "omnibus",
+            "autobus"
+        ]
+    },
+    {
+        "ortsteil_name": "Tempelhof",
+        "station_count": 334,
+        "years_with_data": [
+            1946,
+            1951,
+            1956,
+            1960,
+            1961,
+            1964,
+            1965,
+            1967,
+            1971
+        ],
+        "transport_types": [
+            "omnibus",
+            "s-bahn",
+            "tram",
+            "u-bahn",
+            "autobus"
+        ]
+    },
+    {
+        "ortsteil_name": "Reinickendorf",
+        "station_count": 320,
+        "years_with_data": [
+            1946,
+            1951,
+            1956,
+            1960,
+            1961,
+            1964,
+            1965,
+            1967,
+            1971
+        ],
+        "transport_types": [
+            "s-bahn",
+            "tram",
+            "autobus",
+            "u-bahn"
+        ]
+    },
+    {
+        "ortsteil_name": "K\u00f6penick",
+        "station_count": 319,
+        "years_with_data": [
+            1946,
+            1951,
+            1956,
+            1960,
+            1961,
+            1964,
+            1965,
+            1967,
+            1971
+        ],
+        "transport_types": [
+            "omnibus",
+            "s-bahn",
+            "tram",
+            "autobus",
+            "ferry"
+        ]
+    },
+    {
+        "ortsteil_name": "Zehlendorf",
+        "station_count": 310,
+        "years_with_data": [
+            1946,
+            1951,
+            1956,
+            1960,
+            1961,
+            1964,
+            1965,
+            1967,
+            1971
+        ],
+        "transport_types": [
+            "omnibus",
+            "s-bahn",
+            "u-bahn",
+            "autobus"
+        ]
+    }
+]

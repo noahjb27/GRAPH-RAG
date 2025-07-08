@@ -1,0 +1,125 @@
+[
+    {
+        "year": 1946,
+        "connections_with_capacity": 707,
+        "avg_hourly_capacity": 2095.161648817942,
+        "avg_distance_meters": 1239.2263083451205,
+        "connection_types": [
+            "omnibus",
+            "ferry",
+            "s-bahn",
+            "tram",
+            "u-bahn"
+        ]
+    },
+    {
+        "year": 1951,
+        "connections_with_capacity": 1113,
+        "avg_hourly_capacity": NaN,
+        "avg_distance_meters": 1266.9658580413295,
+        "connection_types": [
+            "tram",
+            "u-bahn",
+            "autobus",
+            "s-bahn",
+            "ferry"
+        ]
+    },
+    {
+        "year": 1956,
+        "connections_with_capacity": 1564,
+        "avg_hourly_capacity": NaN,
+        "avg_distance_meters": 1140.88746803069,
+        "connection_types": [
+            "tram",
+            "u-bahn",
+            "autobus",
+            "s-bahn",
+            "omnibus",
+            "ferry"
+        ]
+    },
+    {
+        "year": 1960,
+        "connections_with_capacity": 1931,
+        "avg_hourly_capacity": NaN,
+        "avg_distance_meters": 1177.5784567581547,
+        "connection_types": [
+            "tram",
+            "autobus",
+            "omnibus",
+            "ferry",
+            "u-bahn",
+            "s-bahn"
+        ]
+    },
+    {
+        "year": 1961,
+        "connections_with_capacity": 1755,
+        "avg_hourly_capacity": Infinity,
+        "avg_distance_meters": 1089.8507122507074,
+        "connection_types": [
+            "tram",
+            "autobus",
+            "u-bahn",
+            "s-bahn",
+            "omnibus",
+            "ferry"
+        ]
+    },
+    {
+        "year": 1964,
+        "connections_with_capacity": 1886,
+        "avg_hourly_capacity": Infinity,
+        "avg_distance_meters": 1103.262990455991,
+        "connection_types": [
+            "tram",
+            "autobus",
+            "s-bahn",
+            "omnibus",
+            "u-bahn",
+            "ferry"
+        ]
+    },
+    {
+        "year": 1965,
+        "connections_with_capacity": 1962,
+        "avg_hourly_capacity": Infinity,
+        "avg_distance_meters": 1075.9847094801223,
+        "connection_types": [
+            "u-bahn",
+            "tram",
+            "autobus",
+            "omnibus",
+            "s-bahn",
+            "ferry"
+        ]
+    },
+    {
+        "year": 1967,
+        "connections_with_capacity": 1780,
+        "avg_hourly_capacity": Infinity,
+        "avg_distance_meters": 1122.8730337078653,
+        "connection_types": [
+            "tram",
+            "autobus",
+            "s-bahn",
+            "u-bahn",
+            "omnibus",
+            "ferry"
+        ]
+    },
+    {
+        "year": 1971,
+        "connections_with_capacity": 1651,
+        "avg_hourly_capacity": NaN,
+        "avg_distance_meters": 1267.770442156269,
+        "connection_types": [
+            "autobus",
+            "ferry",
+            "s-bahn",
+            "tram",
+            "u-bahn"
+        ]
+    }
+]

@@ -1,0 +1,359 @@
+[
+    {
+        "year": 1946,
+        "transport_type": "ferry",
+        "serves_relationships": 3,
+        "unique_lines": 1,
+        "unique_stations": 3
+    },
+    {
+        "year": 1946,
+        "transport_type": "omnibus",
+        "serves_relationships": 59,
+        "unique_lines": 8,
+        "unique_stations": 55
+    },
+    {
+        "year": 1946,
+        "transport_type": "s-bahn",
+        "serves_relationships": 172,
+        "unique_lines": 11,
+        "unique_stations": 122
+    },
+    {
+        "year": 1946,
+        "transport_type": "tram",
+        "serves_relationships": 474,
+        "unique_lines": 43,
+        "unique_stations": 354
+    },
+    {
+        "year": 1946,
+        "transport_type": "u-bahn",
+        "serves_relationships": 71,
+        "unique_lines": 7,
+        "unique_stations": 63
+    },
+    {
+        "year": 1951,
+        "transport_type": "autobus",
+        "serves_relationships": 264,
+        "unique_lines": 35,
+        "unique_stations": 240
+    },
+    {
+        "year": 1951,
+        "transport_type": "ferry",
+        "serves_relationships": 2,
+        "unique_lines": 1,
+        "unique_stations": 2
+    },
+    {
+        "year": 1951,
+        "transport_type": "s-bahn",
+        "serves_relationships": 237,
+        "unique_lines": 12,
+        "unique_stations": 150
+    },
+    {
+        "year": 1951,
+        "transport_type": "tram",
+        "serves_relationships": 616,
+        "unique_lines": 56,
+        "unique_stations": 447
+    },
+    {
+        "year": 1951,
+        "transport_type": "u-bahn",
+        "serves_relationships": 111,
+        "unique_lines": 9,
+        "unique_stations": 93
+    },
+    {
+        "year": 1956,
+        "transport_type": "autobus",
+        "serves_relationships": 532,
+        "unique_lines": 56,
+        "unique_stations": 443
+    },
+    {
+        "year": 1956,
+        "transport_type": "ferry",
+        "serves_relationships": 4,
+        "unique_lines": 2,
+        "unique_stations": 4
+    },
+    {
+        "year": 1956,
+        "transport_type": "oberleitungsbus",
+        "serves_relationships": 37,
+        "unique_lines": 4,
+        "unique_stations": 32
+    },
+    {
+        "year": 1956,
+        "transport_type": "s-bahn",
+        "serves_relationships": 284,
+        "unique_lines": 15,
+        "unique_stations": 158
+    },
+    {
+        "year": 1956,
+        "transport_type": "tram",
+        "serves_relationships": 738,
+        "unique_lines": 54,
+        "unique_stations": 507
+    },
+    {
+        "year": 1956,
+        "transport_type": "u-bahn",
+        "serves_relationships": 114,
+        "unique_lines": 9,
+        "unique_stations": 96
+    },
+    {
+        "year": 1960,
+        "transport_type": "autobus",
+        "serves_relationships": 902,
+        "unique_lines": 74,
+        "unique_stations": 654
+    },
+    {
+        "year": 1960,
+        "transport_type": "ferry",
+        "serves_relationships": 4,
+        "unique_lines": 2,
+        "unique_stations": 4
+    },
+    {
+        "year": 1960,
+        "transport_type": "oberleitungsbus",
+        "serves_relationships": 37,
+        "unique_lines": 4,
+        "unique_stations": 33
+    },
+    {
+        "year": 1960,
+        "transport_type": "s-bahn",
+        "serves_relationships": 304,
+        "unique_lines": 15,
+        "unique_stations": 160
+    },
+    {
+        "year": 1960,
+        "transport_type": "tram",
+        "serves_relationships": 676,
+        "unique_lines": 48,
+        "unique_stations": 409
+    },
+    {
+        "year": 1960,
+        "transport_type": "u-bahn",
+        "serves_relationships": 178,
+        "unique_lines": 10,
+        "unique_stations": 101
+    },
+    {
+        "year": 1961,
+        "transport_type": "autobus",
+        "serves_relationships": 979,
+        "unique_lines": 84,
+        "unique_stations": 736
+    },
+    {
+        "year": 1961,
+        "transport_type": "ferry",
+        "serves_relationships": 2,
+        "unique_lines": 1,
+        "unique_stations": 2
+    },
+    {
+        "year": 1961,
+        "transport_type": "oberleitungsbus",
+        "serves_relationships": 36,
+        "unique_lines": 3,
+        "unique_stations": 34
+    },
+    {
+        "year": 1961,
+        "transport_type": "s-bahn",
+        "serves_relationships": 228,
+        "unique_lines": 12,
+        "unique_stations": 150
+    },
+    {
+        "year": 1961,
+        "transport_type": "tram",
+        "serves_relationships": 539,
+        "unique_lines": 40,
+        "unique_stations": 332
+    },
+    {
+        "year": 1961,
+        "transport_type": "u-bahn",
+        "serves_relationships": 136,
+        "unique_lines": 11,
+        "unique_stations": 90
+    },
+    {
+        "year": 1964,
+        "transport_type": "autobus",
+        "serves_relationships": 1228,
+        "unique_lines": 103,
+        "unique_stations": 895
+    },
+    {
+        "year": 1964,
+        "transport_type": "ferry",
+        "serves_relationships": 2,
+        "unique_lines": 1,
+        "unique_stations": 2
+    },
+    {
+        "year": 1964,
+        "transport_type": "oberleitungsbus",
+        "serves_relationships": 32,
+        "unique_lines": 3,
+        "unique_stations": 29
+    },
+    {
+        "year": 1964,
+        "transport_type": "s-bahn",
+        "serves_relationships": 256,
+        "unique_lines": 19,
+        "unique_stations": 145
+    },
+    {
+        "year": 1964,
+        "transport_type": "tram",
+        "serves_relationships": 433,
+        "unique_lines": 36,
+        "unique_stations": 266
+    },
+    {
+        "year": 1964,
+        "transport_type": "u-bahn",
+        "serves_relationships": 115,
+        "unique_lines": 11,
+        "unique_stations": 94
+    },
+    {
+        "year": 1965,
+        "transport_type": "autobus",
+        "serves_relationships": 1281,
+        "unique_lines": 103,
+        "unique_stations": 931
+    },
+    {
+        "year": 1965,
+        "transport_type": "ferry",
+        "serves_relationships": 2,
+        "unique_lines": 1,
+        "unique_stations": 2
+    },
+    {
+        "year": 1965,
+        "transport_type": "oberleitungsbus",
+        "serves_relationships": 39,
+        "unique_lines": 3,
+        "unique_stations": 36
+    },
+    {
+        "year": 1965,
+        "transport_type": "s-bahn",
+        "serves_relationships": 274,
+        "unique_lines": 20,
+        "unique_stations": 147
+    },
+    {
+        "year": 1965,
+        "transport_type": "tram",
+        "serves_relationships": 426,
+        "unique_lines": 37,
+        "unique_stations": 268
+    },
+    {
+        "year": 1965,
+        "transport_type": "u-bahn",
+        "serves_relationships": 116,
+        "unique_lines": 11,
+        "unique_stations": 95
+    },
+    {
+        "year": 1967,
+        "transport_type": "autobus",
+        "serves_relationships": 1202,
+        "unique_lines": 109,
+        "unique_stations": 892
+    },
+    {
+        "year": 1967,
+        "transport_type": "ferry",
+        "serves_relationships": 2,
+        "unique_lines": 1,
+        "unique_stations": 2
+    },
+    {
+        "year": 1967,
+        "transport_type": "oberleitungsbus",
+        "serves_relationships": 38,
+        "unique_lines": 3,
+        "unique_stations": 32
+    },
+    {
+        "year": 1967,
+        "transport_type": "s-bahn",
+        "serves_relationships": 275,
+        "unique_lines": 20,
+        "unique_stations": 147
+    },
+    {
+        "year": 1967,
+        "transport_type": "tram",
+        "serves_relationships": 318,
+        "unique_lines": 26,
+        "unique_stations": 185
+    },
+    {
+        "year": 1967,
+        "transport_type": "u-bahn",
+        "serves_relationships": 121,
+        "unique_lines": 11,
+        "unique_stations": 106
+    },
+    {
+        "year": 1971,
+        "transport_type": "autobus",
+        "serves_relationships": 1099,
+        "unique_lines": 117,
+        "unique_stations": 788
+    },
+    {
+        "year": 1971,
+        "transport_type": "ferry",
+        "serves_relationships": 11,
+        "unique_lines": 5,
+        "unique_stations": 10
+    },
+    {
+        "year": 1971,
+        "transport_type": "s-bahn",
+        "serves_relationships": 279,
+        "unique_lines": 19,
+        "unique_stations": 149
+    },
+    {
+        "year": 1971,
+        "transport_type": "tram",
+        "serves_relationships": 308,
+        "unique_lines": 27,
+        "unique_stations": 179
+    },
+    {
+        "year": 1971,
+        "transport_type": "u-bahn",
+        "serves_relationships": 132,
+        "unique_lines": 10,
+        "unique_stations": 115
+    }
+]

@@ -1,0 +1,674 @@
+[
+    {
+        "station_name": "Alexanderplatz",
+        "transport_type": "omnibus",
+        "political_side": "unified",
+        "active_years": [
+            1946,
+            1946
+        ]
+    },
+    {
+        "station_name": "Alexanderplatz",
+        "transport_type": "s-bahn",
+        "political_side": "unified",
+        "active_years": [
+            1946,
+            1946,
+            1951,
+            1951,
+            1951,
+            1956,
+            1956,
+            1956,
+            1960,
+            1960,
+            1960
+        ]
+    },
+    {
+        "station_name": "Alexanderplatz",
+        "transport_type": "tram",
+        "political_side": "unified",
+        "active_years": [
+            1946,
+            1946,
+            1946,
+            1946,
+            1946,
+            1951
+        ]
+    },
+    {
+        "station_name": "Alexanderplatz",
+        "transport_type": "u-bahn",
+        "political_side": "unified",
+        "active_years": [
+            1946,
+            1946,
+            1946,
+            1951,
+            1951,
+            1951,
+            1956,
+            1956,
+            1956,
+            1960,
+            1960,
+            1960,
+            1960
+        ]
+    },
+    {
+        "station_name": "Alexanderplatz",
+        "transport_type": "u-bahn",
+        "political_side": "east",
+        "active_years": [
+            1961,
+            1961,
+            1964,
+            1964,
+            1965,
+            1965,
+            1967,
+            1967,
+            1971,
+            1971
+        ]
+    },
+    {
+        "station_name": "Alexanderplatz",
+        "transport_type": "s-bahn",
+        "political_side": "east",
+        "active_years": [
+            1961,
+            1961,
+            1961,
+            1964,
+            1964,
+            1964,
+            1964,
+            1964,
+            1965,
+            1965,
+            1965,
+            1965,
+            1967,
+            1967,
+            1967,
+            1967,
+            1971,
+            1971,
+            1971,
+            1971,
+            1971
+        ]
+    },
+    {
+        "station_name": "Alexanderplatz",
+        "transport_type": "autobus",
+        "political_side": "east",
+        "active_years": [
+            1967,
+            1971,
+            1971,
+            1971
+        ]
+    },
+    {
+        "station_name": "Alexanderplatz, Elisabethstr.",
+        "transport_type": "tram",
+        "political_side": "east",
+        "active_years": [
+            1961
+        ]
+    },
+    {
+        "station_name": "Alexanderplatz, Grunerstr.",
+        "transport_type": "tram",
+        "political_side": "unified",
+        "active_years": [
+            1951,
+            1951,
+            1951,
+            1951,
+            1956,
+            1956,
+            1956,
+            1956,
+            1960,
+            1960,
+            1960,
+            1960,
+            1960
+        ]
+    },
+    {
+        "station_name": "Alexanderplatz, Grunerstr.",
+        "transport_type": "tram",
+        "political_side": "east",
+        "active_years": [
+            1961,
+            1964
+        ]
+    },
+    {
+        "station_name": "Alexanderplatz, Grunerstr.",
+        "transport_type": "autobus",
+        "political_side": "east",
+        "active_years": [
+            1964,
+            1965
+        ]
+    },
+    {
+        "station_name": "Alexanderplatz, Grunestr.",
+        "transport_type": "tram",
+        "political_side": "unified",
+        "active_years": [
+            1951,
+            1956,
+            1960
+        ]
+    },
+    {
+        "station_name": "Alexanderplatz, Leninallee",
+        "transport_type": "tram",
+        "political_side": "east",
+        "active_years": [
+            1961,
+            1964,
+            1965
+        ]
+    },
+    {
+        "station_name": "Alexanderplatz, Memhardstr.",
+        "transport_type": "tram",
+        "political_side": "unified",
+        "active_years": [
+            1956,
+            1956,
+            1956,
+            1956,
+            1960,
+            1960,
+            1960,
+            1960
+        ]
+    },
+    {
+        "station_name": "Alexanderplatz, Memhardstr.",
+        "transport_type": "tram",
+        "political_side": "east",
+        "active_years": [
+            1961,
+            1961,
+            1961,
+            1961,
+            1961,
+            1961,
+            1961,
+            1964,
+            1964,
+            1964,
+            1964,
+            1964,
+            1964,
+            1964,
+            1964,
+            1964,
+            1965,
+            1965,
+            1965,
+            1965,
+            1965,
+            1965,
+            1965,
+            1965,
+            1965,
+            1965,
+            1967,
+            1971
+        ]
+    },
+    {
+        "station_name": "Alexanderplatz, Neue K\u00f6nigsstr.",
+        "transport_type": "tram",
+        "political_side": "unified",
+        "active_years": [
+            1951,
+            1951
+        ]
+    },
+    {
+        "station_name": "Alexanderplatz, Neue K\u00f6nigstr.",
+        "transport_type": "omnibus",
+        "political_side": "east",
+        "active_years": [
+            1964,
+            1965
+        ]
+    },
+    {
+        "station_name": "Am Ostbahnhof",
+        "transport_type": "tram",
+        "political_side": "east",
+        "active_years": [
+            1967,
+            1967
+        ]
+    },
+    {
+        "station_name": "Bhf. Alexanderplatz",
+        "transport_type": "autobus",
+        "political_side": "unified",
+        "active_years": [
+            1951,
+            1956
+        ]
+    },
+    {
+        "station_name": "Bhf. Zoo",
+        "transport_type": "tram",
+        "political_side": "unified",
+        "active_years": [
+            1951,
+            1951,
+            1951,
+            1951,
+            1951,
+            1951,
+            1951,
+            1951,
+            1951,
+            1951,
+            1956,
+            1956,
+            1956,
+            1956,
+            1956,
+            1956,
+            1956,
+            1956,
+            1960,
+            1960,
+            1960,
+            1960,
+            1960,
+            1960,
+            1960,
+            1960
+        ]
+    },
+    {
+        "station_name": "Bhf. Zoo",
+        "transport_type": "autobus",
+        "political_side": "unified",
+        "active_years": [
+            1956,
+            1956,
+            1960,
+            1960,
+            1960,
+            1960,
+            1960,
+            1960
+        ]
+    },
+    {
+        "station_name": "Bhf. Zoo",
+        "transport_type": "tram",
+        "political_side": "west",
+        "active_years": [
+            1961,
+            1961,
+            1961,
+            1961,
+            1964,
+            1965
+        ]
+    },
+    {
+        "station_name": "Bhf. Zoo",
+        "transport_type": "autobus",
+        "political_side": "west",
+        "active_years": [
+            1961,
+            1961,
+            1961,
+            1961,
+            1961,
+            1961,
+            1961,
+            1964,
+            1964,
+            1964,
+            1964,
+            1964,
+            1964,
+            1964,
+            1964,
+            1965,
+            1965,
+            1965,
+            1965,
+            1965,
+            1965,
+            1965,
+            1967
+        ]
+    },
+    {
+        "station_name": "Bhf. Zoo, Hardenbergplatz",
+        "transport_type": "autobus",
+        "political_side": "west",
+        "active_years": [
+            1964,
+            1964,
+            1964,
+            1965,
+            1965,
+            1965,
+            1965,
+            1967,
+            1967,
+            1967,
+            1967,
+            1967,
+            1971
+        ]
+    },
+    {
+        "station_name": "Bhf. Zoo, Jebensstr.",
+        "transport_type": "autobus",
+        "political_side": "west",
+        "active_years": [
+            1967
+        ]
+    },
+    {
+        "station_name": "Bhf. Zoo, Kantstr.",
+        "transport_type": "tram",
+        "political_side": "unified",
+        "active_years": [
+            1956,
+            1960
+        ]
+    },
+    {
+        "station_name": "Bhf. Zoo, Kantstr.",
+        "transport_type": "tram",
+        "political_side": "west",
+        "active_years": [
+            1961,
+            1961,
+            1964,
+            1964
+        ]
+    },
+    {
+        "station_name": "Ostbahnhof",
+        "transport_type": "s-bahn",
+        "political_side": "unified",
+        "active_years": [
+            1951,
+            1951,
+            1951,
+            1956,
+            1956,
+            1956,
+            1960,
+            1960,
+            1960
+        ]
+    },
+    {
+        "station_name": "Ostbahnhof",
+        "transport_type": "tram",
+        "political_side": "unified",
+        "active_years": [
+            1956,
+            1960
+        ]
+    },
+    {
+        "station_name": "Ostbahnhof",
+        "transport_type": "omnibus",
+        "political_side": "unified",
+        "active_years": [
+            1956,
+            1960
+        ]
+    },
+    {
+        "station_name": "Ostbahnhof",
+        "transport_type": "tram",
+        "political_side": "east",
+        "active_years": [
+            1961,
+            1961,
+            1964,
+            1964,
+            1965,
+            1965,
+            1967,
+            1967
+        ]
+    },
+    {
+        "station_name": "Ostbahnhof",
+        "transport_type": "autobus",
+        "political_side": "east",
+        "active_years": [
+            1961,
+            1971,
+            1971,
+            1971
+        ]
+    },
+    {
+        "station_name": "Ostbahnhof",
+        "transport_type": "s-bahn",
+        "political_side": "east",
+        "active_years": [
+            1961,
+            1961,
+            1961,
+            1964,
+            1964,
+            1964,
+            1964,
+            1964,
+            1965,
+            1965,
+            1965,
+            1965,
+            1965,
+            1967,
+            1967,
+            1967,
+            1967,
+            1967,
+            1971,
+            1971,
+            1971,
+            1971,
+            1971
+        ]
+    },
+    {
+        "station_name": "Ostbahnhof",
+        "transport_type": "omnibus",
+        "political_side": "east",
+        "active_years": [
+            1961,
+            1964,
+            1965,
+            1967,
+            1967
+        ]
+    },
+    {
+        "station_name": "S-Bhf. Alexanderplatz",
+        "transport_type": "autobus",
+        "political_side": "unified",
+        "active_years": [
+            1960,
+            1960
+        ]
+    },
+    {
+        "station_name": "S-Bhf. Alexanderplatz",
+        "transport_type": "omnibus",
+        "political_side": "unified",
+        "active_years": [
+            1960
+        ]
+    },
+    {
+        "station_name": "S-Bhf. Alexanderplatz",
+        "transport_type": "autobus",
+        "political_side": "east",
+        "active_years": [
+            1961,
+            1961,
+            1964,
+            1964,
+            1965,
+            1965
+        ]
+    },
+    {
+        "station_name": "S-Bhf. Alexanderplatz",
+        "transport_type": "omnibus",
+        "political_side": "east",
+        "active_years": [
+            1961
+        ]
+    },
+    {
+        "station_name": "Schillingbr\u00fccke (Ostbahnhof)",
+        "transport_type": "tram",
+        "political_side": "unified",
+        "active_years": [
+            1956,
+            1960
+        ]
+    },
+    {
+        "station_name": "Schlesischer Bhf./Ostbahnhof",
+        "transport_type": "tram",
+        "political_side": "unified",
+        "active_years": [
+            1951
+        ]
+    },
+    {
+        "station_name": "Schlesischer Bhf./Ostbahnhof, Madaistr.",
+        "transport_type": "autobus",
+        "political_side": "unified",
+        "active_years": [
+            1951
+        ]
+    },
+    {
+        "station_name": "U-Bhf. Alexanderplatz",
+        "transport_type": "omnibus",
+        "political_side": "unified",
+        "active_years": [
+            1956
+        ]
+    },
+    {
+        "station_name": "Zoo, Hardenbergplatz",
+        "transport_type": "autobus",
+        "political_side": "west",
+        "active_years": [
+            1967,
+            1967,
+            1971,
+            1971,
+            1971,
+            1971,
+            1971,
+            1971,
+            1971
+        ]
+    },
+    {
+        "station_name": "Zoo, Kantstr.",
+        "transport_type": "tram",
+        "political_side": "west",
+        "active_years": [
+            1965,
+            1965
+        ]
+    },
+    {
+        "station_name": "Zoologischer Garten",
+        "transport_type": "s-bahn",
+        "political_side": "unified",
+        "active_years": [
+            1946,
+            1946,
+            1951,
+            1951,
+            1951,
+            1956,
+            1956,
+            1956,
+            1960,
+            1960,
+            1960
+        ]
+    },
+    {
+        "station_name": "Zoologischer Garten",
+        "transport_type": "u-bahn",
+        "political_side": "unified",
+        "active_years": [
+            1951,
+            1956,
+            1960,
+            1960
+        ]
+    },
+    {
+        "station_name": "Zoologischer Garten",
+        "transport_type": "u-bahn",
+        "political_side": "west",
+        "active_years": [
+            1961,
+            1961,
+            1964,
+            1964,
+            1965,
+            1965,
+            1967,
+            1967,
+            1971,
+            1971
+        ]
+    },
+    {
+        "station_name": "Zoologischer Garten",
+        "transport_type": "s-bahn",
+        "political_side": "west",
+        "active_years": [
+            1961,
+            1961,
+            1964,
+            1964,
+            1964,
+            1965,
+            1965,
+            1965,
+            1967,
+            1967,
+            1967,
+            1971,
+            1971,
+            1971
+        ]
+    }
+]

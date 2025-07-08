@@ -1,0 +1,554 @@
+[
+    {
+        "year": 1946,
+        "political_side": "unified",
+        "transport_type": "ferry",
+        "line_count": 1,
+        "avg_frequency": 120.0,
+        "avg_capacity": 50.0
+    },
+    {
+        "year": 1946,
+        "political_side": "unified",
+        "transport_type": "omnibus",
+        "line_count": 8,
+        "avg_frequency": 22.75,
+        "avg_capacity": 80.0
+    },
+    {
+        "year": 1946,
+        "political_side": "unified",
+        "transport_type": "s-bahn",
+        "line_count": 12,
+        "avg_frequency": 27.916666666666664,
+        "avg_capacity": 1100.0
+    },
+    {
+        "year": 1946,
+        "political_side": "unified",
+        "transport_type": "tram",
+        "line_count": 44,
+        "avg_frequency": 12.840909090909086,
+        "avg_capacity": 195.0
+    },
+    {
+        "year": 1946,
+        "political_side": "unified",
+        "transport_type": "u-bahn",
+        "line_count": 7,
+        "avg_frequency": 8.785714285714285,
+        "avg_capacity": 857.1428571428572
+    },
+    {
+        "year": 1951,
+        "political_side": "unified",
+        "transport_type": "autobus",
+        "line_count": 35,
+        "avg_frequency": 19.885714285714286,
+        "avg_capacity": 100.0
+    },
+    {
+        "year": 1951,
+        "political_side": "unified",
+        "transport_type": "ferry",
+        "line_count": 1,
+        "avg_frequency": 60.0,
+        "avg_capacity": 50.0
+    },
+    {
+        "year": 1951,
+        "political_side": "unified",
+        "transport_type": "s-bahn",
+        "line_count": 12,
+        "avg_frequency": 0.0,
+        "avg_capacity": 1100.0
+    },
+    {
+        "year": 1951,
+        "political_side": "unified",
+        "transport_type": "tram",
+        "line_count": 58,
+        "avg_frequency": 18.086206896551722,
+        "avg_capacity": 195.0
+    },
+    {
+        "year": 1951,
+        "political_side": "unified",
+        "transport_type": "u-bahn",
+        "line_count": 9,
+        "avg_frequency": 10.444444444444446,
+        "avg_capacity": 861.1111111111111
+    },
+    {
+        "year": 1956,
+        "political_side": "unified",
+        "transport_type": "autobus",
+        "line_count": 56,
+        "avg_frequency": 17.32142857142857,
+        "avg_capacity": 100.0
+    },
+    {
+        "year": 1956,
+        "political_side": "unified",
+        "transport_type": "ferry",
+        "line_count": 2,
+        "avg_frequency": 40.0,
+        "avg_capacity": 50.0
+    },
+    {
+        "year": 1956,
+        "political_side": "unified",
+        "transport_type": "oberleitungsbus",
+        "line_count": 4,
+        "avg_frequency": 10.5,
+        "avg_capacity": 80.0
+    },
+    {
+        "year": 1956,
+        "political_side": "unified",
+        "transport_type": "s-bahn",
+        "line_count": 15,
+        "avg_frequency": 0.0,
+        "avg_capacity": 1100.0
+    },
+    {
+        "year": 1956,
+        "political_side": "unified",
+        "transport_type": "tram",
+        "line_count": 58,
+        "avg_frequency": 15.551724137931037,
+        "avg_capacity": 195.0
+    },
+    {
+        "year": 1956,
+        "political_side": "unified",
+        "transport_type": "u-bahn",
+        "line_count": 9,
+        "avg_frequency": 7.222222222222222,
+        "avg_capacity": 861.1111111111111
+    },
+    {
+        "year": 1960,
+        "political_side": "unified",
+        "transport_type": "autobus",
+        "line_count": 74,
+        "avg_frequency": 17.83783783783784,
+        "avg_capacity": 100.0
+    },
+    {
+        "year": 1960,
+        "political_side": "unified",
+        "transport_type": "ferry",
+        "line_count": 2,
+        "avg_frequency": 40.0,
+        "avg_capacity": 50.0
+    },
+    {
+        "year": 1960,
+        "political_side": "unified",
+        "transport_type": "oberleitungsbus",
+        "line_count": 4,
+        "avg_frequency": 10.0,
+        "avg_capacity": 80.0
+    },
+    {
+        "year": 1960,
+        "political_side": "unified",
+        "transport_type": "s-bahn",
+        "line_count": 16,
+        "avg_frequency": 0.0,
+        "avg_capacity": 1100.0
+    },
+    {
+        "year": 1960,
+        "political_side": "unified",
+        "transport_type": "tram",
+        "line_count": 52,
+        "avg_frequency": 15.557692307692307,
+        "avg_capacity": 195.0
+    },
+    {
+        "year": 1960,
+        "political_side": "unified",
+        "transport_type": "u-bahn",
+        "line_count": 10,
+        "avg_frequency": 0.0,
+        "avg_capacity": 850.0
+    },
+    {
+        "year": 1961,
+        "political_side": "east",
+        "transport_type": "autobus",
+        "line_count": 31,
+        "avg_frequency": 20.451612903225804,
+        "avg_capacity": 100.0
+    },
+    {
+        "year": 1961,
+        "political_side": "east",
+        "transport_type": "oberleitungsbus",
+        "line_count": 3,
+        "avg_frequency": 16.666666666666668,
+        "avg_capacity": 80.0
+    },
+    {
+        "year": 1961,
+        "political_side": "east",
+        "transport_type": "s-bahn",
+        "line_count": 11,
+        "avg_frequency": 0.0,
+        "avg_capacity": 1100.0
+    },
+    {
+        "year": 1961,
+        "political_side": "east",
+        "transport_type": "tram",
+        "line_count": 24,
+        "avg_frequency": 15.291666666666668,
+        "avg_capacity": 195.0
+    },
+    {
+        "year": 1961,
+        "political_side": "east",
+        "transport_type": "u-bahn",
+        "line_count": 2,
+        "avg_frequency": 3.5,
+        "avg_capacity": 875.0
+    },
+    {
+        "year": 1961,
+        "political_side": "west",
+        "transport_type": "autobus",
+        "line_count": 53,
+        "avg_frequency": 14.962264150943394,
+        "avg_capacity": 100.0
+    },
+    {
+        "year": 1961,
+        "political_side": "west",
+        "transport_type": "ferry",
+        "line_count": 1,
+        "avg_frequency": 60.0,
+        "avg_capacity": 50.0
+    },
+    {
+        "year": 1961,
+        "political_side": "west",
+        "transport_type": "s-bahn",
+        "line_count": 10,
+        "avg_frequency": 0.0,
+        "avg_capacity": 1100.0
+    },
+    {
+        "year": 1961,
+        "political_side": "west",
+        "transport_type": "tram",
+        "line_count": 19,
+        "avg_frequency": 16.157894736842106,
+        "avg_capacity": 195.0
+    },
+    {
+        "year": 1961,
+        "political_side": "west",
+        "transport_type": "u-bahn",
+        "line_count": 9,
+        "avg_frequency": 8.333333333333334,
+        "avg_capacity": 833.3333333333334
+    },
+    {
+        "year": 1964,
+        "political_side": "east",
+        "transport_type": "autobus",
+        "line_count": 34,
+        "avg_frequency": 19.147058823529413,
+        "avg_capacity": 100.0
+    },
+    {
+        "year": 1964,
+        "political_side": "east",
+        "transport_type": "oberleitungsbus",
+        "line_count": 3,
+        "avg_frequency": 13.333333333333334,
+        "avg_capacity": 80.0
+    },
+    {
+        "year": 1964,
+        "political_side": "east",
+        "transport_type": "s-bahn",
+        "line_count": 10,
+        "avg_frequency": 0.0,
+        "avg_capacity": 1100.0
+    },
+    {
+        "year": 1964,
+        "political_side": "east",
+        "transport_type": "tram",
+        "line_count": 28,
+        "avg_frequency": 15.25,
+        "avg_capacity": 195.0
+    },
+    {
+        "year": 1964,
+        "political_side": "east",
+        "transport_type": "u-bahn",
+        "line_count": 2,
+        "avg_frequency": 3.5,
+        "avg_capacity": 875.0
+    },
+    {
+        "year": 1964,
+        "political_side": "west",
+        "transport_type": "autobus",
+        "line_count": 71,
+        "avg_frequency": 17.577464788732396,
+        "avg_capacity": 100.0
+    },
+    {
+        "year": 1964,
+        "political_side": "west",
+        "transport_type": "ferry",
+        "line_count": 1,
+        "avg_frequency": 60.0,
+        "avg_capacity": 50.0
+    },
+    {
+        "year": 1964,
+        "political_side": "west",
+        "transport_type": "s-bahn",
+        "line_count": 10,
+        "avg_frequency": 0.0,
+        "avg_capacity": 1100.0
+    },
+    {
+        "year": 1964,
+        "political_side": "west",
+        "transport_type": "tram",
+        "line_count": 9,
+        "avg_frequency": 16.11111111111111,
+        "avg_capacity": 195.0
+    },
+    {
+        "year": 1964,
+        "political_side": "west",
+        "transport_type": "u-bahn",
+        "line_count": 9,
+        "avg_frequency": 7.555555555555555,
+        "avg_capacity": 861.1111111111111
+    },
+    {
+        "year": 1965,
+        "political_side": "east",
+        "transport_type": "autobus",
+        "line_count": 31,
+        "avg_frequency": 14.419354838709674,
+        "avg_capacity": 100.0
+    },
+    {
+        "year": 1965,
+        "political_side": "east",
+        "transport_type": "oberleitungsbus",
+        "line_count": 3,
+        "avg_frequency": 12.0,
+        "avg_capacity": 80.0
+    },
+    {
+        "year": 1965,
+        "political_side": "east",
+        "transport_type": "s-bahn",
+        "line_count": 10,
+        "avg_frequency": 0.0,
+        "avg_capacity": 1100.0
+    },
+    {
+        "year": 1965,
+        "political_side": "east",
+        "transport_type": "tram",
+        "line_count": 28,
+        "avg_frequency": 15.607142857142858,
+        "avg_capacity": 195.0
+    },
+    {
+        "year": 1965,
+        "political_side": "east",
+        "transport_type": "u-bahn",
+        "line_count": 2,
+        "avg_frequency": 5.0,
+        "avg_capacity": 875.0
+    },
+    {
+        "year": 1965,
+        "political_side": "west",
+        "transport_type": "autobus",
+        "line_count": 73,
+        "avg_frequency": 18.15068493150684,
+        "avg_capacity": 100.0
+    },
+    {
+        "year": 1965,
+        "political_side": "west",
+        "transport_type": "ferry",
+        "line_count": 1,
+        "avg_frequency": 60.0,
+        "avg_capacity": 50.0
+    },
+    {
+        "year": 1965,
+        "political_side": "west",
+        "transport_type": "s-bahn",
+        "line_count": 10,
+        "avg_frequency": 0.0,
+        "avg_capacity": 1100.0
+    },
+    {
+        "year": 1965,
+        "political_side": "west",
+        "transport_type": "tram",
+        "line_count": 9,
+        "avg_frequency": 16.666666666666668,
+        "avg_capacity": 195.0
+    },
+    {
+        "year": 1965,
+        "political_side": "west",
+        "transport_type": "u-bahn",
+        "line_count": 9,
+        "avg_frequency": 7.611111111111111,
+        "avg_capacity": 861.1111111111111
+    },
+    {
+        "year": 1967,
+        "political_side": "east",
+        "transport_type": "autobus",
+        "line_count": 33,
+        "avg_frequency": 13.606060606060606,
+        "avg_capacity": 100.0
+    },
+    {
+        "year": 1967,
+        "political_side": "east",
+        "transport_type": "oberleitungsbus",
+        "line_count": 3,
+        "avg_frequency": 12.666666666666666,
+        "avg_capacity": 80.0
+    },
+    {
+        "year": 1967,
+        "political_side": "east",
+        "transport_type": "s-bahn",
+        "line_count": 10,
+        "avg_frequency": 0.0,
+        "avg_capacity": 1100.0
+    },
+    {
+        "year": 1967,
+        "political_side": "east",
+        "transport_type": "tram",
+        "line_count": 26,
+        "avg_frequency": 14.576923076923073,
+        "avg_capacity": 195.0
+    },
+    {
+        "year": 1967,
+        "political_side": "east",
+        "transport_type": "u-bahn",
+        "line_count": 2,
+        "avg_frequency": 3.5,
+        "avg_capacity": 875.0
+    },
+    {
+        "year": 1967,
+        "political_side": "west",
+        "transport_type": "autobus",
+        "line_count": 82,
+        "avg_frequency": 14.658536585365853,
+        "avg_capacity": 100.0
+    },
+    {
+        "year": 1967,
+        "political_side": "west",
+        "transport_type": "ferry",
+        "line_count": 1,
+        "avg_frequency": 60.0,
+        "avg_capacity": 300.0
+    },
+    {
+        "year": 1967,
+        "political_side": "west",
+        "transport_type": "s-bahn",
+        "line_count": 10,
+        "avg_frequency": 0.0,
+        "avg_capacity": 1100.0
+    },
+    {
+        "year": 1967,
+        "political_side": "west",
+        "transport_type": "u-bahn",
+        "line_count": 9,
+        "avg_frequency": 6.777777777777778,
+        "avg_capacity": 888.888888888889
+    },
+    {
+        "year": 1971,
+        "political_side": "east",
+        "transport_type": "autobus",
+        "line_count": 39,
+        "avg_frequency": 11.37179487179487,
+        "avg_capacity": 100.0
+    },
+    {
+        "year": 1971,
+        "political_side": "east",
+        "transport_type": "ferry",
+        "line_count": 5,
+        "avg_frequency": 4.0,
+        "avg_capacity": 50.0
+    },
+    {
+        "year": 1971,
+        "political_side": "east",
+        "transport_type": "s-bahn",
+        "line_count": 9,
+        "avg_frequency": 21.11111111111111,
+        "avg_capacity": 1100.0
+    },
+    {
+        "year": 1971,
+        "political_side": "east",
+        "transport_type": "tram",
+        "line_count": 27,
+        "avg_frequency": 15.51851851851852,
+        "avg_capacity": 195.0
+    },
+    {
+        "year": 1971,
+        "political_side": "east",
+        "transport_type": "u-bahn",
+        "line_count": 2,
+        "avg_frequency": 3.5,
+        "avg_capacity": 875.0
+    },
+    {
+        "year": 1971,
+        "political_side": "west",
+        "transport_type": "autobus",
+        "line_count": 78,
+        "avg_frequency": 14.384615384615383,
+        "avg_capacity": 100.0
+    },
+    {
+        "year": 1971,
+        "political_side": "west",
+        "transport_type": "s-bahn",
+        "line_count": 10,
+        "avg_frequency": 0.0,
+        "avg_capacity": 1100.0
+    },
+    {
+        "year": 1971,
+        "political_side": "west",
+        "transport_type": "u-bahn",
+        "line_count": 8,
+        "avg_frequency": 6.625,
+        "avg_capacity": 875.0000000000001
+    }
+]

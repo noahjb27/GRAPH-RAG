@@ -1,0 +1,416 @@
+[
+    {
+        "year": 1946,
+        "transport_type": "ferry",
+        "political_side": "unified",
+        "station_count": 3
+    },
+    {
+        "year": 1946,
+        "transport_type": "omnibus",
+        "political_side": "unified",
+        "station_count": 59
+    },
+    {
+        "year": 1946,
+        "transport_type": "s-bahn",
+        "political_side": "unified",
+        "station_count": 172
+    },
+    {
+        "year": 1946,
+        "transport_type": "tram",
+        "political_side": "unified",
+        "station_count": 474
+    },
+    {
+        "year": 1946,
+        "transport_type": "u-bahn",
+        "political_side": "unified",
+        "station_count": 71
+    },
+    {
+        "year": 1951,
+        "transport_type": "autobus",
+        "political_side": "unified",
+        "station_count": 264
+    },
+    {
+        "year": 1951,
+        "transport_type": "ferry",
+        "political_side": "unified",
+        "station_count": 2
+    },
+    {
+        "year": 1951,
+        "transport_type": "s-bahn",
+        "political_side": "unified",
+        "station_count": 237
+    },
+    {
+        "year": 1951,
+        "transport_type": "tram",
+        "political_side": "unified",
+        "station_count": 612
+    },
+    {
+        "year": 1951,
+        "transport_type": "u-bahn",
+        "political_side": "unified",
+        "station_count": 111
+    },
+    {
+        "year": 1956,
+        "transport_type": "autobus",
+        "political_side": "unified",
+        "station_count": 532
+    },
+    {
+        "year": 1956,
+        "transport_type": "ferry",
+        "political_side": "unified",
+        "station_count": 4
+    },
+    {
+        "year": 1956,
+        "transport_type": "omnibus",
+        "political_side": "unified",
+        "station_count": 36
+    },
+    {
+        "year": 1956,
+        "transport_type": "s-bahn",
+        "political_side": "unified",
+        "station_count": 284
+    },
+    {
+        "year": 1956,
+        "transport_type": "tram",
+        "political_side": "unified",
+        "station_count": 738
+    },
+    {
+        "year": 1956,
+        "transport_type": "u-bahn",
+        "political_side": "unified",
+        "station_count": 114
+    },
+    {
+        "year": 1960,
+        "transport_type": "autobus",
+        "political_side": "unified",
+        "station_count": 902
+    },
+    {
+        "year": 1960,
+        "transport_type": "ferry",
+        "political_side": "unified",
+        "station_count": 4
+    },
+    {
+        "year": 1960,
+        "transport_type": "omnibus",
+        "political_side": "unified",
+        "station_count": 37
+    },
+    {
+        "year": 1960,
+        "transport_type": "s-bahn",
+        "political_side": "unified",
+        "station_count": 291
+    },
+    {
+        "year": 1960,
+        "transport_type": "tram",
+        "political_side": "unified",
+        "station_count": 676
+    },
+    {
+        "year": 1960,
+        "transport_type": "u-bahn",
+        "political_side": "unified",
+        "station_count": 178
+    },
+    {
+        "year": 1961,
+        "transport_type": "autobus",
+        "political_side": "east",
+        "station_count": 200
+    },
+    {
+        "year": 1961,
+        "transport_type": "autobus",
+        "political_side": "west",
+        "station_count": 779
+    },
+    {
+        "year": 1961,
+        "transport_type": "ferry",
+        "political_side": "west",
+        "station_count": 2
+    },
+    {
+        "year": 1961,
+        "transport_type": "omnibus",
+        "political_side": "east",
+        "station_count": 36
+    },
+    {
+        "year": 1961,
+        "transport_type": "s-bahn",
+        "political_side": "east",
+        "station_count": 107
+    },
+    {
+        "year": 1961,
+        "transport_type": "s-bahn",
+        "political_side": "west",
+        "station_count": 121
+    },
+    {
+        "year": 1961,
+        "transport_type": "tram",
+        "political_side": "east",
+        "station_count": 263
+    },
+    {
+        "year": 1961,
+        "transport_type": "tram",
+        "political_side": "west",
+        "station_count": 276
+    },
+    {
+        "year": 1961,
+        "transport_type": "u-bahn",
+        "political_side": "east",
+        "station_count": 22
+    },
+    {
+        "year": 1961,
+        "transport_type": "u-bahn",
+        "political_side": "west",
+        "station_count": 114
+    },
+    {
+        "year": 1964,
+        "transport_type": "autobus",
+        "political_side": "east",
+        "station_count": 209
+    },
+    {
+        "year": 1964,
+        "transport_type": "autobus",
+        "political_side": "west",
+        "station_count": 1015
+    },
+    {
+        "year": 1964,
+        "transport_type": "ferry",
+        "political_side": "west",
+        "station_count": 2
+    },
+    {
+        "year": 1964,
+        "transport_type": "omnibus",
+        "political_side": "east",
+        "station_count": 32
+    },
+    {
+        "year": 1964,
+        "transport_type": "s-bahn",
+        "political_side": "east",
+        "station_count": 130
+    },
+    {
+        "year": 1964,
+        "transport_type": "s-bahn",
+        "political_side": "west",
+        "station_count": 126
+    },
+    {
+        "year": 1964,
+        "transport_type": "tram",
+        "political_side": "east",
+        "station_count": 307
+    },
+    {
+        "year": 1964,
+        "transport_type": "tram",
+        "political_side": "west",
+        "station_count": 126
+    },
+    {
+        "year": 1964,
+        "transport_type": "u-bahn",
+        "political_side": "east",
+        "station_count": 22
+    },
+    {
+        "year": 1964,
+        "transport_type": "u-bahn",
+        "political_side": "west",
+        "station_count": 93
+    },
+    {
+        "year": 1965,
+        "transport_type": "autobus",
+        "political_side": "east",
+        "station_count": 223
+    },
+    {
+        "year": 1965,
+        "transport_type": "autobus",
+        "political_side": "west",
+        "station_count": 1058
+    },
+    {
+        "year": 1965,
+        "transport_type": "ferry",
+        "political_side": "west",
+        "station_count": 2
+    },
+    {
+        "year": 1965,
+        "transport_type": "omnibus",
+        "political_side": "east",
+        "station_count": 39
+    },
+    {
+        "year": 1965,
+        "transport_type": "s-bahn",
+        "political_side": "east",
+        "station_count": 148
+    },
+    {
+        "year": 1965,
+        "transport_type": "s-bahn",
+        "political_side": "west",
+        "station_count": 126
+    },
+    {
+        "year": 1965,
+        "transport_type": "tram",
+        "political_side": "east",
+        "station_count": 311
+    },
+    {
+        "year": 1965,
+        "transport_type": "tram",
+        "political_side": "west",
+        "station_count": 115
+    },
+    {
+        "year": 1965,
+        "transport_type": "u-bahn",
+        "political_side": "east",
+        "station_count": 22
+    },
+    {
+        "year": 1965,
+        "transport_type": "u-bahn",
+        "political_side": "west",
+        "station_count": 94
+    },
+    {
+        "year": 1967,
+        "transport_type": "autobus",
+        "political_side": "east",
+        "station_count": 216
+    },
+    {
+        "year": 1967,
+        "transport_type": "autobus",
+        "political_side": "west",
+        "station_count": 986
+    },
+    {
+        "year": 1967,
+        "transport_type": "ferry",
+        "political_side": "west",
+        "station_count": 2
+    },
+    {
+        "year": 1967,
+        "transport_type": "omnibus",
+        "political_side": "east",
+        "station_count": 38
+    },
+    {
+        "year": 1967,
+        "transport_type": "s-bahn",
+        "political_side": "east",
+        "station_count": 148
+    },
+    {
+        "year": 1967,
+        "transport_type": "s-bahn",
+        "political_side": "west",
+        "station_count": 127
+    },
+    {
+        "year": 1967,
+        "transport_type": "tram",
+        "political_side": "east",
+        "station_count": 321
+    },
+    {
+        "year": 1967,
+        "transport_type": "u-bahn",
+        "political_side": "east",
+        "station_count": 22
+    },
+    {
+        "year": 1967,
+        "transport_type": "u-bahn",
+        "political_side": "west",
+        "station_count": 99
+    },
+    {
+        "year": 1971,
+        "transport_type": "autobus",
+        "political_side": "east",
+        "station_count": 262
+    },
+    {
+        "year": 1971,
+        "transport_type": "autobus",
+        "political_side": "west",
+        "station_count": 837
+    },
+    {
+        "year": 1971,
+        "transport_type": "ferry",
+        "political_side": "east",
+        "station_count": 11
+    },
+    {
+        "year": 1971,
+        "transport_type": "s-bahn",
+        "political_side": "east",
+        "station_count": 152
+    },
+    {
+        "year": 1971,
+        "transport_type": "s-bahn",
+        "political_side": "west",
+        "station_count": 127
+    },
+    {
+        "year": 1971,
+        "transport_type": "tram",
+        "political_side": "east",
+        "station_count": 308
+    },
+    {
+        "year": 1971,
+        "transport_type": "u-bahn",
+        "political_side": "east",
+        "station_count": 22
+    },
+    {
+        "year": 1971,
+        "transport_type": "u-bahn",
+        "political_side": "west",
+        "station_count": 110
+    }
+]

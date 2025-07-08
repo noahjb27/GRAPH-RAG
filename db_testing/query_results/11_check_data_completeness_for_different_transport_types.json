@@ -1,0 +1,72 @@
+[
+    {
+        "transport_type": "autobus",
+        "total_lines": 690,
+        "lines_with_frequency": 690,
+        "lines_with_capacity": 690,
+        "avg_frequency": 16.377536231884054,
+        "avg_capacity": 100.0,
+        "earliest_year": 1951,
+        "latest_year": 1971
+    },
+    {
+        "transport_type": "tram",
+        "total_lines": 382,
+        "lines_with_frequency": 382,
+        "lines_with_capacity": 382,
+        "avg_frequency": 15.591623036649217,
+        "avg_capacity": 195.0,
+        "earliest_year": 1946,
+        "latest_year": 1971
+    },
+    {
+        "transport_type": "s-bahn",
+        "total_lines": 155,
+        "lines_with_frequency": 155,
+        "lines_with_capacity": 155,
+        "avg_frequency": 3.3870967741935485,
+        "avg_capacity": 1100.0,
+        "earliest_year": 1946,
+        "latest_year": 1971
+    },
+    {
+        "transport_type": "u-bahn",
+        "total_lines": 89,
+        "lines_with_frequency": 89,
+        "lines_with_capacity": 89,
+        "avg_frequency": 6.561797752808987,
+        "avg_capacity": 862.3595505617978,
+        "earliest_year": 1946,
+        "latest_year": 1971
+    },
+    {
+        "transport_type": "oberleitungsbus",
+        "total_lines": 20,
+        "lines_with_frequency": 20,
+        "lines_with_capacity": 20,
+        "avg_frequency": 12.3,
+        "avg_capacity": 80.0,
+        "earliest_year": 1956,
+        "latest_year": 1967
+    },
+    {
+        "transport_type": "ferry",
+        "total_lines": 15,
+        "lines_with_frequency": 15,
+        "lines_with_capacity": 15,
+        "avg_frequency": 40.0,
+        "avg_capacity": 66.66666666666667,
+        "earliest_year": 1946,
+        "latest_year": 1971
+    },
+    {
+        "transport_type": "omnibus",
+        "total_lines": 8,
+        "lines_with_frequency": 8,
+        "lines_with_capacity": 8,
+        "avg_frequency": 22.75,
+        "avg_capacity": 80.0,
+        "earliest_year": 1946,
+        "latest_year": 1946
+    }
+]

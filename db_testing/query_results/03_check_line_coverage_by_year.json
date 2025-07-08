@@ -1,0 +1,116 @@
+[
+    {
+        "year": 1946,
+        "line_count": 72,
+        "avg_frequency": 17.548611111111125,
+        "line_types": [
+            "omnibus",
+            "ferry",
+            "s-bahn",
+            "tram",
+            "u-bahn"
+        ]
+    },
+    {
+        "year": 1951,
+        "line_count": 115,
+        "avg_frequency": 16.51304347826087,
+        "line_types": [
+            "tram",
+            "u-bahn",
+            "autobus",
+            "s-bahn",
+            "ferry"
+        ]
+    },
+    {
+        "year": 1956,
+        "line_count": 144,
+        "avg_frequency": 14.29861111111112,
+        "line_types": [
+            "tram",
+            "u-bahn",
+            "autobus",
+            "s-bahn",
+            "oberleitungsbus",
+            "ferry"
+        ]
+    },
+    {
+        "year": 1960,
+        "line_count": 158,
+        "avg_frequency": 14.23417721518987,
+        "line_types": [
+            "tram",
+            "autobus",
+            "oberleitungsbus",
+            "ferry",
+            "u-bahn",
+            "s-bahn"
+        ]
+    },
+    {
+        "year": 1961,
+        "line_count": 163,
+        "avg_frequency": 14.06748466257669,
+        "line_types": [
+            "tram",
+            "autobus",
+            "u-bahn",
+            "s-bahn",
+            "oberleitungsbus",
+            "ferry"
+        ]
+    },
+    {
+        "year": 1964,
+        "line_count": 177,
+        "avg_frequency": 14.949152542372882,
+        "line_types": [
+            "tram",
+            "autobus",
+            "s-bahn",
+            "oberleitungsbus",
+            "u-bahn",
+            "ferry"
+        ]
+    },
+    {
+        "year": 1965,
+        "line_count": 176,
+        "avg_frequency": 14.394886363636353,
+        "line_types": [
+            "u-bahn",
+            "tram",
+            "autobus",
+            "oberleitungsbus",
+            "s-bahn",
+            "ferry"
+        ]
+    },
+    {
+        "year": 1967,
+        "line_count": 176,
+        "avg_frequency": 12.477272727272728,
+        "line_types": [
+            "tram",
+            "autobus",
+            "s-bahn",
+            "oberleitungsbus",
+            "u-bahn",
+            "ferry"
+        ]
+    },
+    {
+        "year": 1971,
+        "line_count": 178,
+        "avg_frequency": 12.66573033707865,
+        "line_types": [
+            "autobus",
+            "ferry",
+            "s-bahn",
+            "tram",
+            "u-bahn"
+        ]
+    }
+]

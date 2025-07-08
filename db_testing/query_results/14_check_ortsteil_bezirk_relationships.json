@@ -1,0 +1,416 @@
+[
+    {
+        "bezirk": "Charlottenburg",
+        "ortsteile": [
+            "Charlottenburg"
+        ],
+        "ortsteil_count": 14,
+        "shared_years": [
+            1946,
+            1951,
+            1956,
+            1960,
+            1961,
+            1964,
+            1965,
+            1967,
+            1971,
+            1980,
+            1982,
+            1984,
+            1985,
+            1989
+        ]
+    },
+    {
+        "bezirk": "Friedrichshain",
+        "ortsteile": [
+            "Friedrichshain"
+        ],
+        "ortsteil_count": 14,
+        "shared_years": [
+            1946,
+            1951,
+            1956,
+            1960,
+            1961,
+            1964,
+            1965,
+            1967,
+            1971,
+            1980,
+            1982,
+            1984,
+            1985,
+            1989
+        ]
+    },
+    {
+        "bezirk": "Hellersdorf",
+        "ortsteile": [
+            "Hellersdorf",
+            "Kaulsdorf",
+            "Mahlsdorf"
+        ],
+        "ortsteil_count": 3,
+        "shared_years": [
+            1989
+        ]
+    },
+    {
+        "bezirk": "Hohensch\u00f6nhausen",
+        "ortsteile": [
+            "Falkenberg",
+            "Malchow",
+            "Wartenberg",
+            "Alt-Hohensch\u00f6nhausen",
+            "Neu-Hohensch\u00f6nhausen"
+        ],
+        "ortsteil_count": 9,
+        "shared_years": [
+            1985,
+            1989
+        ]
+    },
+    {
+        "bezirk": "K\u00f6penick",
+        "ortsteile": [
+            "Friedrichshagen",
+            "Gr\u00fcnau",
+            "K\u00f6penick",
+            "M\u00fcggelheim",
+            "Rahnsdorf",
+            "Schm\u00f6ckwitz"
+        ],
+        "ortsteil_count": 84,
+        "shared_years": [
+            1946,
+            1951,
+            1956,
+            1960,
+            1961,
+            1964,
+            1965,
+            1967,
+            1971,
+            1980,
+            1982,
+            1984,
+            1985,
+            1989
+        ]
+    },
+    {
+        "bezirk": "Lichtenberg",
+        "ortsteile": [
+            "Biesdorf",
+            "Friedrichsfelde",
+            "Kaulsdorf",
+            "Lichtenberg",
+            "Mahlsdorf",
+            "Marzahn",
+            "Fennpfuhl"
+        ],
+        "ortsteil_count": 69,
+        "shared_years": [
+            1946,
+            1951,
+            1956,
+            1960,
+            1961,
+            1964,
+            1965,
+            1967,
+            1971,
+            1980,
+            1982,
+            1984,
+            1985,
+            1989
+        ]
+    },
+    {
+        "bezirk": "Marzahn",
+        "ortsteile": [
+            "Biesdorf",
+            "Kaulsdorf",
+            "Mahlsdorf",
+            "Marzahn"
+        ],
+        "ortsteil_count": 18,
+        "shared_years": [
+            1980,
+            1982,
+            1984,
+            1985,
+            1989
+        ]
+    },
+    {
+        "bezirk": "Mitte",
+        "ortsteile": [
+            "Mitte"
+        ],
+        "ortsteil_count": 14,
+        "shared_years": [
+            1946,
+            1951,
+            1956,
+            1960,
+            1961,
+            1964,
+            1965,
+            1967,
+            1971,
+            1980,
+            1982,
+            1984,
+            1985,
+            1989
+        ]
+    },
+    {
+        "bezirk": "Pankow",
+        "ortsteile": [
+            "Blankenburg",
+            "Blankenfelde",
+            "Buch",
+            "Franz\u00f6sisch Buchholz",
+            "Heinersdorf",
+            "Karow",
+            "Niedersch\u00f6nhausen",
+            "Pankow",
+            "Rosenthal"
+        ],
+        "ortsteil_count": 123,
+        "shared_years": [
+            1946,
+            1951,
+            1956,
+            1960,
+            1961,
+            1964,
+            1965,
+            1967,
+            1971,
+            1980,
+            1982,
+            1984,
+            1985,
+            1989
+        ]
+    },
+    {
+        "bezirk": "Prenzlauer Berg",
+        "ortsteile": [
+            "Prenzlauer Berg"
+        ],
+        "ortsteil_count": 14,
+        "shared_years": [
+            1946,
+            1951,
+            1956,
+            1960,
+            1961,
+            1964,
+            1965,
+            1967,
+            1971,
+            1980,
+            1982,
+            1984,
+            1985,
+            1989
+        ]
+    },
+    {
+        "bezirk": "Reinickendorf",
+        "ortsteile": [
+            "Frohnau",
+            "Hermsdorf",
+            "Reinickendorf",
+            "Tegel",
+            "Wittenau",
+            "Heiligensee",
+            "L\u00fcbars",
+            "Konradsh\u00f6he",
+            "Waidmannslust"
+        ],
+        "ortsteil_count": 124,
+        "shared_years": [
+            1946,
+            1951,
+            1956,
+            1960,
+            1961,
+            1964,
+            1965,
+            1967,
+            1971,
+            1980,
+            1982,
+            1984,
+            1985,
+            1989
+        ]
+    },
+    {
+        "bezirk": "Spandau",
+        "ortsteile": [
+            "Gatow",
+            "Kladow",
+            "Siemensstadt",
+            "Staaken",
+            "Spandau",
+            "Haselhorst"
+        ],
+        "ortsteil_count": 83,
+        "shared_years": [
+            1946,
+            1951,
+            1956,
+            1960,
+            1961,
+            1964,
+            1965,
+            1967,
+            1971,
+            1980,
+            1982,
+            1984,
+            1985,
+            1989
+        ]
+    },
+    {
+        "bezirk": "Tiergarten",
+        "ortsteile": [
+            "Tiergarten"
+        ],
+        "ortsteil_count": 14,
+        "shared_years": [
+            1946,
+            1951,
+            1956,
+            1960,
+            1961,
+            1964,
+            1965,
+            1967,
+            1971,
+            1980,
+            1982,
+            1984,
+            1985,
+            1989
+        ]
+    },
+    {
+        "bezirk": "Treptow",
+        "ortsteile": [
+            "Bohnsdorf",
+            "Johannisthal",
+            "Niedersch\u00f6neweide",
+            "Obersch\u00f6neweide",
+            "Adlershof",
+            "Alt-Treptow",
+            "Altglienicke",
+            "Baumschulenweg"
+        ],
+        "ortsteil_count": 111,
+        "shared_years": [
+            1946,
+            1951,
+            1956,
+            1960,
+            1961,
+            1964,
+            1965,
+            1967,
+            1971,
+            1980,
+            1982,
+            1984,
+            1985,
+            1989
+        ]
+    },
+    {
+        "bezirk": "Wedding",
+        "ortsteile": [
+            "Wedding"
+        ],
+        "ortsteil_count": 14,
+        "shared_years": [
+            1946,
+            1951,
+            1956,
+            1960,
+            1961,
+            1964,
+            1965,
+            1967,
+            1971,
+            1980,
+            1982,
+            1984,
+            1985,
+            1989
+        ]
+    },
+    {
+        "bezirk": "Wei\u00dfensee",
+        "ortsteile": [
+            "Falkenberg",
+            "Malchow",
+            "Wartenberg",
+            "Wei\u00dfensee",
+            "Alt-Hohensch\u00f6nhausen",
+            "Blankenburg",
+            "Heinersdorf",
+            "Karow"
+        ],
+        "ortsteil_count": 65,
+        "shared_years": [
+            1946,
+            1951,
+            1956,
+            1960,
+            1961,
+            1964,
+            1965,
+            1967,
+            1971,
+            1980,
+            1982,
+            1984,
+            1985,
+            1989
+        ]
+    },
+    {
+        "bezirk": "Wilmersdorf",
+        "ortsteile": [
+            "Grunewald",
+            "Schmargendorf",
+            "Wilmersdorf"
+        ],
+        "ortsteil_count": 42,
+        "shared_years": [
+            1946,
+            1951,
+            1956,
+            1960,
+            1961,
+            1964,
+            1965,
+            1967,
+            1971,
+            1980,
+            1982,
+            1984,
+            1985,
+            1989
+        ]
+    }
+]

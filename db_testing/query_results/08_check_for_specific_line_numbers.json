@@ -1,0 +1,138 @@
+[
+    {
+        "line_name": "1",
+        "transport_type": "omnibus",
+        "political_side": "unified",
+        "frequency": 25.0,
+        "capacity": 80,
+        "active_years": [
+            1946
+        ]
+    },
+    {
+        "line_name": "1",
+        "transport_type": "tram",
+        "political_side": "unified",
+        "frequency": 10.0,
+        "capacity": 195,
+        "active_years": [
+            1946
+        ]
+    },
+    {
+        "line_name": "1",
+        "transport_type": "tram",
+        "political_side": "unified",
+        "frequency": 12.0,
+        "capacity": 195,
+        "active_years": [
+            1951
+        ]
+    },
+    {
+        "line_name": "1",
+        "transport_type": "tram",
+        "political_side": "unified",
+        "frequency": 20.0,
+        "capacity": 195,
+        "active_years": [
+            1956,
+            1960
+        ]
+    },
+    {
+        "line_name": "1",
+        "transport_type": "tram",
+        "political_side": "east",
+        "frequency": 20.0,
+        "capacity": 195,
+        "active_years": [
+            1961,
+            1964,
+            1965
+        ]
+    },
+    {
+        "line_name": "1",
+        "transport_type": "u-bahn",
+        "political_side": "west",
+        "frequency": 5.0,
+        "capacity": 750,
+        "active_years": [
+            1967,
+            1971
+        ]
+    },
+    {
+        "line_name": "5",
+        "transport_type": "omnibus",
+        "political_side": "unified",
+        "frequency": 60.0,
+        "capacity": 80,
+        "active_years": [
+            1946
+        ]
+    },
+    {
+        "line_name": "5",
+        "transport_type": "u-bahn",
+        "political_side": "west",
+        "frequency": 10.0,
+        "capacity": 1000,
+        "active_years": [
+            1967
+        ]
+    },
+    {
+        "line_name": "6",
+        "transport_type": "tram",
+        "political_side": "unified",
+        "frequency": 12.0,
+        "capacity": 195,
+        "active_years": [
+            1946
+        ]
+    },
+    {
+        "line_name": "6",
+        "transport_type": "tram",
+        "political_side": "unified",
+        "frequency": 15.0,
+        "capacity": 195,
+        "active_years": [
+            1951
+        ]
+    },
+    {
+        "line_name": "6",
+        "transport_type": "tram",
+        "political_side": "unified",
+        "frequency": 10.0,
+        "capacity": 195,
+        "active_years": [
+            1956,
+            1960
+        ]
+    },
+    {
+        "line_name": "6",
+        "transport_type": "u-bahn",
+        "political_side": "west",
+        "frequency": 5.0,
+        "capacity": 1000,
+        "active_years": [
+            1967,
+            1971
+        ]
+    },
+    {
+        "line_name": "S1",
+        "transport_type": "autobus",
+        "political_side": "west",
+        "frequency": 15.0,
+        "capacity": 100,
+        "active_years": [
+            1967
+        ]
+    }
+]

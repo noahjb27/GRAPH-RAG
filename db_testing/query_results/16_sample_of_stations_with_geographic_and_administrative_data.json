@@ -1,0 +1,202 @@
+[
+    {
+        "station_name": "Zoologischer Garten",
+        "transport_type": "s-bahn",
+        "political_side": "unified",
+        "ortsteil": "Charlottenburg",
+        "bezirk": "Charlottenburg",
+        "year": 1946,
+        "lat": 52.50722222,
+        "lon": 13.3325
+    },
+    {
+        "station_name": "Spandauerstr. Ecke Schlo\u00dfstr.",
+        "transport_type": "tram",
+        "political_side": "unified",
+        "ortsteil": "Charlottenburg",
+        "bezirk": "Charlottenburg",
+        "year": 1946,
+        "lat": 52.51943258,
+        "lon": 13.29599648
+    },
+    {
+        "station_name": "Savignyplatz",
+        "transport_type": "s-bahn",
+        "political_side": "unified",
+        "ortsteil": "Charlottenburg",
+        "bezirk": "Charlottenburg",
+        "year": 1946,
+        "lat": 52.5051746,
+        "lon": 13.3190659
+    },
+    {
+        "station_name": "Savignyplatz",
+        "transport_type": "s-bahn",
+        "political_side": "unified",
+        "ortsteil": "Charlottenburg",
+        "bezirk": "Charlottenburg",
+        "year": 1946,
+        "lat": 52.5051746,
+        "lon": 13.3190659
+    },
+    {
+        "station_name": "Wilmerdorferstr.",
+        "transport_type": "tram",
+        "political_side": "unified",
+        "ortsteil": "Charlottenburg",
+        "bezirk": "Charlottenburg",
+        "year": 1946,
+        "lat": 52.51152326,
+        "lon": 13.30516737
+    },
+    {
+        "station_name": "Brandenburgischestr.",
+        "transport_type": "tram",
+        "political_side": "unified",
+        "ortsteil": "Charlottenburg",
+        "bezirk": "Charlottenburg",
+        "year": 1946,
+        "lat": 52.50008221,
+        "lon": 13.30697894
+    },
+    {
+        "station_name": "Witzleben",
+        "transport_type": "s-bahn",
+        "political_side": "unified",
+        "ortsteil": "Charlottenburg",
+        "bezirk": "Charlottenburg",
+        "year": 1946,
+        "lat": 52.5078,
+        "lon": 13.2836
+    },
+    {
+        "station_name": "Charlottenburg",
+        "transport_type": "s-bahn",
+        "political_side": "unified",
+        "ortsteil": "Charlottenburg",
+        "bezirk": "Charlottenburg",
+        "year": 1946,
+        "lat": 52.50472222,
+        "lon": 13.30333333
+    },
+    {
+        "station_name": "Westkreuz",
+        "transport_type": "s-bahn",
+        "political_side": "unified",
+        "ortsteil": "Charlottenburg",
+        "bezirk": "Charlottenburg",
+        "year": 1946,
+        "lat": 52.5011,
+        "lon": 13.2839
+    },
+    {
+        "station_name": "Charlottenburg",
+        "transport_type": "s-bahn",
+        "political_side": "unified",
+        "ortsteil": "Charlottenburg",
+        "bezirk": "Charlottenburg",
+        "year": 1946,
+        "lat": 52.50472222,
+        "lon": 13.30333333
+    },
+    {
+        "station_name": "Kaiserin-Augusta-Allee Ecke Tauroggenerstr.",
+        "transport_type": "tram",
+        "political_side": "unified",
+        "ortsteil": "Charlottenburg",
+        "bezirk": "Charlottenburg",
+        "year": 1946,
+        "lat": 52.52584247,
+        "lon": 13.30196664
+    },
+    {
+        "station_name": "Berlinerstr. Ecke Wilmersdorferstr.",
+        "transport_type": "tram",
+        "political_side": "unified",
+        "ortsteil": "Charlottenburg",
+        "bezirk": "Charlottenburg",
+        "year": 1946,
+        "lat": 52.5181127,
+        "lon": 13.30446494
+    },
+    {
+        "station_name": "Wilmersdorferstr. Ecke Kantstr.",
+        "transport_type": "tram",
+        "political_side": "unified",
+        "ortsteil": "Charlottenburg",
+        "bezirk": "Charlottenburg",
+        "year": 1946,
+        "lat": 52.50669333,
+        "lon": 13.30667347
+    },
+    {
+        "station_name": "Wilmersdorferstr. Ecke Kurf\u00fcrstendamm",
+        "transport_type": "tram",
+        "political_side": "unified",
+        "ortsteil": "Charlottenburg",
+        "bezirk": "Charlottenburg",
+        "year": 1946,
+        "lat": 52.50003268,
+        "lon": 13.30722146
+    },
+    {
+        "station_name": "Charlottenburg, Knie",
+        "transport_type": "omnibus",
+        "political_side": "unified",
+        "ortsteil": "Charlottenburg",
+        "bezirk": "Charlottenburg",
+        "year": 1946,
+        "lat": 52.51253515,
+        "lon": 13.32179649
+    },
+    {
+        "station_name": "Westkreuz",
+        "transport_type": "s-bahn",
+        "political_side": "unified",
+        "ortsteil": "Charlottenburg",
+        "bezirk": "Charlottenburg",
+        "year": 1946,
+        "lat": 52.5011,
+        "lon": 13.2839
+    },
+    {
+        "station_name": "Westend",
+        "transport_type": "s-bahn",
+        "political_side": "unified",
+        "ortsteil": "Charlottenburg",
+        "bezirk": "Charlottenburg",
+        "year": 1946,
+        "lat": 52.5181,
+        "lon": 13.2844
+    },
+    {
+        "station_name": "Westkreuz",
+        "transport_type": "s-bahn",
+        "political_side": "unified",
+        "ortsteil": "Charlottenburg",
+        "bezirk": "Charlottenburg",
+        "year": 1946,
+        "lat": 52.5011,
+        "lon": 13.2839
+    },
+    {
+        "station_name": "Zoologischer Garten",
+        "transport_type": "s-bahn",
+        "political_side": "unified",
+        "ortsteil": "Charlottenburg",
+        "bezirk": "Charlottenburg",
+        "year": 1946,
+        "lat": 52.50722222,
+        "lon": 13.3325
+    },
+    {
+        "station_name": "Richard-Wagner-Platz",
+        "transport_type": "tram",
+        "political_side": "unified",
+        "ortsteil": "Charlottenburg",
+        "bezirk": "Charlottenburg",
+        "year": 1946,
+        "lat": 52.51757062,
+        "lon": 13.30624812
+    }
+]

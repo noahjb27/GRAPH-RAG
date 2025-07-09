@@ -1,0 +1,5 @@
+{
+  "question": "What train lines exist in Berlin?",
+  "pipeline": "no_rag",
+  "llm_provider": "openai"
+} 

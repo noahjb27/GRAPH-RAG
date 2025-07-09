@@ -47,7 +47,7 @@ class MetricsCalculator:
         return total_tokens / total_cost
     
     @staticmethod
-    def compare_pipelines(results: List[EvaluationResult]) -> Dict[str, Dict[str, Any]]:
+    def compare_pipelines(results: List[EvaluationResult]) -> List[Dict[str, Any]]:
         """Compare performance across pipelines"""
         
         pipeline_results = {}
@@ -58,20 +58,21 @@ class MetricsCalculator:
                 pipeline_results[pipeline] = []
             pipeline_results[pipeline].append(result)
         
-        comparison = {}
+        comparison = []
         
         for pipeline, pipeline_results_list in pipeline_results.items():
-            comparison[pipeline] = {
+            comparison.append({
+                "pipeline_name": pipeline,
                 "success_rate": MetricsCalculator.calculate_success_rate(pipeline_results_list),
-                "average_cost": MetricsCalculator.calculate_average_cost(pipeline_results_list),
-                "average_execution_time": MetricsCalculator.calculate_average_execution_time(pipeline_results_list),
+                "avg_cost": MetricsCalculator.calculate_average_cost(pipeline_results_list),
+                "avg_execution_time": MetricsCalculator.calculate_average_execution_time(pipeline_results_list),
                 "total_evaluations": len(pipeline_results_list)
-            }
+            })
         
         return comparison
     
     @staticmethod
-    def compare_llm_providers(results: List[EvaluationResult]) -> Dict[str, Dict[str, Any]]:
+    def compare_llm_providers(results: List[EvaluationResult]) -> List[Dict[str, Any]]:
         """Compare performance across LLM providers"""
         
         provider_results = {}
@@ -82,15 +83,21 @@ class MetricsCalculator:
                 provider_results[provider] = []
             provider_results[provider].append(result)
         
-        comparison = {}
+        comparison = []
         
         for provider, provider_results_list in provider_results.items():
-            comparison[provider] = {
+            # Calculate average tokens per second for this provider
+            total_tokens = sum(r.total_tokens for r in provider_results_list if r.execution_time_seconds > 0)
+            total_time = sum(r.execution_time_seconds for r in provider_results_list if r.execution_time_seconds > 0)
+            avg_tokens_per_second = total_tokens / total_time if total_time > 0 else 0.0
+            
+            comparison.append({
+                "llm_provider": provider,
                 "success_rate": MetricsCalculator.calculate_success_rate(provider_results_list),
-                "average_cost": MetricsCalculator.calculate_average_cost(provider_results_list),
-                "average_execution_time": MetricsCalculator.calculate_average_execution_time(provider_results_list),
-                "tokens_per_dollar": MetricsCalculator.calculate_tokens_per_dollar(provider_results_list),
+                "avg_cost": MetricsCalculator.calculate_average_cost(provider_results_list),
+                "avg_execution_time": MetricsCalculator.calculate_average_execution_time(provider_results_list),
+                "avg_tokens_per_second": avg_tokens_per_second,
                 "total_evaluations": len(provider_results_list)
-            }
+            })
         
         return comparison 

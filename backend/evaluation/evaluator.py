@@ -316,14 +316,22 @@ class Evaluator:
             stats["success_rate"] = stats["successful"] / stats["total"] if stats["total"] > 0 else 0.0
             stats["avg_time"] = stats["time"] / stats["total"] if stats["total"] > 0 else 0.0
         
+        # Calculate average tokens per second
+        total_tokens_with_time = sum(r.total_tokens for r in results if r.execution_time_seconds > 0)
+        total_time_with_tokens = sum(r.execution_time_seconds for r in results if r.execution_time_seconds > 0)
+        avg_tokens_per_second = total_tokens_with_time / total_time_with_tokens if total_time_with_tokens > 0 else 0.0
+        
+        failed_evaluations = total_evaluations - successful_evaluations
+        
         return {
             "total_evaluations": total_evaluations,
             "successful_evaluations": successful_evaluations,
-            "overall_success_rate": successful_evaluations / total_evaluations,
-            "total_cost_usd": total_cost,
+            "failed_evaluations": failed_evaluations,
+            "success_rate": successful_evaluations / total_evaluations,
+            "avg_execution_time": total_execution_time / total_evaluations,
+            "total_cost": total_cost,
             "total_tokens": total_tokens,
-            "total_execution_time_seconds": total_execution_time,
-            "average_execution_time": total_execution_time / total_evaluations,
+            "avg_tokens_per_second": avg_tokens_per_second,
             "by_pipeline": by_pipeline,
             "by_llm_provider": by_llm_provider
         } 

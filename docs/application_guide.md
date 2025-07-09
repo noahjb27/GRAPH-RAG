@@ -304,7 +304,7 @@ MISTRAL_BASE_URL=https://llm1-compute.cms.hu-berlin.de/v1/
 # Server Configuration
 DEBUG=true
 HOST=0.0.0.0
-PORT=8000
+PORT=3000
 ```
 
 ### Installation Steps

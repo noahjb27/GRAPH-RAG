@@ -5,6 +5,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { apiClient, handleAPIResponse } from '@/lib/api-client';
+import { useAPIData } from '@/lib/api-context';
 import { QuestionsResponse, Question, QuestionFilters } from '@/types/api';
 import { 
   Search, 
@@ -16,6 +17,7 @@ import {
 import { getDifficultyColor, getDifficultyLabel, formatNumber, debounce } from '@/lib/utils';
 
 export default function QuestionsPage() {
+  const { data: cachedData } = useAPIData();
   const [questions, setQuestions] = useState<Question[]>([]);
   const [totalQuestions, setTotalQuestions] = useState(0);
   const [categories, setCategories] = useState<Record<string, number>>({});
@@ -81,10 +83,13 @@ export default function QuestionsPage() {
     question.sub_category.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
+  // Use system status total questions as the authoritative count, fall back to API response
+  const displayTotalQuestions = cachedData.systemStatus?.total_questions ?? totalQuestions;
+
   if (loading && questions.length === 0) {
     return (
       <div className="flex items-center justify-center h-64">
-        <div className="flex items-center space-x-2 text-gray-600">
+        <div className="flex items-center space-x-2 text-gray-800">
           <RefreshCw className="h-5 w-5 animate-spin" />
           <span>Loading questions...</span>
         </div>
@@ -112,8 +117,8 @@ export default function QuestionsPage() {
       <div className="flex items-center justify-between">
         <div>
           <h1 className="text-3xl font-bold text-gray-900">Questions</h1>
-          <p className="text-gray-600 mt-1">
-            Browse and explore evaluation questions ({formatNumber(totalQuestions)} total)
+          <p className="text-gray-800 mt-1">
+            Browse and explore evaluation questions ({formatNumber(displayTotalQuestions)} total)
           </p>
         </div>
         <Button onClick={() => fetchQuestions()} variant="outline" loading={loading}>
@@ -134,7 +139,7 @@ export default function QuestionsPage() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
             {/* Search */}
             <div className="relative">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-4 w-4" />
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-600 h-4 w-4" />
               <input
                 type="text"
                 placeholder="Search questions..."
@@ -191,7 +196,7 @@ export default function QuestionsPage() {
                     <CardTitle className="text-lg mb-2">
                       {question.question_text}
                     </CardTitle>
-                    <div className="flex items-center space-x-4 text-sm text-gray-600">
+                    <div className="flex items-center space-x-4 text-sm text-gray-800">
                       <span>ID: {question.question_id}</span>
                       <span>•</span>
                       <span>{question.category}</span>
@@ -217,14 +222,14 @@ export default function QuestionsPage() {
                 <CardContent>
                   {question.historical_context && (
                     <div className="mb-3">
-                      <h4 className="text-sm font-medium text-gray-700 mb-1">Historical Context</h4>
-                      <p className="text-sm text-gray-600">{question.historical_context}</p>
+                                      <h4 className="text-sm font-medium text-gray-800 mb-1">Historical Context</h4>
+                <p className="text-sm text-gray-800">{question.historical_context}</p>
                     </div>
                   )}
                   
                   {question.required_capabilities.length > 0 && (
                     <div>
-                      <h4 className="text-sm font-medium text-gray-700 mb-2">Required Capabilities</h4>
+                      <h4 className="text-sm font-medium text-gray-800 mb-2">Required Capabilities</h4>
                       <div className="flex flex-wrap gap-1">
                         {question.required_capabilities.map((capability) => (
                           <Badge key={capability} variant="outline" className="text-xs">
@@ -241,9 +246,9 @@ export default function QuestionsPage() {
         ) : (
           <Card>
             <CardContent className="text-center py-12">
-              <MessageSquare className="h-12 w-12 text-gray-400 mx-auto mb-4" />
+              <MessageSquare className="h-12 w-12 text-gray-600 mx-auto mb-4" />
               <h3 className="text-lg font-medium text-gray-900 mb-2">No Questions Found</h3>
-              <p className="text-gray-600">
+              <p className="text-gray-800">
                 {searchQuery || selectedCategory || selectedDifficulty
                   ? 'Try adjusting your filters to see more questions.'
                   : 'No questions are available in the system.'}

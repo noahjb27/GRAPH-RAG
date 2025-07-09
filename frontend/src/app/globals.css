@@ -3,11 +3,21 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --muted: #6b7280;
+  --muted-foreground: #374151;
+  --card: #ffffff;
+  --card-foreground: #171717;
+  --border: #e5e7eb;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-border: var(--border);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
@@ -16,6 +26,11 @@
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+    --muted: #9ca3af;
+    --muted-foreground: #d1d5db;
+    --card: #1f2937;
+    --card-foreground: #ededed;
+    --border: #374151;
   }
 }
 
@@ -24,3 +39,143 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Ensure all text elements have good contrast by default, but exclude navigation and dark backgrounds */
+:not(.bg-gray-900):not(nav) span:not([class*="text-"]):not([class*="text-red"]):not([class*="text-green"]):not([class*="text-blue"]):not([class*="text-yellow"]):not([class*="text-purple"]) {
+  color: #1f2937 !important; /* Ensure spans without explicit colors are dark */
+}
+
+:not(.bg-gray-900):not(nav) div:not([class*="text-"]):not([class*="text-red"]):not([class*="text-green"]):not([class*="text-blue"]):not([class*="text-yellow"]):not([class*="text-purple"]) {
+  color: #1f2937 !important; /* Ensure divs without explicit colors are dark */
+}
+
+/* Specifically target common utility classes that don't have text colors, but exclude dark backgrounds */
+:not(.bg-gray-900):not(nav) .font-medium:not([class*="text-"]),
+:not(.bg-gray-900):not(nav) .font-semibold:not([class*="text-"]),
+:not(.bg-gray-900):not(nav) .font-bold:not([class*="text-"]) {
+  color: #111827 !important; /* Dark color for font weight utilities without text colors */
+}
+
+/* Ensure default text is dark enough, but exclude dark backgrounds */
+:not(.bg-gray-900):not(nav) p:not([class*="text-"]),
+:not(.bg-gray-900):not(nav) h1:not([class*="text-"]),
+:not(.bg-gray-900):not(nav) h2:not([class*="text-"]),
+:not(.bg-gray-900):not(nav) h3:not([class*="text-"]),
+:not(.bg-gray-900):not(nav) h4:not([class*="text-"]),
+:not(.bg-gray-900):not(nav) h5:not([class*="text-"]),
+:not(.bg-gray-900):not(nav) h6:not([class*="text-"]) {
+  color: #111827 !important; /* Ensure headings and paragraphs without explicit colors are dark */
+}
+
+/* Ensure navigation text colors work properly on dark backgrounds */
+.bg-gray-900 .text-gray-100 {
+  color: #f3f4f6 !important;
+}
+
+.bg-gray-900 .text-gray-300 {
+  color: #d1d5db !important;
+}
+
+.bg-gray-900 .text-white {
+  color: #ffffff !important;
+}
+
+/* Force navigation text to be light - very specific selectors */
+nav.bg-gray-900 h1,
+nav.bg-gray-900 p,
+nav.bg-gray-900 div,
+nav.bg-gray-900 span {
+  color: inherit !important;
+}
+
+nav.bg-gray-900 h1.text-lg {
+  color: #ffffff !important;
+}
+
+nav.bg-gray-900 p.text-xs {
+  color: #d1d5db !important;
+}
+
+nav.bg-gray-900 .text-gray-100 {
+  color: #f3f4f6 !important;
+}
+
+nav.bg-gray-900 .text-gray-300 {
+  color: #d1d5db !important;
+}
+
+nav.bg-gray-900 .font-medium {
+  color: inherit !important;
+}
+
+/* Navigation links specifically */
+nav.bg-gray-900 a > div > div:first-child {
+  color: inherit !important;
+}
+
+nav.bg-gray-900 a > div > div.text-xs {
+  color: #d1d5db !important;
+}
+
+/* Override all global rules for navigation */
+nav[class*="bg-gray-900"] * {
+  color: inherit;
+}
+
+nav[class*="bg-gray-900"] .text-white {
+  color: #ffffff !important;
+}
+
+nav[class*="bg-gray-900"] .text-gray-300 {
+  color: #d1d5db !important;
+}
+
+nav[class*="bg-gray-900"] .text-gray-100 {
+  color: #f3f4f6 !important;
+}
+
+/* Ultimate navigation override */
+.navigation-dark,
+.navigation-dark *,
+.navigation-dark h1,
+.navigation-dark h2,
+.navigation-dark h3,
+.navigation-dark h4,
+.navigation-dark h5,
+.navigation-dark h6,
+.navigation-dark p,
+.navigation-dark div,
+.navigation-dark span {
+  color: inherit !important;
+}
+
+.navigation-dark .text-white {
+  color: #ffffff !important;
+}
+
+.navigation-dark .text-gray-300 {
+  color: #d1d5db !important;
+}
+
+.navigation-dark .text-gray-100 {
+  color: #f3f4f6 !important;
+}
+
+/* Specifically target navigation link text */
+.navigation-dark a {
+  color: inherit !important;
+}
+
+.navigation-dark a > div > div:first-child {
+  color: inherit !important;
+}
+
+.navigation-dark a.text-gray-100 > div > div:first-child {
+  color: #f3f4f6 !important;
+}
+
+.navigation-dark a.text-white > div > div:first-child {
+  color: #ffffff !important;
+}
+
+

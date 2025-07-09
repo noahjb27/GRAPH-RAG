@@ -17,7 +17,7 @@ class Settings(BaseSettings):
     # FastAPI settings
     app_name: str = "Graph-RAG Research System"
     debug: bool = False
-    port: int = 8000
+    backend_port: int = 8000
     host: str = "0.0.0.0"
     
     # Neo4j Database settings

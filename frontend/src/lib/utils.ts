@@ -6,6 +6,9 @@ export function cn(...inputs: ClassValue[]) {
 
 // Utility functions for formatting
 export function formatDuration(seconds: number): string {
+  if (seconds == null || isNaN(seconds)) {
+    return 'N/A';
+  }
   if (seconds < 1) {
     return `${Math.round(seconds * 1000)}ms`;
   }
@@ -18,6 +21,9 @@ export function formatDuration(seconds: number): string {
 }
 
 export function formatCurrency(amount: number): string {
+  if (amount == null || isNaN(amount)) {
+    return 'N/A';
+  }
   return new Intl.NumberFormat('en-US', {
     style: 'currency',
     currency: 'USD',
@@ -26,6 +32,9 @@ export function formatCurrency(amount: number): string {
 }
 
 export function formatNumber(num: number, decimals = 0): string {
+  if (num == null || isNaN(num)) {
+    return 'N/A';
+  }
   return new Intl.NumberFormat('en-US', {
     minimumFractionDigits: decimals,
     maximumFractionDigits: decimals,
@@ -33,10 +42,16 @@ export function formatNumber(num: number, decimals = 0): string {
 }
 
 export function formatPercentage(value: number): string {
+  if (value == null || isNaN(value)) {
+    return 'N/A';
+  }
   return `${(value * 100).toFixed(1)}%`;
 }
 
 export function formatTokensPerSecond(tps: number): string {
+  if (tps == null || isNaN(tps)) {
+    return 'N/A';
+  }
   if (tps < 1) {
     return `${tps.toFixed(2)} t/s`;
   }

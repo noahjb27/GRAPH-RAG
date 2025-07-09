@@ -26,7 +26,7 @@ GEMINI_API_KEY=your-gemini-api-key
 # FastAPI Configuration
 DEBUG=false
 HOST=0.0.0.0
-PORT=8000
+PORT=3000
 
 # Optional: Advanced Configuration
 CYPHER_GENERATION_TEMPERATURE=0.1

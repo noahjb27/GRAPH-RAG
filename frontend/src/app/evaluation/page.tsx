@@ -5,6 +5,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { apiClient, handleAPIResponse } from '@/lib/api-client';
+import { useAPIData } from '@/lib/api-context';
 import { 
   SystemStatus, 
   LLMProvidersResponse, 
@@ -44,6 +45,9 @@ interface EvaluationState {
 }
 
 export default function EvaluationPage() {
+  // API context
+  const { updateEvaluationResults } = useAPIData();
+  
   // System data
   const [llmProviders, setLLMProviders] = useState<LLMProvidersResponse | null>(null);
   const [pipelines, setPipelines] = useState<PipelinesResponse | null>(null);
@@ -139,6 +143,9 @@ export default function EvaluationPage() {
         results,
         error: null,
       });
+
+      // Update the global context with the results
+      updateEvaluationResults(results);
     } catch (err) {
       setEvaluation({
         isRunning: false,
@@ -180,6 +187,9 @@ export default function EvaluationPage() {
         results,
         error: null,
       });
+
+      // Update the global context with the results
+      updateEvaluationResults(results);
     } catch (err) {
       setEvaluation({
         isRunning: false,
@@ -233,7 +243,7 @@ export default function EvaluationPage() {
       <div className="flex items-center justify-between">
         <div>
           <h1 className="text-3xl font-bold text-gray-900">Evaluation</h1>
-          <p className="text-gray-600 mt-1">
+          <p className="text-gray-800 mt-1">
             Run Graph-RAG evaluations with different pipelines and LLM providers
           </p>
         </div>
@@ -280,7 +290,7 @@ export default function EvaluationPage() {
                     />
                     <div className="flex-1">
                       <div className="font-medium">{pipeline.display_name}</div>
-                      <div className="text-xs text-gray-600">{pipeline.description}</div>
+                      <div className="text-xs text-gray-800">{pipeline.description}</div>
                     </div>
                   </label>
                 ))}
@@ -317,7 +327,7 @@ export default function EvaluationPage() {
                     <div className="flex-1 flex items-center justify-between">
                       <div>
                         <div className="font-medium capitalize">{provider.name}</div>
-                        <div className="text-xs text-gray-600">
+                        <div className="text-xs text-gray-800">
                           {provider.connected ? 'Connected' : 'Disconnected'}
                         </div>
                       </div>
@@ -347,7 +357,7 @@ export default function EvaluationPage() {
             </CardHeader>
             <CardContent className="space-y-4">
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
+                <label className="block text-sm font-medium text-gray-800 mb-2">
                   Select Question
                 </label>
                 <select
@@ -374,8 +384,8 @@ export default function EvaluationPage() {
                       {getDifficultyLabel(selectedQuestionObj.difficulty)}
                     </Badge>
                   </div>
-                  <p className="text-sm text-gray-700">{selectedQuestionObj.question_text}</p>
-                  <div className="mt-2 text-xs text-gray-600">
+                  <p className="text-sm text-gray-800">{selectedQuestionObj.question_text}</p>
+                  <div className="mt-2 text-xs text-gray-700">
                     {selectedQuestionObj.category} • {selectedQuestionObj.sub_category}
                   </div>
                 </div>
@@ -407,7 +417,7 @@ export default function EvaluationPage() {
             <CardContent className="space-y-4">
               <div className="grid grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                  <label className="block text-sm font-medium text-gray-800 mb-2">
                     Number of Questions
                   </label>
                   <input
@@ -421,7 +431,7 @@ export default function EvaluationPage() {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                  <label className="block text-sm font-medium text-gray-800 mb-2">
                     Max Difficulty
                   </label>
                   <select
@@ -550,9 +560,16 @@ export default function EvaluationPage() {
                         </div>
                       </div>
                       
+                      {result.generated_cypher && (
+                        <div className="mt-3 p-3 bg-blue-50 rounded">
+                          <div className="text-sm font-medium text-blue-800 mb-1">Generated Cypher Query:</div>
+                          <div className="text-sm font-mono text-blue-700 bg-blue-100 p-2 rounded border">{result.generated_cypher}</div>
+                        </div>
+                      )}
+
                       {result.answer && (
                         <div className="mt-3 p-3 bg-gray-50 rounded">
-                          <div className="text-sm font-medium text-gray-700 mb-1">Answer:</div>
+                          <div className="text-sm font-medium text-gray-800 mb-1">Answer:</div>
                           <div className="text-sm">{result.answer}</div>
                         </div>
                       )}

@@ -81,7 +81,7 @@ export default function DatabasePage() {
       <div className="flex items-center justify-between">
         <div>
           <h1 className="text-3xl font-bold text-gray-900">Database</h1>
-          <p className="text-gray-600 mt-1">
+          <p className="text-gray-800 mt-1">
             Neo4j database connection and statistics
           </p>
         </div>
@@ -111,7 +111,7 @@ export default function DatabasePage() {
               <Database className={`h-6 w-6 ${getStatusColor(isConnected)}`} />
               <div>
                 <div className="font-medium">Database Status</div>
-                <div className="text-sm text-gray-600 flex items-center space-x-1">
+                <div className="text-sm text-gray-800 flex items-center space-x-1">
                   {isConnected ? (
                     <CheckCircle className="h-4 w-4 text-green-600" />
                   ) : (
@@ -126,7 +126,7 @@ export default function DatabasePage() {
               <Network className={`h-6 w-6 ${getStatusColor(neo4jStatus === 'healthy')}`} />
               <div>
                 <div className="font-medium">Health Check</div>
-                <div className="text-sm text-gray-600">
+                <div className="text-sm text-gray-800">
                   {typeof neo4jStatus === 'string' ? neo4jStatus : 'Checking...'}
                 </div>
               </div>
@@ -136,7 +136,7 @@ export default function DatabasePage() {
               <Activity className="h-6 w-6 text-blue-600" />
               <div>
                 <div className="font-medium">Response Time</div>
-                <div className="text-sm text-gray-600">
+                <div className="text-sm text-gray-800">
                   {isConnected ? '< 100ms' : 'N/A'}
                 </div>
               </div>
@@ -172,7 +172,7 @@ export default function DatabasePage() {
               <div className="space-y-4">
                 {Object.entries(databaseInfo.database_info).map(([key, value]) => (
                   <div key={key} className="flex items-center justify-between py-2 border-b border-gray-100 last:border-b-0">
-                    <span className="text-sm font-medium text-gray-700 capitalize">
+                    <span className="text-sm font-medium text-gray-800 capitalize">
                       {key.replace(/_/g, ' ')}
                     </span>
                     <span className="text-sm text-gray-900">
@@ -197,19 +197,19 @@ export default function DatabasePage() {
             <CardContent>
               <div className="space-y-4">
                 <div className="flex items-center justify-between py-2 border-b border-gray-100">
-                  <span className="text-sm font-medium text-gray-700">Database Type</span>
-                  <span className="text-sm text-gray-900">Neo4j</span>
-                </div>
-                <div className="flex items-center justify-between py-2 border-b border-gray-100">
-                  <span className="text-sm font-medium text-gray-700">Connection Protocol</span>
-                  <span className="text-sm text-gray-900">Bolt</span>
-                </div>
-                <div className="flex items-center justify-between py-2 border-b border-gray-100">
-                  <span className="text-sm font-medium text-gray-700">Query Language</span>
-                  <span className="text-sm text-gray-900">Cypher</span>
-                </div>
-                <div className="flex items-center justify-between py-2">
-                  <span className="text-sm font-medium text-gray-700">Graph Database</span>
+                                  <span className="text-sm font-medium text-gray-800">Database Type</span>
+                <span className="text-sm text-gray-900">Neo4j</span>
+              </div>
+              <div className="flex items-center justify-between py-2 border-b border-gray-100">
+                <span className="text-sm font-medium text-gray-800">Connection Protocol</span>
+                <span className="text-sm text-gray-900">Bolt</span>
+              </div>
+              <div className="flex items-center justify-between py-2 border-b border-gray-100">
+                <span className="text-sm font-medium text-gray-800">Query Language</span>
+                <span className="text-sm text-gray-900">Cypher</span>
+              </div>
+              <div className="flex items-center justify-between py-2">
+                <span className="text-sm font-medium text-gray-800">Graph Database</span>
                   <Badge variant="info">Berlin Transport Network</Badge>
                 </div>
               </div>
@@ -231,19 +231,19 @@ export default function DatabasePage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
               <div className="text-center p-4 bg-blue-50 rounded-lg">
                 <div className="text-2xl font-bold text-blue-600">Stations</div>
-                <div className="text-sm text-gray-600">Transport stops and hubs</div>
+                <div className="text-sm text-gray-800">Transport stops and hubs</div>
               </div>
               <div className="text-center p-4 bg-green-50 rounded-lg">
                 <div className="text-2xl font-bold text-green-600">Lines</div>
-                <div className="text-sm text-gray-600">Transit routes</div>
+                <div className="text-sm text-gray-800">Transit routes</div>
               </div>
               <div className="text-center p-4 bg-yellow-50 rounded-lg">
                 <div className="text-2xl font-bold text-yellow-600">Districts</div>
-                <div className="text-sm text-gray-600">Administrative areas</div>
+                <div className="text-sm text-gray-800">Administrative areas</div>
               </div>
               <div className="text-center p-4 bg-purple-50 rounded-lg">
                 <div className="text-2xl font-bold text-purple-600">Years</div>
-                <div className="text-sm text-gray-600">Temporal data points</div>
+                <div className="text-sm text-gray-800">Temporal data points</div>
               </div>
             </div>
 

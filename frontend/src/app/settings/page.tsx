@@ -46,7 +46,7 @@ export default function SettingsPage() {
       {/* Header */}
       <div>
         <h1 className="text-3xl font-bold text-gray-900">Settings</h1>
-        <p className="text-gray-600 mt-1">
+        <p className="text-gray-800 mt-1">
           Configure your Graph-RAG Research System preferences
         </p>
       </div>
@@ -65,7 +65,7 @@ export default function SettingsPage() {
           </CardHeader>
           <CardContent className="space-y-4">
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
+              <label className="block text-sm font-medium text-gray-800 mb-2">
                 Backend API URL
               </label>
               <input
@@ -75,7 +75,7 @@ export default function SettingsPage() {
                 placeholder="http://localhost:8000"
                 className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               />
-              <p className="text-xs text-gray-500 mt-1">
+              <p className="text-xs text-gray-700 mt-1">
                 The URL where your FastAPI backend is running
               </p>
             </div>
@@ -107,10 +107,10 @@ export default function SettingsPage() {
           <CardContent className="space-y-4">
             <div className="flex items-center justify-between">
               <div>
-                <label className="text-sm font-medium text-gray-700">
+                <label className="text-sm font-medium text-gray-800">
                   Auto-refresh Data
                 </label>
-                <p className="text-xs text-gray-500">
+                <p className="text-xs text-gray-700">
                   Automatically refresh dashboard and status information
                 </p>
               </div>
@@ -124,7 +124,7 @@ export default function SettingsPage() {
 
             {autoRefresh && (
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
+                <label className="block text-sm font-medium text-gray-800 mb-2">
                   Refresh Interval (seconds)
                 </label>
                 <input
@@ -140,10 +140,10 @@ export default function SettingsPage() {
 
             <div className="flex items-center justify-between">
               <div>
-                <label className="text-sm font-medium text-gray-700">
+                <label className="text-sm font-medium text-gray-800">
                   Enable Notifications
                 </label>
-                <p className="text-xs text-gray-500">
+                <p className="text-xs text-gray-700">
                   Show notifications for evaluation completion and errors
                 </p>
               </div>
@@ -171,23 +171,23 @@ export default function SettingsPage() {
           <CardContent>
             <div className="space-y-3">
               <div className="flex items-center justify-between py-2 border-b border-gray-100">
-                <span className="text-sm font-medium text-gray-700">Application</span>
+                <span className="text-sm font-medium text-gray-800">Application</span>
                 <span className="text-sm text-gray-900">Graph-RAG Frontend</span>
               </div>
               <div className="flex items-center justify-between py-2 border-b border-gray-100">
-                <span className="text-sm font-medium text-gray-700">Version</span>
+                <span className="text-sm font-medium text-gray-800">Version</span>
                 <Badge variant="outline">1.0.0</Badge>
               </div>
               <div className="flex items-center justify-between py-2 border-b border-gray-100">
-                <span className="text-sm font-medium text-gray-700">Framework</span>
+                <span className="text-sm font-medium text-gray-800">Framework</span>
                 <span className="text-sm text-gray-900">Next.js 15.3.5</span>
               </div>
               <div className="flex items-center justify-between py-2 border-b border-gray-100">
-                <span className="text-sm font-medium text-gray-700">UI Library</span>
+                <span className="text-sm font-medium text-gray-800">UI Library</span>
                 <span className="text-sm text-gray-900">Tailwind CSS</span>
               </div>
               <div className="flex items-center justify-between py-2">
-                <span className="text-sm font-medium text-gray-700">Build</span>
+                <span className="text-sm font-medium text-gray-800">Build</span>
                 <span className="text-sm text-gray-900">Development</span>
               </div>
             </div>

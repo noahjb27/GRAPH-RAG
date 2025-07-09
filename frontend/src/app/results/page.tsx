@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
+import { useAPIData } from '@/lib/api-context';
 import { 
   BarChart3, 
   TrendingUp, 
@@ -13,7 +14,8 @@ import {
   Target,
   RefreshCw,
   Download,
-  Filter
+  Filter,
+  AlertCircle
 } from 'lucide-react';
 import { 
   formatDuration, 
@@ -123,9 +125,36 @@ const mockAnalytics = {
 };
 
 export default function ResultsPage() {
-  const [analytics] = useState(mockAnalytics);
+  const { data } = useAPIData();
   const [timeRange, setTimeRange] = useState('7d');
   const [selectedMetric, setSelectedMetric] = useState('success_rate');
+
+  // Derive analytics from actual evaluation results
+  const analytics = data.latestEvaluationResults ? {
+    overview: {
+      totalEvaluations: data.latestEvaluationResults.summary.total_evaluations,
+      avgSuccessRate: data.latestEvaluationResults.summary.success_rate,
+      avgExecutionTime: data.latestEvaluationResults.summary.avg_execution_time,
+      totalCost: data.latestEvaluationResults.summary.total_cost,
+      lastUpdated: new Date().toISOString(),
+    },
+    pipelineComparison: 'pipeline_comparison' in data.latestEvaluationResults 
+      ? data.latestEvaluationResults.pipeline_comparison 
+      : [],
+    llmComparison: 'llm_comparison' in data.latestEvaluationResults 
+      ? data.latestEvaluationResults.llm_comparison 
+      : [],
+    recentEvaluations: data.latestEvaluationResults.results.slice(0, 5).map((result, index) => ({
+      id: `${index}`,
+      timestamp: result.timestamp || new Date().toISOString(),
+      type: data.latestEvaluationResults!.results.length === 1 ? 'single' as const : 'batch' as const,
+      pipeline: result.pipeline_name,
+      provider: result.llm_provider,
+      success: result.success,
+      duration: result.execution_time_seconds,
+      cost: result.cost_usd,
+    })),
+  } : mockAnalytics;
 
   const MetricCard = ({ 
     title, 
@@ -144,9 +173,9 @@ export default function ResultsPage() {
       <CardContent className="p-6">
         <div className="flex items-center justify-between">
           <div>
-            <p className="text-sm font-medium text-gray-600">{title}</p>
+            <p className="text-sm font-medium text-gray-800">{title}</p>
             <p className="text-2xl font-bold">{value}</p>
-            {subtitle && <p className="text-xs text-gray-500 mt-1">{subtitle}</p>}
+            {subtitle && <p className="text-xs text-gray-700 mt-1">{subtitle}</p>}
           </div>
           <div className={`p-3 rounded-full bg-${color}-100`}>
             <Icon className={`h-6 w-6 text-${color}-600`} />
@@ -158,12 +187,31 @@ export default function ResultsPage() {
 
   return (
     <div className="space-y-6">
+      {/* Data Status Banner */}
+      {!data.latestEvaluationResults && (
+        <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
+          <div className="flex items-center space-x-2">
+            <AlertCircle className="h-5 w-5 text-blue-600" />
+            <div>
+              <h3 className="text-sm font-medium text-blue-800">Sample Data Display</h3>
+              <p className="text-sm text-blue-700">
+                No recent evaluation results available. The data shown below is for demonstration purposes. 
+                Visit the <a href="/evaluation" className="underline font-medium">Evaluation page</a> to run tests and see real results here.
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
+
       {/* Header */}
       <div className="flex items-center justify-between">
         <div>
           <h1 className="text-3xl font-bold text-gray-900">Results & Analytics</h1>
           <p className="text-gray-600 mt-1">
-            Performance metrics and evaluation insights
+            {data.latestEvaluationResults 
+              ? 'Performance metrics from latest evaluation run'
+              : 'Performance metrics and evaluation insights (showing sample data - run an evaluation to see real results)'
+            }
           </p>
         </div>
         <div className="flex items-center space-x-2">
@@ -234,7 +282,7 @@ export default function ResultsPage() {
         <CardContent>
           <div className="space-y-4">
             <div className="flex items-center space-x-4 mb-4">
-              <span className="text-sm font-medium text-gray-700">Metric:</span>
+                              <span className="text-sm font-medium text-gray-800">Metric:</span>
               <select
                 value={selectedMetric}
                 onChange={(e) => setSelectedMetric(e.target.value)}
@@ -274,7 +322,7 @@ export default function ResultsPage() {
                       <span className="font-medium capitalize">
                         {pipeline.pipeline_name.replace('_', ' ')}
                       </span>
-                      <span className="text-gray-600">{formattedValue}</span>
+                      <span className="text-gray-800">{formattedValue}</span>
                     </div>
                     <div className="w-full bg-gray-200 rounded-full h-2">
                       <div
@@ -317,25 +365,25 @@ export default function ResultsPage() {
                   </div>
                   <div className="grid grid-cols-2 gap-4 text-sm">
                     <div>
-                      <span className="text-gray-600">Success Rate:</span>
+                      <span className="text-gray-800">Success Rate:</span>
                       <span className="ml-2 font-medium">
                         {formatPercentage(provider.success_rate)}
                       </span>
                     </div>
                     <div>
-                      <span className="text-gray-600">Avg Time:</span>
+                      <span className="text-gray-800">Avg Time:</span>
                       <span className="ml-2 font-medium">
                         {formatDuration(provider.avg_execution_time)}
                       </span>
                     </div>
                     <div>
-                      <span className="text-gray-600">Avg Cost:</span>
+                      <span className="text-gray-800">Avg Cost:</span>
                       <span className="ml-2 font-medium">
                         {formatCurrency(provider.avg_cost)}
                       </span>
                     </div>
                     <div>
-                      <span className="text-gray-600">Speed:</span>
+                      <span className="text-gray-800">Speed:</span>
                       <span className="ml-2 font-medium">
                         {formatNumber(provider.avg_tokens_per_second, 1)} t/s
                       </span>
@@ -370,14 +418,14 @@ export default function ResultsPage() {
                       <div className="text-sm font-medium">
                         {evaluation.type === 'single' ? 'Single Question' : 'Batch Evaluation'}
                       </div>
-                      <div className="text-xs text-gray-600">
+                      <div className="text-xs text-gray-800">
                         {evaluation.pipeline} • {evaluation.provider}
                       </div>
                     </div>
                   </div>
                   <div className="text-right text-sm">
                     <div className="font-medium">{formatDuration(evaluation.duration)}</div>
-                    <div className="text-gray-600">{formatCurrency(evaluation.cost)}</div>
+                    <div className="text-gray-800">{formatCurrency(evaluation.cost)}</div>
                   </div>
                 </div>
               ))}

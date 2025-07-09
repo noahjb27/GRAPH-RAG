@@ -353,7 +353,7 @@ async def startup_event():
     except Exception as e:
         print(f"✗ LLM provider test failed: {e}")
     
-    print(f"✓ Server ready on {settings.host}:{settings.port}")
+    print(f"✓ Server ready on {settings.host}:{settings.backend_port}")
 
 # Shutdown event
 @app.on_event("shutdown")
@@ -371,7 +371,7 @@ if __name__ == "__main__":
     uvicorn.run(
         "backend.main:app",
         host=settings.host,
-        port=settings.port,
+        port=settings.backend_port,
         reload=settings.debug,
         log_level="info"
     ) 

@@ -10,6 +10,7 @@ from datetime import datetime
 
 from ..pipelines.base_pipeline import BasePipeline, PipelineResult
 from ..pipelines.direct_cypher_pipeline import DirectCypherPipeline
+from ..pipelines.multi_query_cypher_pipeline import MultiQueryCypherPipeline
 from ..pipelines.no_rag_pipeline import NoRAGPipeline
 from ..pipelines.vector_pipeline import VectorPipeline
 from ..pipelines.hybrid_pipeline import HybridPipeline
@@ -62,6 +63,7 @@ class Evaluator:
         """Initialize all available pipelines"""
         return {
             "direct_cypher": DirectCypherPipeline(),
+            "multi_query_cypher": MultiQueryCypherPipeline(),
             "no_rag": NoRAGPipeline(),
             "vector": VectorPipeline(),
             "hybrid": HybridPipeline()

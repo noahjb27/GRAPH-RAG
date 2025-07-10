@@ -560,10 +560,99 @@ export default function EvaluationPage() {
                         </div>
                       </div>
                       
+                      {/* Multi-Query Details */}
+                      {result.metadata?.actually_used_multi_query && (
+                        <div className="mt-3 p-3 bg-indigo-50 rounded border border-indigo-200">
+                          <div className="text-sm font-medium text-indigo-800 mb-2">🔄 Multi-Query Pipeline Details</div>
+                          
+                          {/* Query Plan Summary */}
+                          <div className="grid grid-cols-2 md:grid-cols-3 gap-3 mb-3">
+                            <div className="bg-indigo-100 p-2 rounded text-center">
+                              <div className="text-lg font-bold text-indigo-700">
+                                {result.metadata.query_plan?.num_queries || 0}
+                              </div>
+                              <div className="text-xs text-indigo-600">Queries</div>
+                            </div>
+                            <div className="bg-indigo-100 p-2 rounded text-center">
+                              <div className="text-sm font-bold text-indigo-700">
+                                {result.metadata.query_plan?.integration_strategy || 'N/A'}
+                              </div>
+                              <div className="text-xs text-indigo-600">Strategy</div>
+                            </div>
+                            <div className="bg-indigo-100 p-2 rounded text-center">
+                              <div className="text-lg font-bold text-indigo-700">
+                                {result.metadata.total_records || 0}
+                              </div>
+                              <div className="text-xs text-indigo-600">Records</div>
+                            </div>
+                          </div>
+
+                          {/* Query Plan Reasoning */}
+                          {result.metadata.query_plan?.reasoning && (
+                            <div className="mb-3 p-2 bg-indigo-100 rounded">
+                              <div className="text-xs font-medium text-indigo-700 mb-1">Planning Reasoning:</div>
+                              <div className="text-xs text-indigo-600">{result.metadata.query_plan.reasoning}</div>
+                            </div>
+                          )}
+
+                          {/* Individual Query Results */}
+                          {result.metadata.individual_queries && (
+                            <div className="space-y-2">
+                              <div className="text-xs font-medium text-indigo-700">Individual Query Execution:</div>
+                              {result.metadata.individual_queries.map((query: any, idx: number) => (
+                                <div key={idx} className="bg-white border border-indigo-200 rounded p-2">
+                                  <div className="flex items-center justify-between mb-1">
+                                    <span className="text-xs font-medium text-gray-700">Query {idx + 1}</span>
+                                    <div className="flex items-center space-x-2">
+                                      <span className={`text-xs px-2 py-1 rounded ${
+                                        query.success ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'
+                                      }`}>
+                                        {query.success ? '✅' : '❌'} {query.records_count || 0} records
+                                      </span>
+                                      <span className="text-xs text-gray-500">
+                                        {query.execution_time?.toFixed(2) || 0}s
+                                      </span>
+                                    </div>
+                                  </div>
+                                  <div className="text-xs font-mono text-gray-600 bg-gray-50 p-1 rounded border max-h-20 overflow-y-auto">
+                                    {query.query}
+                                  </div>
+                                  {query.error && (
+                                    <div className="text-xs text-red-600 mt-1 bg-red-50 p-1 rounded">
+                                      Error: {query.error}
+                                    </div>
+                                  )}
+                                </div>
+                              ))}
+                            </div>
+                          )}
+                        </div>
+                      )}
+
+                      {/* Fallback Info */}
+                      {result.metadata?.intended_approach === 'multi_query' && !result.metadata?.actually_used_multi_query && (
+                        <div className="mt-3 p-3 bg-yellow-50 rounded border border-yellow-200">
+                          <div className="text-sm font-medium text-yellow-800 mb-1">⚡ Multi-Query Fallback</div>
+                          <div className="text-sm text-yellow-700">
+                            Intended to use multi-query but fell back to Direct Cypher
+                            {result.metadata.fallback_reason && (
+                              <span className="block text-xs mt-1">
+                                Reason: {result.metadata.fallback_reason}
+                              </span>
+                            )}
+                          </div>
+                        </div>
+                      )}
+
+                      {/* Regular Cypher Query (for single-query or fallback) */}
                       {result.generated_cypher && (
                         <div className="mt-3 p-3 bg-blue-50 rounded">
-                          <div className="text-sm font-medium text-blue-800 mb-1">Generated Cypher Query:</div>
-                          <div className="text-sm font-mono text-blue-700 bg-blue-100 p-2 rounded border">{result.generated_cypher}</div>
+                          <div className="text-sm font-medium text-blue-800 mb-1">
+                            {result.metadata?.actually_used_multi_query ? 'All Generated Queries:' : 'Generated Cypher Query:'}
+                          </div>
+                          <div className="text-sm font-mono text-blue-700 bg-blue-100 p-2 rounded border max-h-40 overflow-y-auto">
+                            {result.generated_cypher}
+                          </div>
                         </div>
                       )}
 

@@ -1,0 +1,27 @@
+# CHUNK EXPORT SUMMARY
+Generated: 2025-07-10T17:04:50.782176
+Total chunks: 135063
+
+## Breakdown by Entity Type:
+- administrative_area: 200 chunks
+- line: 750 chunks
+- line_operational_data: 1000 chunks
+- line_property: 6639 chunks
+- political_division_data: 14 chunks
+- relationship: 60110 chunks
+- station: 1500 chunks
+- station_line_relationship: 2000 chunks
+- station_property: 62836 chunks
+- temporal_snapshot: 14 chunks
+
+## Files Created:
+- administrative_area_chunks.txt
+- line_chunks.txt
+- line_operational_data_chunks.txt
+- line_property_chunks.txt
+- political_division_data_chunks.txt
+- relationship_chunks.txt
+- station_chunks.txt
+- station_line_relationship_chunks.txt
+- station_property_chunks.txt
+- temporal_snapshot_chunks.txt

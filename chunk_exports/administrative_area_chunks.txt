@@ -1,0 +1,3803 @@
+# ADMINISTRATIVE_AREA CHUNKS (200 total)
+# Generated: 2025-07-10T17:04:50.740658
+
+## CHUNK 1: area_adlershof_1946_1946_131849
+**Type:** narrative
+**Temporal Context:** Year 1946
+**Spatial Context:** Adlershof
+**Source Entities:** area:adlershof_1946
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "adlershof_1946",
+  "area_name": "Adlershof",
+  "year": 1946,
+  "bezirk_name": "Treptow",
+  "station_count": 2,
+  "population": 20112,
+  "area_km2": 5.28
+}
+**Content:**
+In 1946, Adlershof (part of Treptow district) had a population of 20,112 residents covering an area of 5.28 square kilometers. The area was served by 2 public transport stations.
+--------------------------------------------------------------------------------
+
+## CHUNK 2: area_adlershof_1951_1951_131850
+**Type:** narrative
+**Temporal Context:** Year 1951
+**Spatial Context:** Adlershof
+**Source Entities:** area:adlershof_1951
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "adlershof_1951",
+  "area_name": "Adlershof",
+  "year": 1951,
+  "bezirk_name": "Treptow",
+  "station_count": 4,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1951, Adlershof (part of Treptow district). The area was served by 4 public transport stations.
+--------------------------------------------------------------------------------
+
+## CHUNK 3: area_adlershof_1956_1956_131851
+**Type:** narrative
+**Temporal Context:** Year 1956
+**Spatial Context:** Adlershof
+**Source Entities:** area:adlershof_1956
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "adlershof_1956",
+  "area_name": "Adlershof",
+  "year": 1956,
+  "bezirk_name": "Treptow",
+  "station_count": 5,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1956, Adlershof (part of Treptow district). The area was served by 5 public transport stations.
+--------------------------------------------------------------------------------
+
+## CHUNK 4: area_adlershof_1960_1960_131852
+**Type:** narrative
+**Temporal Context:** Year 1960
+**Spatial Context:** Adlershof
+**Source Entities:** area:adlershof_1960
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "adlershof_1960",
+  "area_name": "Adlershof",
+  "year": 1960,
+  "bezirk_name": "Treptow",
+  "station_count": 5,
+  "population": 20170,
+  "area_km2": 3.7
+}
+**Content:**
+In 1960, Adlershof (part of Treptow district) had a population of 20,170 residents covering an area of 3.70 square kilometers. The area was served by 5 public transport stations.
+--------------------------------------------------------------------------------
+
+## CHUNK 5: area_adlershof_1961_1961_131853
+**Type:** narrative
+**Temporal Context:** Year 1961
+**Spatial Context:** Adlershof
+**Source Entities:** area:adlershof_1961
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "adlershof_1961",
+  "area_name": "Adlershof",
+  "year": 1961,
+  "bezirk_name": "Treptow",
+  "station_count": 6,
+  "population": 13862,
+  "area_km2": 0.05
+}
+**Content:**
+In 1961, Adlershof (part of Treptow district) had a population of 13,862 residents covering an area of 0.05 square kilometers. The area was served by 6 public transport stations.
+--------------------------------------------------------------------------------
+
+## CHUNK 6: area_adlershof_1964_1964_131854
+**Type:** narrative
+**Temporal Context:** Year 1964
+**Spatial Context:** Adlershof
+**Source Entities:** area:adlershof_1964
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "adlershof_1964",
+  "area_name": "Adlershof",
+  "year": 1964,
+  "bezirk_name": "Treptow",
+  "station_count": 4,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1964, Adlershof (part of Treptow district). The area was served by 4 public transport stations.
+--------------------------------------------------------------------------------
+
+## CHUNK 7: area_adlershof_1965_1965_131855
+**Type:** narrative
+**Temporal Context:** Year 1965
+**Spatial Context:** Adlershof
+**Source Entities:** area:adlershof_1965
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "adlershof_1965",
+  "area_name": "Adlershof",
+  "year": 1965,
+  "bezirk_name": "Treptow",
+  "station_count": 5,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1965, Adlershof (part of Treptow district). The area was served by 5 public transport stations.
+--------------------------------------------------------------------------------
+
+## CHUNK 8: area_adlershof_1967_1967_131856
+**Type:** narrative
+**Temporal Context:** Year 1967
+**Spatial Context:** Adlershof
+**Source Entities:** area:adlershof_1967
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "adlershof_1967",
+  "area_name": "Adlershof",
+  "year": 1967,
+  "bezirk_name": "Treptow",
+  "station_count": 6,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1967, Adlershof (part of Treptow district). The area was served by 6 public transport stations.
+--------------------------------------------------------------------------------
+
+## CHUNK 9: area_adlershof_1971_1971_131857
+**Type:** narrative
+**Temporal Context:** Year 1971
+**Spatial Context:** Adlershof
+**Source Entities:** area:adlershof_1971
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "adlershof_1971",
+  "area_name": "Adlershof",
+  "year": 1971,
+  "bezirk_name": "Treptow",
+  "station_count": 6,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1971, Adlershof (part of Treptow district). The area was served by 6 public transport stations.
+--------------------------------------------------------------------------------
+
+## CHUNK 10: area_adlershof_1980_1980_131858
+**Type:** narrative
+**Temporal Context:** Year 1980
+**Spatial Context:** Adlershof
+**Source Entities:** area:adlershof_1980
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "adlershof_1980",
+  "area_name": "Adlershof",
+  "year": 1980,
+  "bezirk_name": "Treptow",
+  "station_count": 0,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1980, Adlershof (part of Treptow district). The area had no public transport stations during this period.
+--------------------------------------------------------------------------------
+
+## CHUNK 11: area_adlershof_1982_1982_131859
+**Type:** narrative
+**Temporal Context:** Year 1982
+**Spatial Context:** Adlershof
+**Source Entities:** area:adlershof_1982
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "adlershof_1982",
+  "area_name": "Adlershof",
+  "year": 1982,
+  "bezirk_name": "Treptow",
+  "station_count": 0,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1982, Adlershof (part of Treptow district). The area had no public transport stations during this period.
+--------------------------------------------------------------------------------
+
+## CHUNK 12: area_adlershof_1984_1984_131860
+**Type:** narrative
+**Temporal Context:** Year 1984
+**Spatial Context:** Adlershof
+**Source Entities:** area:adlershof_1984
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "adlershof_1984",
+  "area_name": "Adlershof",
+  "year": 1984,
+  "bezirk_name": "Treptow",
+  "station_count": 0,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1984, Adlershof (part of Treptow district). The area had no public transport stations during this period.
+--------------------------------------------------------------------------------
+
+## CHUNK 13: area_adlershof_1985_1985_131861
+**Type:** narrative
+**Temporal Context:** Year 1985
+**Spatial Context:** Adlershof
+**Source Entities:** area:adlershof_1985
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "adlershof_1985",
+  "area_name": "Adlershof",
+  "year": 1985,
+  "bezirk_name": "Treptow",
+  "station_count": 0,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1985, Adlershof (part of Treptow district). The area had no public transport stations during this period.
+--------------------------------------------------------------------------------
+
+## CHUNK 14: area_adlershof_1989_1989_131862
+**Type:** narrative
+**Temporal Context:** Year 1989
+**Spatial Context:** Adlershof
+**Source Entities:** area:adlershof_1989
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "adlershof_1989",
+  "area_name": "Adlershof",
+  "year": 1989,
+  "bezirk_name": "Treptow",
+  "station_count": 0,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1989, Adlershof (part of Treptow district). The area had no public transport stations during this period.
+--------------------------------------------------------------------------------
+
+## CHUNK 15: area_alt_hohenschönhausen_1946_1946_131863
+**Type:** narrative
+**Temporal Context:** Year 1946
+**Spatial Context:** Alt-Hohenschönhausen
+**Source Entities:** area:alt_hohenschönhausen_1946
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "alt_hohensch\u00f6nhausen_1946",
+  "area_name": "Alt-Hohensch\u00f6nhausen",
+  "year": 1946,
+  "bezirk_name": "Wei\u00dfensee",
+  "station_count": 3,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1946, Alt-Hohenschönhausen (part of Weißensee district). The area was served by 3 public transport stations.
+--------------------------------------------------------------------------------
+
+## CHUNK 16: area_alt_hohenschönhausen_1951_1951_131864
+**Type:** narrative
+**Temporal Context:** Year 1951
+**Spatial Context:** Alt-Hohenschönhausen
+**Source Entities:** area:alt_hohenschönhausen_1951
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "alt_hohensch\u00f6nhausen_1951",
+  "area_name": "Alt-Hohensch\u00f6nhausen",
+  "year": 1951,
+  "bezirk_name": "Wei\u00dfensee",
+  "station_count": 3,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1951, Alt-Hohenschönhausen (part of Weißensee district). The area was served by 3 public transport stations.
+--------------------------------------------------------------------------------
+
+## CHUNK 17: area_alt_hohenschönhausen_1956_1956_131865
+**Type:** narrative
+**Temporal Context:** Year 1956
+**Spatial Context:** Alt-Hohenschönhausen
+**Source Entities:** area:alt_hohenschönhausen_1956
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "alt_hohensch\u00f6nhausen_1956",
+  "area_name": "Alt-Hohensch\u00f6nhausen",
+  "year": 1956,
+  "bezirk_name": "Wei\u00dfensee",
+  "station_count": 10,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1956, Alt-Hohenschönhausen (part of Weißensee district). The area was served by 10 public transport stations.
+--------------------------------------------------------------------------------
+
+## CHUNK 18: area_alt_hohenschönhausen_1960_1960_131866
+**Type:** narrative
+**Temporal Context:** Year 1960
+**Spatial Context:** Alt-Hohenschönhausen
+**Source Entities:** area:alt_hohenschönhausen_1960
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "alt_hohensch\u00f6nhausen_1960",
+  "area_name": "Alt-Hohensch\u00f6nhausen",
+  "year": 1960,
+  "bezirk_name": "Wei\u00dfensee",
+  "station_count": 9,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1960, Alt-Hohenschönhausen (part of Weißensee district). The area was served by 9 public transport stations.
+--------------------------------------------------------------------------------
+
+## CHUNK 19: area_alt_hohenschönhausen_1961_1961_131867
+**Type:** narrative
+**Temporal Context:** Year 1961
+**Spatial Context:** Alt-Hohenschönhausen
+**Source Entities:** area:alt_hohenschönhausen_1961
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "alt_hohensch\u00f6nhausen_1961",
+  "area_name": "Alt-Hohensch\u00f6nhausen",
+  "year": 1961,
+  "bezirk_name": "Wei\u00dfensee",
+  "station_count": 10,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1961, Alt-Hohenschönhausen (part of Weißensee district). The area was served by 10 public transport stations.
+--------------------------------------------------------------------------------
+
+## CHUNK 20: area_alt_hohenschönhausen_1964_1964_131868
+**Type:** narrative
+**Temporal Context:** Year 1964
+**Spatial Context:** Alt-Hohenschönhausen
+**Source Entities:** area:alt_hohenschönhausen_1964
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "alt_hohensch\u00f6nhausen_1964",
+  "area_name": "Alt-Hohensch\u00f6nhausen",
+  "year": 1964,
+  "bezirk_name": "Wei\u00dfensee",
+  "station_count": 15,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1964, Alt-Hohenschönhausen (part of Weißensee district). The area was served by 15 public transport stations.
+--------------------------------------------------------------------------------
+
+## CHUNK 21: area_alt_hohenschönhausen_1965_1965_131869
+**Type:** narrative
+**Temporal Context:** Year 1965
+**Spatial Context:** Alt-Hohenschönhausen
+**Source Entities:** area:alt_hohenschönhausen_1965
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "alt_hohensch\u00f6nhausen_1965",
+  "area_name": "Alt-Hohensch\u00f6nhausen",
+  "year": 1965,
+  "bezirk_name": "Wei\u00dfensee",
+  "station_count": 14,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1965, Alt-Hohenschönhausen (part of Weißensee district). The area was served by 14 public transport stations.
+--------------------------------------------------------------------------------
+
+## CHUNK 22: area_alt_hohenschönhausen_1967_1967_131870
+**Type:** narrative
+**Temporal Context:** Year 1967
+**Spatial Context:** Alt-Hohenschönhausen
+**Source Entities:** area:alt_hohenschönhausen_1967
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "alt_hohensch\u00f6nhausen_1967",
+  "area_name": "Alt-Hohensch\u00f6nhausen",
+  "year": 1967,
+  "bezirk_name": "Wei\u00dfensee",
+  "station_count": 9,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1967, Alt-Hohenschönhausen (part of Weißensee district). The area was served by 9 public transport stations.
+--------------------------------------------------------------------------------
+
+## CHUNK 23: area_alt_hohenschönhausen_1971_1971_131871
+**Type:** narrative
+**Temporal Context:** Year 1971
+**Spatial Context:** Alt-Hohenschönhausen
+**Source Entities:** area:alt_hohenschönhausen_1971
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "alt_hohensch\u00f6nhausen_1971",
+  "area_name": "Alt-Hohensch\u00f6nhausen",
+  "year": 1971,
+  "bezirk_name": "Wei\u00dfensee",
+  "station_count": 9,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1971, Alt-Hohenschönhausen (part of Weißensee district). The area was served by 9 public transport stations.
+--------------------------------------------------------------------------------
+
+## CHUNK 24: area_alt_hohenschönhausen_1980_1980_131872
+**Type:** narrative
+**Temporal Context:** Year 1980
+**Spatial Context:** Alt-Hohenschönhausen
+**Source Entities:** area:alt_hohenschönhausen_1980
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "alt_hohensch\u00f6nhausen_1980",
+  "area_name": "Alt-Hohensch\u00f6nhausen",
+  "year": 1980,
+  "bezirk_name": "Wei\u00dfensee",
+  "station_count": 0,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1980, Alt-Hohenschönhausen (part of Weißensee district). The area had no public transport stations during this period.
+--------------------------------------------------------------------------------
+
+## CHUNK 25: area_alt_hohenschönhausen_1982_1982_131873
+**Type:** narrative
+**Temporal Context:** Year 1982
+**Spatial Context:** Alt-Hohenschönhausen
+**Source Entities:** area:alt_hohenschönhausen_1982
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "alt_hohensch\u00f6nhausen_1982",
+  "area_name": "Alt-Hohensch\u00f6nhausen",
+  "year": 1982,
+  "bezirk_name": "Wei\u00dfensee",
+  "station_count": 0,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1982, Alt-Hohenschönhausen (part of Weißensee district). The area had no public transport stations during this period.
+--------------------------------------------------------------------------------
+
+## CHUNK 26: area_alt_hohenschönhausen_1984_1984_131874
+**Type:** narrative
+**Temporal Context:** Year 1984
+**Spatial Context:** Alt-Hohenschönhausen
+**Source Entities:** area:alt_hohenschönhausen_1984
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "alt_hohensch\u00f6nhausen_1984",
+  "area_name": "Alt-Hohensch\u00f6nhausen",
+  "year": 1984,
+  "bezirk_name": "Wei\u00dfensee",
+  "station_count": 0,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1984, Alt-Hohenschönhausen (part of Weißensee district). The area had no public transport stations during this period.
+--------------------------------------------------------------------------------
+
+## CHUNK 27: area_alt_hohenschönhausen_1985_1985_131875
+**Type:** narrative
+**Temporal Context:** Year 1985
+**Spatial Context:** Alt-Hohenschönhausen
+**Source Entities:** area:alt_hohenschönhausen_1985
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "alt_hohensch\u00f6nhausen_1985",
+  "area_name": "Alt-Hohensch\u00f6nhausen",
+  "year": 1985,
+  "bezirk_name": "Hohensch\u00f6nhausen",
+  "station_count": 0,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1985, Alt-Hohenschönhausen (part of Hohenschönhausen district). The area had no public transport stations during this period.
+--------------------------------------------------------------------------------
+
+## CHUNK 28: area_alt_hohenschönhausen_1985_1985_131876
+**Type:** narrative
+**Temporal Context:** Year 1985
+**Spatial Context:** Alt-Hohenschönhausen
+**Source Entities:** area:alt_hohenschönhausen_1985
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "alt_hohensch\u00f6nhausen_1985",
+  "area_name": "Alt-Hohensch\u00f6nhausen",
+  "year": 1985,
+  "bezirk_name": "Wei\u00dfensee",
+  "station_count": 0,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1985, Alt-Hohenschönhausen (part of Weißensee district). The area had no public transport stations during this period.
+--------------------------------------------------------------------------------
+
+## CHUNK 29: area_alt_hohenschönhausen_1989_1989_131877
+**Type:** narrative
+**Temporal Context:** Year 1989
+**Spatial Context:** Alt-Hohenschönhausen
+**Source Entities:** area:alt_hohenschönhausen_1989
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "alt_hohensch\u00f6nhausen_1989",
+  "area_name": "Alt-Hohensch\u00f6nhausen",
+  "year": 1989,
+  "bezirk_name": "Hohensch\u00f6nhausen",
+  "station_count": 0,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1989, Alt-Hohenschönhausen (part of Hohenschönhausen district). The area had no public transport stations during this period.
+--------------------------------------------------------------------------------
+
+## CHUNK 30: area_alt_treptow_1946_1946_131878
+**Type:** narrative
+**Temporal Context:** Year 1946
+**Spatial Context:** Alt-Treptow
+**Source Entities:** area:alt_treptow_1946
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "alt_treptow_1946",
+  "area_name": "Alt-Treptow",
+  "year": 1946,
+  "bezirk_name": "Treptow",
+  "station_count": 5,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1946, Alt-Treptow (part of Treptow district). The area was served by 5 public transport stations.
+--------------------------------------------------------------------------------
+
+## CHUNK 31: area_alt_treptow_1951_1951_131879
+**Type:** narrative
+**Temporal Context:** Year 1951
+**Spatial Context:** Alt-Treptow
+**Source Entities:** area:alt_treptow_1951
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "alt_treptow_1951",
+  "area_name": "Alt-Treptow",
+  "year": 1951,
+  "bezirk_name": "Treptow",
+  "station_count": 5,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1951, Alt-Treptow (part of Treptow district). The area was served by 5 public transport stations.
+--------------------------------------------------------------------------------
+
+## CHUNK 32: area_alt_treptow_1956_1956_131880
+**Type:** narrative
+**Temporal Context:** Year 1956
+**Spatial Context:** Alt-Treptow
+**Source Entities:** area:alt_treptow_1956
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "alt_treptow_1956",
+  "area_name": "Alt-Treptow",
+  "year": 1956,
+  "bezirk_name": "Treptow",
+  "station_count": 7,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1956, Alt-Treptow (part of Treptow district). The area was served by 7 public transport stations.
+--------------------------------------------------------------------------------
+
+## CHUNK 33: area_alt_treptow_1960_1960_131881
+**Type:** narrative
+**Temporal Context:** Year 1960
+**Spatial Context:** Alt-Treptow
+**Source Entities:** area:alt_treptow_1960
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "alt_treptow_1960",
+  "area_name": "Alt-Treptow",
+  "year": 1960,
+  "bezirk_name": "Treptow",
+  "station_count": 8,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1960, Alt-Treptow (part of Treptow district). The area was served by 8 public transport stations.
+--------------------------------------------------------------------------------
+
+## CHUNK 34: area_alt_treptow_1961_1961_131882
+**Type:** narrative
+**Temporal Context:** Year 1961
+**Spatial Context:** Alt-Treptow
+**Source Entities:** area:alt_treptow_1961
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "alt_treptow_1961",
+  "area_name": "Alt-Treptow",
+  "year": 1961,
+  "bezirk_name": "Treptow",
+  "station_count": 7,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1961, Alt-Treptow (part of Treptow district). The area was served by 7 public transport stations.
+--------------------------------------------------------------------------------
+
+## CHUNK 35: area_alt_treptow_1964_1964_131883
+**Type:** narrative
+**Temporal Context:** Year 1964
+**Spatial Context:** Alt-Treptow
+**Source Entities:** area:alt_treptow_1964
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "alt_treptow_1964",
+  "area_name": "Alt-Treptow",
+  "year": 1964,
+  "bezirk_name": "Treptow",
+  "station_count": 7,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1964, Alt-Treptow (part of Treptow district). The area was served by 7 public transport stations.
+--------------------------------------------------------------------------------
+
+## CHUNK 36: area_alt_treptow_1965_1965_131884
+**Type:** narrative
+**Temporal Context:** Year 1965
+**Spatial Context:** Alt-Treptow
+**Source Entities:** area:alt_treptow_1965
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "alt_treptow_1965",
+  "area_name": "Alt-Treptow",
+  "year": 1965,
+  "bezirk_name": "Treptow",
+  "station_count": 8,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1965, Alt-Treptow (part of Treptow district). The area was served by 8 public transport stations.
+--------------------------------------------------------------------------------
+
+## CHUNK 37: area_alt_treptow_1967_1967_131885
+**Type:** narrative
+**Temporal Context:** Year 1967
+**Spatial Context:** Alt-Treptow
+**Source Entities:** area:alt_treptow_1967
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "alt_treptow_1967",
+  "area_name": "Alt-Treptow",
+  "year": 1967,
+  "bezirk_name": "Treptow",
+  "station_count": 8,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1967, Alt-Treptow (part of Treptow district). The area was served by 8 public transport stations.
+--------------------------------------------------------------------------------
+
+## CHUNK 38: area_alt_treptow_1971_1971_131886
+**Type:** narrative
+**Temporal Context:** Year 1971
+**Spatial Context:** Alt-Treptow
+**Source Entities:** area:alt_treptow_1971
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "alt_treptow_1971",
+  "area_name": "Alt-Treptow",
+  "year": 1971,
+  "bezirk_name": "Treptow",
+  "station_count": 9,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1971, Alt-Treptow (part of Treptow district). The area was served by 9 public transport stations.
+--------------------------------------------------------------------------------
+
+## CHUNK 39: area_alt_treptow_1980_1980_131887
+**Type:** narrative
+**Temporal Context:** Year 1980
+**Spatial Context:** Alt-Treptow
+**Source Entities:** area:alt_treptow_1980
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "alt_treptow_1980",
+  "area_name": "Alt-Treptow",
+  "year": 1980,
+  "bezirk_name": "Treptow",
+  "station_count": 0,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1980, Alt-Treptow (part of Treptow district). The area had no public transport stations during this period.
+--------------------------------------------------------------------------------
+
+## CHUNK 40: area_alt_treptow_1982_1982_131888
+**Type:** narrative
+**Temporal Context:** Year 1982
+**Spatial Context:** Alt-Treptow
+**Source Entities:** area:alt_treptow_1982
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "alt_treptow_1982",
+  "area_name": "Alt-Treptow",
+  "year": 1982,
+  "bezirk_name": "Treptow",
+  "station_count": 0,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1982, Alt-Treptow (part of Treptow district). The area had no public transport stations during this period.
+--------------------------------------------------------------------------------
+
+## CHUNK 41: area_alt_treptow_1984_1984_131889
+**Type:** narrative
+**Temporal Context:** Year 1984
+**Spatial Context:** Alt-Treptow
+**Source Entities:** area:alt_treptow_1984
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "alt_treptow_1984",
+  "area_name": "Alt-Treptow",
+  "year": 1984,
+  "bezirk_name": "Treptow",
+  "station_count": 0,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1984, Alt-Treptow (part of Treptow district). The area had no public transport stations during this period.
+--------------------------------------------------------------------------------
+
+## CHUNK 42: area_alt_treptow_1985_1985_131890
+**Type:** narrative
+**Temporal Context:** Year 1985
+**Spatial Context:** Alt-Treptow
+**Source Entities:** area:alt_treptow_1985
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "alt_treptow_1985",
+  "area_name": "Alt-Treptow",
+  "year": 1985,
+  "bezirk_name": "Treptow",
+  "station_count": 0,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1985, Alt-Treptow (part of Treptow district). The area had no public transport stations during this period.
+--------------------------------------------------------------------------------
+
+## CHUNK 43: area_alt_treptow_1989_1989_131891
+**Type:** narrative
+**Temporal Context:** Year 1989
+**Spatial Context:** Alt-Treptow
+**Source Entities:** area:alt_treptow_1989
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "alt_treptow_1989",
+  "area_name": "Alt-Treptow",
+  "year": 1989,
+  "bezirk_name": "Treptow",
+  "station_count": 0,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1989, Alt-Treptow (part of Treptow district). The area had no public transport stations during this period.
+--------------------------------------------------------------------------------
+
+## CHUNK 44: area_altglienicke_1946_1946_131892
+**Type:** narrative
+**Temporal Context:** Year 1946
+**Spatial Context:** Altglienicke
+**Source Entities:** area:altglienicke_1946
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "altglienicke_1946",
+  "area_name": "Altglienicke",
+  "year": 1946,
+  "bezirk_name": "Treptow",
+  "station_count": 0,
+  "population": 12110,
+  "area_km2": 8.58
+}
+**Content:**
+In 1946, Altglienicke (part of Treptow district) had a population of 12,110 residents covering an area of 8.58 square kilometers. The area had no public transport stations during this period.
+--------------------------------------------------------------------------------
+
+## CHUNK 45: area_altglienicke_1951_1951_131893
+**Type:** narrative
+**Temporal Context:** Year 1951
+**Spatial Context:** Altglienicke
+**Source Entities:** area:altglienicke_1951
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "altglienicke_1951",
+  "area_name": "Altglienicke",
+  "year": 1951,
+  "bezirk_name": "Treptow",
+  "station_count": 1,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1951, Altglienicke (part of Treptow district). The area was served by 1 public transport stations.
+--------------------------------------------------------------------------------
+
+## CHUNK 46: area_altglienicke_1956_1956_131894
+**Type:** narrative
+**Temporal Context:** Year 1956
+**Spatial Context:** Altglienicke
+**Source Entities:** area:altglienicke_1956
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "altglienicke_1956",
+  "area_name": "Altglienicke",
+  "year": 1956,
+  "bezirk_name": "Treptow",
+  "station_count": 4,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1956, Altglienicke (part of Treptow district). The area was served by 4 public transport stations.
+--------------------------------------------------------------------------------
+
+## CHUNK 47: area_altglienicke_1960_1960_131895
+**Type:** narrative
+**Temporal Context:** Year 1960
+**Spatial Context:** Altglienicke
+**Source Entities:** area:altglienicke_1960
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "altglienicke_1960",
+  "area_name": "Altglienicke",
+  "year": 1960,
+  "bezirk_name": "Treptow",
+  "station_count": 5,
+  "population": 10587,
+  "area_km2": 8.6
+}
+**Content:**
+In 1960, Altglienicke (part of Treptow district) had a population of 10,587 residents covering an area of 8.60 square kilometers. The area was served by 5 public transport stations.
+--------------------------------------------------------------------------------
+
+## CHUNK 48: area_altglienicke_1961_1961_131896
+**Type:** narrative
+**Temporal Context:** Year 1961
+**Spatial Context:** Altglienicke
+**Source Entities:** area:altglienicke_1961
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "altglienicke_1961",
+  "area_name": "Altglienicke",
+  "year": 1961,
+  "bezirk_name": "Treptow",
+  "station_count": 5,
+  "population": 10542,
+  "area_km2": 0.06
+}
+**Content:**
+In 1961, Altglienicke (part of Treptow district) had a population of 10,542 residents covering an area of 0.06 square kilometers. The area was served by 5 public transport stations.
+--------------------------------------------------------------------------------
+
+## CHUNK 49: area_altglienicke_1964_1964_131897
+**Type:** narrative
+**Temporal Context:** Year 1964
+**Spatial Context:** Altglienicke
+**Source Entities:** area:altglienicke_1964
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "altglienicke_1964",
+  "area_name": "Altglienicke",
+  "year": 1964,
+  "bezirk_name": "Treptow",
+  "station_count": 7,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1964, Altglienicke (part of Treptow district). The area was served by 7 public transport stations.
+--------------------------------------------------------------------------------
+
+## CHUNK 50: area_altglienicke_1965_1965_131898
+**Type:** narrative
+**Temporal Context:** Year 1965
+**Spatial Context:** Altglienicke
+**Source Entities:** area:altglienicke_1965
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "altglienicke_1965",
+  "area_name": "Altglienicke",
+  "year": 1965,
+  "bezirk_name": "Treptow",
+  "station_count": 12,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1965, Altglienicke (part of Treptow district). The area was served by 12 public transport stations.
+--------------------------------------------------------------------------------
+
+## CHUNK 51: area_altglienicke_1967_1967_131899
+**Type:** narrative
+**Temporal Context:** Year 1967
+**Spatial Context:** Altglienicke
+**Source Entities:** area:altglienicke_1967
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "altglienicke_1967",
+  "area_name": "Altglienicke",
+  "year": 1967,
+  "bezirk_name": "Treptow",
+  "station_count": 11,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1967, Altglienicke (part of Treptow district). The area was served by 11 public transport stations.
+--------------------------------------------------------------------------------
+
+## CHUNK 52: area_altglienicke_1971_1971_131900
+**Type:** narrative
+**Temporal Context:** Year 1971
+**Spatial Context:** Altglienicke
+**Source Entities:** area:altglienicke_1971
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "altglienicke_1971",
+  "area_name": "Altglienicke",
+  "year": 1971,
+  "bezirk_name": "Treptow",
+  "station_count": 11,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1971, Altglienicke (part of Treptow district). The area was served by 11 public transport stations.
+--------------------------------------------------------------------------------
+
+## CHUNK 53: area_altglienicke_1980_1980_131901
+**Type:** narrative
+**Temporal Context:** Year 1980
+**Spatial Context:** Altglienicke
+**Source Entities:** area:altglienicke_1980
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "altglienicke_1980",
+  "area_name": "Altglienicke",
+  "year": 1980,
+  "bezirk_name": "Treptow",
+  "station_count": 0,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1980, Altglienicke (part of Treptow district). The area had no public transport stations during this period.
+--------------------------------------------------------------------------------
+
+## CHUNK 54: area_altglienicke_1982_1982_131902
+**Type:** narrative
+**Temporal Context:** Year 1982
+**Spatial Context:** Altglienicke
+**Source Entities:** area:altglienicke_1982
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "altglienicke_1982",
+  "area_name": "Altglienicke",
+  "year": 1982,
+  "bezirk_name": "Treptow",
+  "station_count": 0,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1982, Altglienicke (part of Treptow district). The area had no public transport stations during this period.
+--------------------------------------------------------------------------------
+
+## CHUNK 55: area_altglienicke_1984_1984_131903
+**Type:** narrative
+**Temporal Context:** Year 1984
+**Spatial Context:** Altglienicke
+**Source Entities:** area:altglienicke_1984
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "altglienicke_1984",
+  "area_name": "Altglienicke",
+  "year": 1984,
+  "bezirk_name": "Treptow",
+  "station_count": 0,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1984, Altglienicke (part of Treptow district). The area had no public transport stations during this period.
+--------------------------------------------------------------------------------
+
+## CHUNK 56: area_altglienicke_1985_1985_131904
+**Type:** narrative
+**Temporal Context:** Year 1985
+**Spatial Context:** Altglienicke
+**Source Entities:** area:altglienicke_1985
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "altglienicke_1985",
+  "area_name": "Altglienicke",
+  "year": 1985,
+  "bezirk_name": "Treptow",
+  "station_count": 0,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1985, Altglienicke (part of Treptow district). The area had no public transport stations during this period.
+--------------------------------------------------------------------------------
+
+## CHUNK 57: area_altglienicke_1989_1989_131905
+**Type:** narrative
+**Temporal Context:** Year 1989
+**Spatial Context:** Altglienicke
+**Source Entities:** area:altglienicke_1989
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "altglienicke_1989",
+  "area_name": "Altglienicke",
+  "year": 1989,
+  "bezirk_name": "Treptow",
+  "station_count": 0,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1989, Altglienicke (part of Treptow district). The area had no public transport stations during this period.
+--------------------------------------------------------------------------------
+
+## CHUNK 58: area_baumschulenweg_1951_1951_131906
+**Type:** narrative
+**Temporal Context:** Year 1951
+**Spatial Context:** Baumschulenweg
+**Source Entities:** area:baumschulenweg_1951
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "baumschulenweg_1951",
+  "area_name": "Baumschulenweg",
+  "year": 1951,
+  "bezirk_name": "Treptow",
+  "station_count": 6,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1951, Baumschulenweg (part of Treptow district). The area was served by 6 public transport stations.
+--------------------------------------------------------------------------------
+
+## CHUNK 59: area_baumschulenweg_1956_1956_131907
+**Type:** narrative
+**Temporal Context:** Year 1956
+**Spatial Context:** Baumschulenweg
+**Source Entities:** area:baumschulenweg_1956
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "baumschulenweg_1956",
+  "area_name": "Baumschulenweg",
+  "year": 1956,
+  "bezirk_name": "Treptow",
+  "station_count": 9,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1956, Baumschulenweg (part of Treptow district). The area was served by 9 public transport stations.
+--------------------------------------------------------------------------------
+
+## CHUNK 60: area_baumschulenweg_1960_1960_131908
+**Type:** narrative
+**Temporal Context:** Year 1960
+**Spatial Context:** Baumschulenweg
+**Source Entities:** area:baumschulenweg_1960
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "baumschulenweg_1960",
+  "area_name": "Baumschulenweg",
+  "year": 1960,
+  "bezirk_name": "Treptow",
+  "station_count": 9,
+  "population": 20851,
+  "area_km2": 3.5
+}
+**Content:**
+In 1960, Baumschulenweg (part of Treptow district) had a population of 20,851 residents covering an area of 3.50 square kilometers. The area was served by 9 public transport stations.
+--------------------------------------------------------------------------------
+
+## CHUNK 61: area_baumschulenweg_1961_1961_131909
+**Type:** narrative
+**Temporal Context:** Year 1961
+**Spatial Context:** Baumschulenweg
+**Source Entities:** area:baumschulenweg_1961
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "baumschulenweg_1961",
+  "area_name": "Baumschulenweg",
+  "year": 1961,
+  "bezirk_name": "Treptow",
+  "station_count": 12,
+  "population": 25084,
+  "area_km2": 0.04
+}
+**Content:**
+In 1961, Baumschulenweg (part of Treptow district) had a population of 25,084 residents covering an area of 0.04 square kilometers. The area was served by 12 public transport stations.
+--------------------------------------------------------------------------------
+
+## CHUNK 62: area_baumschulenweg_1964_1964_131910
+**Type:** narrative
+**Temporal Context:** Year 1964
+**Spatial Context:** Baumschulenweg
+**Source Entities:** area:baumschulenweg_1964
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "baumschulenweg_1964",
+  "area_name": "Baumschulenweg",
+  "year": 1964,
+  "bezirk_name": "Treptow",
+  "station_count": 12,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1964, Baumschulenweg (part of Treptow district). The area was served by 12 public transport stations.
+--------------------------------------------------------------------------------
+
+## CHUNK 63: area_baumschulenweg_1965_1965_131911
+**Type:** narrative
+**Temporal Context:** Year 1965
+**Spatial Context:** Baumschulenweg
+**Source Entities:** area:baumschulenweg_1965
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "baumschulenweg_1965",
+  "area_name": "Baumschulenweg",
+  "year": 1965,
+  "bezirk_name": "Treptow",
+  "station_count": 13,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1965, Baumschulenweg (part of Treptow district). The area was served by 13 public transport stations.
+--------------------------------------------------------------------------------
+
+## CHUNK 64: area_baumschulenweg_1967_1967_131912
+**Type:** narrative
+**Temporal Context:** Year 1967
+**Spatial Context:** Baumschulenweg
+**Source Entities:** area:baumschulenweg_1967
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "baumschulenweg_1967",
+  "area_name": "Baumschulenweg",
+  "year": 1967,
+  "bezirk_name": "Treptow",
+  "station_count": 13,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1967, Baumschulenweg (part of Treptow district). The area was served by 13 public transport stations.
+--------------------------------------------------------------------------------
+
+## CHUNK 65: area_baumschulenweg_1971_1971_131913
+**Type:** narrative
+**Temporal Context:** Year 1971
+**Spatial Context:** Baumschulenweg
+**Source Entities:** area:baumschulenweg_1971
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "baumschulenweg_1971",
+  "area_name": "Baumschulenweg",
+  "year": 1971,
+  "bezirk_name": "Treptow",
+  "station_count": 11,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1971, Baumschulenweg (part of Treptow district). The area was served by 11 public transport stations.
+--------------------------------------------------------------------------------
+
+## CHUNK 66: area_baumschulenweg_1980_1980_131914
+**Type:** narrative
+**Temporal Context:** Year 1980
+**Spatial Context:** Baumschulenweg
+**Source Entities:** area:baumschulenweg_1980
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "baumschulenweg_1980",
+  "area_name": "Baumschulenweg",
+  "year": 1980,
+  "bezirk_name": "Treptow",
+  "station_count": 0,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1980, Baumschulenweg (part of Treptow district). The area had no public transport stations during this period.
+--------------------------------------------------------------------------------
+
+## CHUNK 67: area_baumschulenweg_1982_1982_131915
+**Type:** narrative
+**Temporal Context:** Year 1982
+**Spatial Context:** Baumschulenweg
+**Source Entities:** area:baumschulenweg_1982
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "baumschulenweg_1982",
+  "area_name": "Baumschulenweg",
+  "year": 1982,
+  "bezirk_name": "Treptow",
+  "station_count": 0,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1982, Baumschulenweg (part of Treptow district). The area had no public transport stations during this period.
+--------------------------------------------------------------------------------
+
+## CHUNK 68: area_baumschulenweg_1984_1984_131916
+**Type:** narrative
+**Temporal Context:** Year 1984
+**Spatial Context:** Baumschulenweg
+**Source Entities:** area:baumschulenweg_1984
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "baumschulenweg_1984",
+  "area_name": "Baumschulenweg",
+  "year": 1984,
+  "bezirk_name": "Treptow",
+  "station_count": 0,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1984, Baumschulenweg (part of Treptow district). The area had no public transport stations during this period.
+--------------------------------------------------------------------------------
+
+## CHUNK 69: area_baumschulenweg_1985_1985_131917
+**Type:** narrative
+**Temporal Context:** Year 1985
+**Spatial Context:** Baumschulenweg
+**Source Entities:** area:baumschulenweg_1985
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "baumschulenweg_1985",
+  "area_name": "Baumschulenweg",
+  "year": 1985,
+  "bezirk_name": "Treptow",
+  "station_count": 0,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1985, Baumschulenweg (part of Treptow district). The area had no public transport stations during this period.
+--------------------------------------------------------------------------------
+
+## CHUNK 70: area_baumschulenweg_1989_1989_131918
+**Type:** narrative
+**Temporal Context:** Year 1989
+**Spatial Context:** Baumschulenweg
+**Source Entities:** area:baumschulenweg_1989
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "baumschulenweg_1989",
+  "area_name": "Baumschulenweg",
+  "year": 1989,
+  "bezirk_name": "Treptow",
+  "station_count": 0,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1989, Baumschulenweg (part of Treptow district). The area had no public transport stations during this period.
+--------------------------------------------------------------------------------
+
+## CHUNK 71: area_biesdorf_1946_1946_131919
+**Type:** narrative
+**Temporal Context:** Year 1946
+**Spatial Context:** Biesdorf
+**Source Entities:** area:biesdorf_1946
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "biesdorf_1946",
+  "area_name": "Biesdorf",
+  "year": 1946,
+  "bezirk_name": "Lichtenberg",
+  "station_count": 4,
+  "population": 16018,
+  "area_km2": 13.61
+}
+**Content:**
+In 1946, Biesdorf (part of Lichtenberg district) had a population of 16,018 residents covering an area of 13.61 square kilometers. The area was served by 4 public transport stations.
+--------------------------------------------------------------------------------
+
+## CHUNK 72: area_biesdorf_1951_1951_131920
+**Type:** narrative
+**Temporal Context:** Year 1951
+**Spatial Context:** Biesdorf
+**Source Entities:** area:biesdorf_1951
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "biesdorf_1951",
+  "area_name": "Biesdorf",
+  "year": 1951,
+  "bezirk_name": "Lichtenberg",
+  "station_count": 4,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1951, Biesdorf (part of Lichtenberg district). The area was served by 4 public transport stations.
+--------------------------------------------------------------------------------
+
+## CHUNK 73: area_biesdorf_1956_1956_131921
+**Type:** narrative
+**Temporal Context:** Year 1956
+**Spatial Context:** Biesdorf
+**Source Entities:** area:biesdorf_1956
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "biesdorf_1956",
+  "area_name": "Biesdorf",
+  "year": 1956,
+  "bezirk_name": "Lichtenberg",
+  "station_count": 8,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1956, Biesdorf (part of Lichtenberg district). The area was served by 8 public transport stations.
+--------------------------------------------------------------------------------
+
+## CHUNK 74: area_biesdorf_1960_1960_131922
+**Type:** narrative
+**Temporal Context:** Year 1960
+**Spatial Context:** Biesdorf
+**Source Entities:** area:biesdorf_1960
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "biesdorf_1960",
+  "area_name": "Biesdorf",
+  "year": 1960,
+  "bezirk_name": "Lichtenberg",
+  "station_count": 5,
+  "population": 18805,
+  "area_km2": 11.3
+}
+**Content:**
+In 1960, Biesdorf (part of Lichtenberg district) had a population of 18,805 residents covering an area of 11.30 square kilometers. The area was served by 5 public transport stations.
+--------------------------------------------------------------------------------
+
+## CHUNK 75: area_biesdorf_1961_1961_131923
+**Type:** narrative
+**Temporal Context:** Year 1961
+**Spatial Context:** Biesdorf
+**Source Entities:** area:biesdorf_1961
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "biesdorf_1961",
+  "area_name": "Biesdorf",
+  "year": 1961,
+  "bezirk_name": "Lichtenberg",
+  "station_count": 5,
+  "population": 18626,
+  "area_km2": 0.11
+}
+**Content:**
+In 1961, Biesdorf (part of Lichtenberg district) had a population of 18,626 residents covering an area of 0.11 square kilometers. The area was served by 5 public transport stations.
+--------------------------------------------------------------------------------
+
+## CHUNK 76: area_biesdorf_1964_1964_131924
+**Type:** narrative
+**Temporal Context:** Year 1964
+**Spatial Context:** Biesdorf
+**Source Entities:** area:biesdorf_1964
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "biesdorf_1964",
+  "area_name": "Biesdorf",
+  "year": 1964,
+  "bezirk_name": "Lichtenberg",
+  "station_count": 5,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1964, Biesdorf (part of Lichtenberg district). The area was served by 5 public transport stations.
+--------------------------------------------------------------------------------
+
+## CHUNK 77: area_biesdorf_1965_1965_131925
+**Type:** narrative
+**Temporal Context:** Year 1965
+**Spatial Context:** Biesdorf
+**Source Entities:** area:biesdorf_1965
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "biesdorf_1965",
+  "area_name": "Biesdorf",
+  "year": 1965,
+  "bezirk_name": "Lichtenberg",
+  "station_count": 9,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1965, Biesdorf (part of Lichtenberg district). The area was served by 9 public transport stations.
+--------------------------------------------------------------------------------
+
+## CHUNK 78: area_biesdorf_1967_1967_131926
+**Type:** narrative
+**Temporal Context:** Year 1967
+**Spatial Context:** Biesdorf
+**Source Entities:** area:biesdorf_1967
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "biesdorf_1967",
+  "area_name": "Biesdorf",
+  "year": 1967,
+  "bezirk_name": "Lichtenberg",
+  "station_count": 9,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1967, Biesdorf (part of Lichtenberg district). The area was served by 9 public transport stations.
+--------------------------------------------------------------------------------
+
+## CHUNK 79: area_biesdorf_1971_1971_131927
+**Type:** narrative
+**Temporal Context:** Year 1971
+**Spatial Context:** Biesdorf
+**Source Entities:** area:biesdorf_1971
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "biesdorf_1971",
+  "area_name": "Biesdorf",
+  "year": 1971,
+  "bezirk_name": "Lichtenberg",
+  "station_count": 7,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1971, Biesdorf (part of Lichtenberg district). The area was served by 7 public transport stations.
+--------------------------------------------------------------------------------
+
+## CHUNK 80: area_biesdorf_1980_1980_131928
+**Type:** narrative
+**Temporal Context:** Year 1980
+**Spatial Context:** Biesdorf
+**Source Entities:** area:biesdorf_1980
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "biesdorf_1980",
+  "area_name": "Biesdorf",
+  "year": 1980,
+  "bezirk_name": "Marzahn",
+  "station_count": 0,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1980, Biesdorf (part of Marzahn district). The area had no public transport stations during this period.
+--------------------------------------------------------------------------------
+
+## CHUNK 81: area_biesdorf_1982_1982_131929
+**Type:** narrative
+**Temporal Context:** Year 1982
+**Spatial Context:** Biesdorf
+**Source Entities:** area:biesdorf_1982
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "biesdorf_1982",
+  "area_name": "Biesdorf",
+  "year": 1982,
+  "bezirk_name": "Marzahn",
+  "station_count": 0,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1982, Biesdorf (part of Marzahn district). The area had no public transport stations during this period.
+--------------------------------------------------------------------------------
+
+## CHUNK 82: area_biesdorf_1984_1984_131930
+**Type:** narrative
+**Temporal Context:** Year 1984
+**Spatial Context:** Biesdorf
+**Source Entities:** area:biesdorf_1984
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "biesdorf_1984",
+  "area_name": "Biesdorf",
+  "year": 1984,
+  "bezirk_name": "Marzahn",
+  "station_count": 0,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1984, Biesdorf (part of Marzahn district). The area had no public transport stations during this period.
+--------------------------------------------------------------------------------
+
+## CHUNK 83: area_biesdorf_1985_1985_131931
+**Type:** narrative
+**Temporal Context:** Year 1985
+**Spatial Context:** Biesdorf
+**Source Entities:** area:biesdorf_1985
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "biesdorf_1985",
+  "area_name": "Biesdorf",
+  "year": 1985,
+  "bezirk_name": "Marzahn",
+  "station_count": 0,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1985, Biesdorf (part of Marzahn district). The area had no public transport stations during this period.
+--------------------------------------------------------------------------------
+
+## CHUNK 84: area_biesdorf_1989_1989_131932
+**Type:** narrative
+**Temporal Context:** Year 1989
+**Spatial Context:** Biesdorf
+**Source Entities:** area:biesdorf_1989
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "biesdorf_1989",
+  "area_name": "Biesdorf",
+  "year": 1989,
+  "bezirk_name": "Marzahn",
+  "station_count": 0,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1989, Biesdorf (part of Marzahn district). The area had no public transport stations during this period.
+--------------------------------------------------------------------------------
+
+## CHUNK 85: area_blankenburg_1946_1946_131933
+**Type:** narrative
+**Temporal Context:** Year 1946
+**Spatial Context:** Blankenburg
+**Source Entities:** area:blankenburg_1946
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "blankenburg_1946",
+  "area_name": "Blankenburg",
+  "year": 1946,
+  "bezirk_name": "Pankow",
+  "station_count": 1,
+  "population": 5651,
+  "area_km2": 6.78
+}
+**Content:**
+In 1946, Blankenburg (part of Pankow district) had a population of 5,651 residents covering an area of 6.78 square kilometers. The area was served by 1 public transport stations.
+--------------------------------------------------------------------------------
+
+## CHUNK 86: area_blankenburg_1951_1951_131934
+**Type:** narrative
+**Temporal Context:** Year 1951
+**Spatial Context:** Blankenburg
+**Source Entities:** area:blankenburg_1951
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "blankenburg_1951",
+  "area_name": "Blankenburg",
+  "year": 1951,
+  "bezirk_name": "Pankow",
+  "station_count": 2,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1951, Blankenburg (part of Pankow district). The area was served by 2 public transport stations.
+--------------------------------------------------------------------------------
+
+## CHUNK 87: area_blankenburg_1956_1956_131935
+**Type:** narrative
+**Temporal Context:** Year 1956
+**Spatial Context:** Blankenburg
+**Source Entities:** area:blankenburg_1956
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "blankenburg_1956",
+  "area_name": "Blankenburg",
+  "year": 1956,
+  "bezirk_name": "Pankow",
+  "station_count": 3,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1956, Blankenburg (part of Pankow district). The area was served by 3 public transport stations.
+--------------------------------------------------------------------------------
+
+## CHUNK 88: area_blankenburg_1960_1960_131936
+**Type:** narrative
+**Temporal Context:** Year 1960
+**Spatial Context:** Blankenburg
+**Source Entities:** area:blankenburg_1960
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "blankenburg_1960",
+  "area_name": "Blankenburg",
+  "year": 1960,
+  "bezirk_name": "Pankow",
+  "station_count": 3,
+  "population": 6214,
+  "area_km2": 6.7
+}
+**Content:**
+In 1960, Blankenburg (part of Pankow district) had a population of 6,214 residents covering an area of 6.70 square kilometers. The area was served by 3 public transport stations.
+--------------------------------------------------------------------------------
+
+## CHUNK 89: area_blankenburg_1961_1961_131937
+**Type:** narrative
+**Temporal Context:** Year 1961
+**Spatial Context:** Blankenburg
+**Source Entities:** area:blankenburg_1961
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "blankenburg_1961",
+  "area_name": "Blankenburg",
+  "year": 1961,
+  "bezirk_name": "Pankow",
+  "station_count": 2,
+  "population": 6057,
+  "area_km2": 0.07
+}
+**Content:**
+In 1961, Blankenburg (part of Pankow district) had a population of 6,057 residents covering an area of 0.07 square kilometers. The area was served by 2 public transport stations.
+--------------------------------------------------------------------------------
+
+## CHUNK 90: area_blankenburg_1964_1964_131938
+**Type:** narrative
+**Temporal Context:** Year 1964
+**Spatial Context:** Blankenburg
+**Source Entities:** area:blankenburg_1964
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "blankenburg_1964",
+  "area_name": "Blankenburg",
+  "year": 1964,
+  "bezirk_name": "Pankow",
+  "station_count": 3,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1964, Blankenburg (part of Pankow district). The area was served by 3 public transport stations.
+--------------------------------------------------------------------------------
+
+## CHUNK 91: area_blankenburg_1965_1965_131939
+**Type:** narrative
+**Temporal Context:** Year 1965
+**Spatial Context:** Blankenburg
+**Source Entities:** area:blankenburg_1965
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "blankenburg_1965",
+  "area_name": "Blankenburg",
+  "year": 1965,
+  "bezirk_name": "Pankow",
+  "station_count": 5,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1965, Blankenburg (part of Pankow district). The area was served by 5 public transport stations.
+--------------------------------------------------------------------------------
+
+## CHUNK 92: area_blankenburg_1967_1967_131940
+**Type:** narrative
+**Temporal Context:** Year 1967
+**Spatial Context:** Blankenburg
+**Source Entities:** area:blankenburg_1967
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "blankenburg_1967",
+  "area_name": "Blankenburg",
+  "year": 1967,
+  "bezirk_name": "Pankow",
+  "station_count": 5,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1967, Blankenburg (part of Pankow district). The area was served by 5 public transport stations.
+--------------------------------------------------------------------------------
+
+## CHUNK 93: area_blankenburg_1971_1971_131941
+**Type:** narrative
+**Temporal Context:** Year 1971
+**Spatial Context:** Blankenburg
+**Source Entities:** area:blankenburg_1971
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "blankenburg_1971",
+  "area_name": "Blankenburg",
+  "year": 1971,
+  "bezirk_name": "Pankow",
+  "station_count": 6,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1971, Blankenburg (part of Pankow district). The area was served by 6 public transport stations.
+--------------------------------------------------------------------------------
+
+## CHUNK 94: area_blankenburg_1980_1980_131942
+**Type:** narrative
+**Temporal Context:** Year 1980
+**Spatial Context:** Blankenburg
+**Source Entities:** area:blankenburg_1980
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "blankenburg_1980",
+  "area_name": "Blankenburg",
+  "year": 1980,
+  "bezirk_name": "Pankow",
+  "station_count": 0,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1980, Blankenburg (part of Pankow district). The area had no public transport stations during this period.
+--------------------------------------------------------------------------------
+
+## CHUNK 95: area_blankenburg_1982_1982_131943
+**Type:** narrative
+**Temporal Context:** Year 1982
+**Spatial Context:** Blankenburg
+**Source Entities:** area:blankenburg_1982
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "blankenburg_1982",
+  "area_name": "Blankenburg",
+  "year": 1982,
+  "bezirk_name": "Pankow",
+  "station_count": 0,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1982, Blankenburg (part of Pankow district). The area had no public transport stations during this period.
+--------------------------------------------------------------------------------
+
+## CHUNK 96: area_blankenburg_1984_1984_131944
+**Type:** narrative
+**Temporal Context:** Year 1984
+**Spatial Context:** Blankenburg
+**Source Entities:** area:blankenburg_1984
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "blankenburg_1984",
+  "area_name": "Blankenburg",
+  "year": 1984,
+  "bezirk_name": "Pankow",
+  "station_count": 0,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1984, Blankenburg (part of Pankow district). The area had no public transport stations during this period.
+--------------------------------------------------------------------------------
+
+## CHUNK 97: area_blankenburg_1985_1985_131945
+**Type:** narrative
+**Temporal Context:** Year 1985
+**Spatial Context:** Blankenburg
+**Source Entities:** area:blankenburg_1985
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "blankenburg_1985",
+  "area_name": "Blankenburg",
+  "year": 1985,
+  "bezirk_name": "Pankow",
+  "station_count": 0,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1985, Blankenburg (part of Pankow district). The area had no public transport stations during this period.
+--------------------------------------------------------------------------------
+
+## CHUNK 98: area_blankenburg_1989_1989_131946
+**Type:** narrative
+**Temporal Context:** Year 1989
+**Spatial Context:** Blankenburg
+**Source Entities:** area:blankenburg_1989
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "blankenburg_1989",
+  "area_name": "Blankenburg",
+  "year": 1989,
+  "bezirk_name": "Wei\u00dfensee",
+  "station_count": 0,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1989, Blankenburg (part of Weißensee district). The area had no public transport stations during this period.
+--------------------------------------------------------------------------------
+
+## CHUNK 99: area_blankenfelde_1946_1946_131947
+**Type:** narrative
+**Temporal Context:** Year 1946
+**Spatial Context:** Blankenfelde
+**Source Entities:** area:blankenfelde_1946
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "blankenfelde_1946",
+  "area_name": "Blankenfelde",
+  "year": 1946,
+  "bezirk_name": "Pankow",
+  "station_count": 2,
+  "population": 3448,
+  "area_km2": 13.02
+}
+**Content:**
+In 1946, Blankenfelde (part of Pankow district) had a population of 3,448 residents covering an area of 13.02 square kilometers. The area was served by 2 public transport stations.
+--------------------------------------------------------------------------------
+
+## CHUNK 100: area_blankenfelde_1951_1951_131948
+**Type:** narrative
+**Temporal Context:** Year 1951
+**Spatial Context:** Blankenfelde
+**Source Entities:** area:blankenfelde_1951
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "blankenfelde_1951",
+  "area_name": "Blankenfelde",
+  "year": 1951,
+  "bezirk_name": "Pankow",
+  "station_count": 3,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1951, Blankenfelde (part of Pankow district). The area was served by 3 public transport stations.
+--------------------------------------------------------------------------------
+
+## CHUNK 101: area_blankenfelde_1956_1956_131949
+**Type:** narrative
+**Temporal Context:** Year 1956
+**Spatial Context:** Blankenfelde
+**Source Entities:** area:blankenfelde_1956
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "blankenfelde_1956",
+  "area_name": "Blankenfelde",
+  "year": 1956,
+  "bezirk_name": "Pankow",
+  "station_count": 3,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1956, Blankenfelde (part of Pankow district). The area was served by 3 public transport stations.
+--------------------------------------------------------------------------------
+
+## CHUNK 102: area_blankenfelde_1960_1960_131950
+**Type:** narrative
+**Temporal Context:** Year 1960
+**Spatial Context:** Blankenfelde
+**Source Entities:** area:blankenfelde_1960
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "blankenfelde_1960",
+  "area_name": "Blankenfelde",
+  "year": 1960,
+  "bezirk_name": "Pankow",
+  "station_count": 2,
+  "population": 2305,
+  "area_km2": 10.7
+}
+**Content:**
+In 1960, Blankenfelde (part of Pankow district) had a population of 2,305 residents covering an area of 10.70 square kilometers. The area was served by 2 public transport stations.
+--------------------------------------------------------------------------------
+
+## CHUNK 103: area_blankenfelde_1961_1961_131951
+**Type:** narrative
+**Temporal Context:** Year 1961
+**Spatial Context:** Blankenfelde
+**Source Entities:** area:blankenfelde_1961
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "blankenfelde_1961",
+  "area_name": "Blankenfelde",
+  "year": 1961,
+  "bezirk_name": "Pankow",
+  "station_count": 2,
+  "population": 10947,
+  "area_km2": 0.12
+}
+**Content:**
+In 1961, Blankenfelde (part of Pankow district) had a population of 10,947 residents covering an area of 0.12 square kilometers. The area was served by 2 public transport stations.
+--------------------------------------------------------------------------------
+
+## CHUNK 104: area_blankenfelde_1964_1964_131952
+**Type:** narrative
+**Temporal Context:** Year 1964
+**Spatial Context:** Blankenfelde
+**Source Entities:** area:blankenfelde_1964
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "blankenfelde_1964",
+  "area_name": "Blankenfelde",
+  "year": 1964,
+  "bezirk_name": "Pankow",
+  "station_count": 3,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1964, Blankenfelde (part of Pankow district). The area was served by 3 public transport stations.
+--------------------------------------------------------------------------------
+
+## CHUNK 105: area_blankenfelde_1965_1965_131953
+**Type:** narrative
+**Temporal Context:** Year 1965
+**Spatial Context:** Blankenfelde
+**Source Entities:** area:blankenfelde_1965
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "blankenfelde_1965",
+  "area_name": "Blankenfelde",
+  "year": 1965,
+  "bezirk_name": "Pankow",
+  "station_count": 6,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1965, Blankenfelde (part of Pankow district). The area was served by 6 public transport stations.
+--------------------------------------------------------------------------------
+
+## CHUNK 106: area_blankenfelde_1967_1967_131954
+**Type:** narrative
+**Temporal Context:** Year 1967
+**Spatial Context:** Blankenfelde
+**Source Entities:** area:blankenfelde_1967
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "blankenfelde_1967",
+  "area_name": "Blankenfelde",
+  "year": 1967,
+  "bezirk_name": "Pankow",
+  "station_count": 5,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1967, Blankenfelde (part of Pankow district). The area was served by 5 public transport stations.
+--------------------------------------------------------------------------------
+
+## CHUNK 107: area_blankenfelde_1971_1971_131955
+**Type:** narrative
+**Temporal Context:** Year 1971
+**Spatial Context:** Blankenfelde
+**Source Entities:** area:blankenfelde_1971
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "blankenfelde_1971",
+  "area_name": "Blankenfelde",
+  "year": 1971,
+  "bezirk_name": "Pankow",
+  "station_count": 2,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1971, Blankenfelde (part of Pankow district). The area was served by 2 public transport stations.
+--------------------------------------------------------------------------------
+
+## CHUNK 108: area_blankenfelde_1980_1980_131956
+**Type:** narrative
+**Temporal Context:** Year 1980
+**Spatial Context:** Blankenfelde
+**Source Entities:** area:blankenfelde_1980
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "blankenfelde_1980",
+  "area_name": "Blankenfelde",
+  "year": 1980,
+  "bezirk_name": "Pankow",
+  "station_count": 0,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1980, Blankenfelde (part of Pankow district). The area had no public transport stations during this period.
+--------------------------------------------------------------------------------
+
+## CHUNK 109: area_blankenfelde_1982_1982_131957
+**Type:** narrative
+**Temporal Context:** Year 1982
+**Spatial Context:** Blankenfelde
+**Source Entities:** area:blankenfelde_1982
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "blankenfelde_1982",
+  "area_name": "Blankenfelde",
+  "year": 1982,
+  "bezirk_name": "Pankow",
+  "station_count": 0,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1982, Blankenfelde (part of Pankow district). The area had no public transport stations during this period.
+--------------------------------------------------------------------------------
+
+## CHUNK 110: area_blankenfelde_1984_1984_131958
+**Type:** narrative
+**Temporal Context:** Year 1984
+**Spatial Context:** Blankenfelde
+**Source Entities:** area:blankenfelde_1984
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "blankenfelde_1984",
+  "area_name": "Blankenfelde",
+  "year": 1984,
+  "bezirk_name": "Pankow",
+  "station_count": 0,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1984, Blankenfelde (part of Pankow district). The area had no public transport stations during this period.
+--------------------------------------------------------------------------------
+
+## CHUNK 111: area_blankenfelde_1985_1985_131959
+**Type:** narrative
+**Temporal Context:** Year 1985
+**Spatial Context:** Blankenfelde
+**Source Entities:** area:blankenfelde_1985
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "blankenfelde_1985",
+  "area_name": "Blankenfelde",
+  "year": 1985,
+  "bezirk_name": "Pankow",
+  "station_count": 0,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1985, Blankenfelde (part of Pankow district). The area had no public transport stations during this period.
+--------------------------------------------------------------------------------
+
+## CHUNK 112: area_blankenfelde_1989_1989_131960
+**Type:** narrative
+**Temporal Context:** Year 1989
+**Spatial Context:** Blankenfelde
+**Source Entities:** area:blankenfelde_1989
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "blankenfelde_1989",
+  "area_name": "Blankenfelde",
+  "year": 1989,
+  "bezirk_name": "Pankow",
+  "station_count": 0,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1989, Blankenfelde (part of Pankow district). The area had no public transport stations during this period.
+--------------------------------------------------------------------------------
+
+## CHUNK 113: area_bohnsdorf_1946_1946_131961
+**Type:** narrative
+**Temporal Context:** Year 1946
+**Spatial Context:** Bohnsdorf
+**Source Entities:** area:bohnsdorf_1946
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "bohnsdorf_1946",
+  "area_name": "Bohnsdorf",
+  "year": 1946,
+  "bezirk_name": "Treptow",
+  "station_count": 0,
+  "population": 10389,
+  "area_km2": 5.75
+}
+**Content:**
+In 1946, Bohnsdorf (part of Treptow district) had a population of 10,389 residents covering an area of 5.75 square kilometers. The area had no public transport stations during this period.
+--------------------------------------------------------------------------------
+
+## CHUNK 114: area_bohnsdorf_1951_1951_131962
+**Type:** narrative
+**Temporal Context:** Year 1951
+**Spatial Context:** Bohnsdorf
+**Source Entities:** area:bohnsdorf_1951
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "bohnsdorf_1951",
+  "area_name": "Bohnsdorf",
+  "year": 1951,
+  "bezirk_name": "Treptow",
+  "station_count": 4,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1951, Bohnsdorf (part of Treptow district). The area was served by 4 public transport stations.
+--------------------------------------------------------------------------------
+
+## CHUNK 115: area_bohnsdorf_1956_1956_131963
+**Type:** narrative
+**Temporal Context:** Year 1956
+**Spatial Context:** Bohnsdorf
+**Source Entities:** area:bohnsdorf_1956
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "bohnsdorf_1956",
+  "area_name": "Bohnsdorf",
+  "year": 1956,
+  "bezirk_name": "Treptow",
+  "station_count": 5,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1956, Bohnsdorf (part of Treptow district). The area was served by 5 public transport stations.
+--------------------------------------------------------------------------------
+
+## CHUNK 116: area_bohnsdorf_1960_1960_131964
+**Type:** narrative
+**Temporal Context:** Year 1960
+**Spatial Context:** Bohnsdorf
+**Source Entities:** area:bohnsdorf_1960
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "bohnsdorf_1960",
+  "area_name": "Bohnsdorf",
+  "year": 1960,
+  "bezirk_name": "Treptow",
+  "station_count": 8,
+  "population": 8756,
+  "area_km2": 5.8
+}
+**Content:**
+In 1960, Bohnsdorf (part of Treptow district) had a population of 8,756 residents covering an area of 5.80 square kilometers. The area was served by 8 public transport stations.
+--------------------------------------------------------------------------------
+
+## CHUNK 117: area_bohnsdorf_1961_1961_131965
+**Type:** narrative
+**Temporal Context:** Year 1961
+**Spatial Context:** Bohnsdorf
+**Source Entities:** area:bohnsdorf_1961
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "bohnsdorf_1961",
+  "area_name": "Bohnsdorf",
+  "year": 1961,
+  "bezirk_name": "Treptow",
+  "station_count": 8,
+  "population": 8542,
+  "area_km2": 0.04
+}
+**Content:**
+In 1961, Bohnsdorf (part of Treptow district) had a population of 8,542 residents covering an area of 0.04 square kilometers. The area was served by 8 public transport stations.
+--------------------------------------------------------------------------------
+
+## CHUNK 118: area_bohnsdorf_1964_1964_131966
+**Type:** narrative
+**Temporal Context:** Year 1964
+**Spatial Context:** Bohnsdorf
+**Source Entities:** area:bohnsdorf_1964
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "bohnsdorf_1964",
+  "area_name": "Bohnsdorf",
+  "year": 1964,
+  "bezirk_name": "Treptow",
+  "station_count": 7,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1964, Bohnsdorf (part of Treptow district). The area was served by 7 public transport stations.
+--------------------------------------------------------------------------------
+
+## CHUNK 119: area_bohnsdorf_1965_1965_131967
+**Type:** narrative
+**Temporal Context:** Year 1965
+**Spatial Context:** Bohnsdorf
+**Source Entities:** area:bohnsdorf_1965
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "bohnsdorf_1965",
+  "area_name": "Bohnsdorf",
+  "year": 1965,
+  "bezirk_name": "Treptow",
+  "station_count": 6,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1965, Bohnsdorf (part of Treptow district). The area was served by 6 public transport stations.
+--------------------------------------------------------------------------------
+
+## CHUNK 120: area_bohnsdorf_1967_1967_131968
+**Type:** narrative
+**Temporal Context:** Year 1967
+**Spatial Context:** Bohnsdorf
+**Source Entities:** area:bohnsdorf_1967
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "bohnsdorf_1967",
+  "area_name": "Bohnsdorf",
+  "year": 1967,
+  "bezirk_name": "Treptow",
+  "station_count": 5,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1967, Bohnsdorf (part of Treptow district). The area was served by 5 public transport stations.
+--------------------------------------------------------------------------------
+
+## CHUNK 121: area_bohnsdorf_1971_1971_131969
+**Type:** narrative
+**Temporal Context:** Year 1971
+**Spatial Context:** Bohnsdorf
+**Source Entities:** area:bohnsdorf_1971
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "bohnsdorf_1971",
+  "area_name": "Bohnsdorf",
+  "year": 1971,
+  "bezirk_name": "Treptow",
+  "station_count": 4,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1971, Bohnsdorf (part of Treptow district). The area was served by 4 public transport stations.
+--------------------------------------------------------------------------------
+
+## CHUNK 122: area_bohnsdorf_1980_1980_131970
+**Type:** narrative
+**Temporal Context:** Year 1980
+**Spatial Context:** Bohnsdorf
+**Source Entities:** area:bohnsdorf_1980
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "bohnsdorf_1980",
+  "area_name": "Bohnsdorf",
+  "year": 1980,
+  "bezirk_name": "Treptow",
+  "station_count": 0,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1980, Bohnsdorf (part of Treptow district). The area had no public transport stations during this period.
+--------------------------------------------------------------------------------
+
+## CHUNK 123: area_bohnsdorf_1982_1982_131971
+**Type:** narrative
+**Temporal Context:** Year 1982
+**Spatial Context:** Bohnsdorf
+**Source Entities:** area:bohnsdorf_1982
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "bohnsdorf_1982",
+  "area_name": "Bohnsdorf",
+  "year": 1982,
+  "bezirk_name": "Treptow",
+  "station_count": 0,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1982, Bohnsdorf (part of Treptow district). The area had no public transport stations during this period.
+--------------------------------------------------------------------------------
+
+## CHUNK 124: area_bohnsdorf_1984_1984_131972
+**Type:** narrative
+**Temporal Context:** Year 1984
+**Spatial Context:** Bohnsdorf
+**Source Entities:** area:bohnsdorf_1984
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "bohnsdorf_1984",
+  "area_name": "Bohnsdorf",
+  "year": 1984,
+  "bezirk_name": "Treptow",
+  "station_count": 0,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1984, Bohnsdorf (part of Treptow district). The area had no public transport stations during this period.
+--------------------------------------------------------------------------------
+
+## CHUNK 125: area_bohnsdorf_1985_1985_131973
+**Type:** narrative
+**Temporal Context:** Year 1985
+**Spatial Context:** Bohnsdorf
+**Source Entities:** area:bohnsdorf_1985
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "bohnsdorf_1985",
+  "area_name": "Bohnsdorf",
+  "year": 1985,
+  "bezirk_name": "Treptow",
+  "station_count": 0,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1985, Bohnsdorf (part of Treptow district). The area had no public transport stations during this period.
+--------------------------------------------------------------------------------
+
+## CHUNK 126: area_bohnsdorf_1989_1989_131974
+**Type:** narrative
+**Temporal Context:** Year 1989
+**Spatial Context:** Bohnsdorf
+**Source Entities:** area:bohnsdorf_1989
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "bohnsdorf_1989",
+  "area_name": "Bohnsdorf",
+  "year": 1989,
+  "bezirk_name": "Treptow",
+  "station_count": 0,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1989, Bohnsdorf (part of Treptow district). The area had no public transport stations during this period.
+--------------------------------------------------------------------------------
+
+## CHUNK 127: area_britz_1946_1946_131975
+**Type:** narrative
+**Temporal Context:** Year 1946
+**Spatial Context:** Britz
+**Source Entities:** area:britz_1946
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "britz_1946",
+  "area_name": "Britz",
+  "year": 1946,
+  "bezirk_name": null,
+  "station_count": 5,
+  "population": 20233,
+  "area_km2": 12.2
+}
+**Content:**
+In 1946, Britz had a population of 20,233 residents covering an area of 12.20 square kilometers. The area was served by 5 public transport stations.
+--------------------------------------------------------------------------------
+
+## CHUNK 128: area_britz_1951_1951_131976
+**Type:** narrative
+**Temporal Context:** Year 1951
+**Spatial Context:** Britz
+**Source Entities:** area:britz_1951
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "britz_1951",
+  "area_name": "Britz",
+  "year": 1951,
+  "bezirk_name": null,
+  "station_count": 9,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1951, Britz. The area was served by 9 public transport stations.
+--------------------------------------------------------------------------------
+
+## CHUNK 129: area_britz_1956_1956_131977
+**Type:** narrative
+**Temporal Context:** Year 1956
+**Spatial Context:** Britz
+**Source Entities:** area:britz_1956
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "britz_1956",
+  "area_name": "Britz",
+  "year": 1956,
+  "bezirk_name": null,
+  "station_count": 13,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1956, Britz. The area was served by 13 public transport stations.
+--------------------------------------------------------------------------------
+
+## CHUNK 130: area_britz_1960_1960_131978
+**Type:** narrative
+**Temporal Context:** Year 1960
+**Spatial Context:** Britz
+**Source Entities:** area:britz_1960
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "britz_1960",
+  "area_name": "Britz",
+  "year": 1960,
+  "bezirk_name": null,
+  "station_count": 19,
+  "population": 47595,
+  "area_km2": 12.2
+}
+**Content:**
+In 1960, Britz had a population of 47,595 residents covering an area of 12.20 square kilometers. The area was served by 19 public transport stations.
+--------------------------------------------------------------------------------
+
+## CHUNK 131: area_britz_1961_1961_131979
+**Type:** narrative
+**Temporal Context:** Year 1961
+**Spatial Context:** Britz
+**Source Entities:** area:britz_1961
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "britz_1961",
+  "area_name": "Britz",
+  "year": 1961,
+  "bezirk_name": null,
+  "station_count": 19,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1961, Britz. The area was served by 19 public transport stations.
+--------------------------------------------------------------------------------
+
+## CHUNK 132: area_britz_1964_1964_131980
+**Type:** narrative
+**Temporal Context:** Year 1964
+**Spatial Context:** Britz
+**Source Entities:** area:britz_1964
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "britz_1964",
+  "area_name": "Britz",
+  "year": 1964,
+  "bezirk_name": null,
+  "station_count": 28,
+  "population": 53855,
+  "area_km2": 12.2
+}
+**Content:**
+In 1964, Britz had a population of 53,855 residents covering an area of 12.20 square kilometers. The area was served by 28 public transport stations.
+--------------------------------------------------------------------------------
+
+## CHUNK 133: area_britz_1965_1965_131981
+**Type:** narrative
+**Temporal Context:** Year 1965
+**Spatial Context:** Britz
+**Source Entities:** area:britz_1965
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "britz_1965",
+  "area_name": "Britz",
+  "year": 1965,
+  "bezirk_name": null,
+  "station_count": 31,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1965, Britz. The area was served by 31 public transport stations.
+--------------------------------------------------------------------------------
+
+## CHUNK 134: area_britz_1967_1967_131982
+**Type:** narrative
+**Temporal Context:** Year 1967
+**Spatial Context:** Britz
+**Source Entities:** area:britz_1967
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "britz_1967",
+  "area_name": "Britz",
+  "year": 1967,
+  "bezirk_name": null,
+  "station_count": 25,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1967, Britz. The area was served by 25 public transport stations.
+--------------------------------------------------------------------------------
+
+## CHUNK 135: area_britz_1971_1971_131983
+**Type:** narrative
+**Temporal Context:** Year 1971
+**Spatial Context:** Britz
+**Source Entities:** area:britz_1971
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "britz_1971",
+  "area_name": "Britz",
+  "year": 1971,
+  "bezirk_name": null,
+  "station_count": 20,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1971, Britz. The area was served by 20 public transport stations.
+--------------------------------------------------------------------------------
+
+## CHUNK 136: area_britz_1980_1980_131984
+**Type:** narrative
+**Temporal Context:** Year 1980
+**Spatial Context:** Britz
+**Source Entities:** area:britz_1980
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "britz_1980",
+  "area_name": "Britz",
+  "year": 1980,
+  "bezirk_name": null,
+  "station_count": 0,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1980, Britz. The area had no public transport stations during this period.
+--------------------------------------------------------------------------------
+
+## CHUNK 137: area_britz_1982_1982_131985
+**Type:** narrative
+**Temporal Context:** Year 1982
+**Spatial Context:** Britz
+**Source Entities:** area:britz_1982
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "britz_1982",
+  "area_name": "Britz",
+  "year": 1982,
+  "bezirk_name": null,
+  "station_count": 0,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1982, Britz. The area had no public transport stations during this period.
+--------------------------------------------------------------------------------
+
+## CHUNK 138: area_britz_1984_1984_131986
+**Type:** narrative
+**Temporal Context:** Year 1984
+**Spatial Context:** Britz
+**Source Entities:** area:britz_1984
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "britz_1984",
+  "area_name": "Britz",
+  "year": 1984,
+  "bezirk_name": null,
+  "station_count": 0,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1984, Britz. The area had no public transport stations during this period.
+--------------------------------------------------------------------------------
+
+## CHUNK 139: area_britz_1985_1985_131987
+**Type:** narrative
+**Temporal Context:** Year 1985
+**Spatial Context:** Britz
+**Source Entities:** area:britz_1985
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "britz_1985",
+  "area_name": "Britz",
+  "year": 1985,
+  "bezirk_name": null,
+  "station_count": 0,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1985, Britz. The area had no public transport stations during this period.
+--------------------------------------------------------------------------------
+
+## CHUNK 140: area_britz_1989_1989_131988
+**Type:** narrative
+**Temporal Context:** Year 1989
+**Spatial Context:** Britz
+**Source Entities:** area:britz_1989
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "britz_1989",
+  "area_name": "Britz",
+  "year": 1989,
+  "bezirk_name": null,
+  "station_count": 0,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1989, Britz. The area had no public transport stations during this period.
+--------------------------------------------------------------------------------
+
+## CHUNK 141: area_buch_1946_1946_131989
+**Type:** narrative
+**Temporal Context:** Year 1946
+**Spatial Context:** Buch
+**Source Entities:** area:buch_1946
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "buch_1946",
+  "area_name": "Buch",
+  "year": 1946,
+  "bezirk_name": "Pankow",
+  "station_count": 1,
+  "population": 7913,
+  "area_km2": 18.82
+}
+**Content:**
+In 1946, Buch (part of Pankow district) had a population of 7,913 residents covering an area of 18.82 square kilometers. The area was served by 1 public transport stations.
+--------------------------------------------------------------------------------
+
+## CHUNK 142: area_buch_1951_1951_131990
+**Type:** narrative
+**Temporal Context:** Year 1951
+**Spatial Context:** Buch
+**Source Entities:** area:buch_1951
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "buch_1951",
+  "area_name": "Buch",
+  "year": 1951,
+  "bezirk_name": "Pankow",
+  "station_count": 3,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1951, Buch (part of Pankow district). The area was served by 3 public transport stations.
+--------------------------------------------------------------------------------
+
+## CHUNK 143: area_buch_1956_1956_131991
+**Type:** narrative
+**Temporal Context:** Year 1956
+**Spatial Context:** Buch
+**Source Entities:** area:buch_1956
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "buch_1956",
+  "area_name": "Buch",
+  "year": 1956,
+  "bezirk_name": "Pankow",
+  "station_count": 3,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1956, Buch (part of Pankow district). The area was served by 3 public transport stations.
+--------------------------------------------------------------------------------
+
+## CHUNK 144: area_buch_1960_1960_131992
+**Type:** narrative
+**Temporal Context:** Year 1960
+**Spatial Context:** Buch
+**Source Entities:** area:buch_1960
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "buch_1960",
+  "area_name": "Buch",
+  "year": 1960,
+  "bezirk_name": "Pankow",
+  "station_count": 4,
+  "population": 7002,
+  "area_km2": 10.0
+}
+**Content:**
+In 1960, Buch (part of Pankow district) had a population of 7,002 residents covering an area of 10.00 square kilometers. The area was served by 4 public transport stations.
+--------------------------------------------------------------------------------
+
+## CHUNK 145: area_buch_1961_1961_131993
+**Type:** narrative
+**Temporal Context:** Year 1961
+**Spatial Context:** Buch
+**Source Entities:** area:buch_1961
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "buch_1961",
+  "area_name": "Buch",
+  "year": 1961,
+  "bezirk_name": "Pankow",
+  "station_count": 3,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1961, Buch (part of Pankow district). The area was served by 3 public transport stations.
+--------------------------------------------------------------------------------
+
+## CHUNK 146: area_buch_1964_1964_131994
+**Type:** narrative
+**Temporal Context:** Year 1964
+**Spatial Context:** Buch
+**Source Entities:** area:buch_1964
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "buch_1964",
+  "area_name": "Buch",
+  "year": 1964,
+  "bezirk_name": "Pankow",
+  "station_count": 3,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1964, Buch (part of Pankow district). The area was served by 3 public transport stations.
+--------------------------------------------------------------------------------
+
+## CHUNK 147: area_buch_1965_1965_131995
+**Type:** narrative
+**Temporal Context:** Year 1965
+**Spatial Context:** Buch
+**Source Entities:** area:buch_1965
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "buch_1965",
+  "area_name": "Buch",
+  "year": 1965,
+  "bezirk_name": "Pankow",
+  "station_count": 4,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1965, Buch (part of Pankow district). The area was served by 4 public transport stations.
+--------------------------------------------------------------------------------
+
+## CHUNK 148: area_buch_1967_1967_131996
+**Type:** narrative
+**Temporal Context:** Year 1967
+**Spatial Context:** Buch
+**Source Entities:** area:buch_1967
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "buch_1967",
+  "area_name": "Buch",
+  "year": 1967,
+  "bezirk_name": "Pankow",
+  "station_count": 7,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1967, Buch (part of Pankow district). The area was served by 7 public transport stations.
+--------------------------------------------------------------------------------
+
+## CHUNK 149: area_buch_1971_1971_131997
+**Type:** narrative
+**Temporal Context:** Year 1971
+**Spatial Context:** Buch
+**Source Entities:** area:buch_1971
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "buch_1971",
+  "area_name": "Buch",
+  "year": 1971,
+  "bezirk_name": "Pankow",
+  "station_count": 8,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1971, Buch (part of Pankow district). The area was served by 8 public transport stations.
+--------------------------------------------------------------------------------
+
+## CHUNK 150: area_buch_1980_1980_131998
+**Type:** narrative
+**Temporal Context:** Year 1980
+**Spatial Context:** Buch
+**Source Entities:** area:buch_1980
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "buch_1980",
+  "area_name": "Buch",
+  "year": 1980,
+  "bezirk_name": "Pankow",
+  "station_count": 0,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1980, Buch (part of Pankow district). The area had no public transport stations during this period.
+--------------------------------------------------------------------------------
+
+## CHUNK 151: area_buch_1982_1982_131999
+**Type:** narrative
+**Temporal Context:** Year 1982
+**Spatial Context:** Buch
+**Source Entities:** area:buch_1982
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "buch_1982",
+  "area_name": "Buch",
+  "year": 1982,
+  "bezirk_name": "Pankow",
+  "station_count": 0,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1982, Buch (part of Pankow district). The area had no public transport stations during this period.
+--------------------------------------------------------------------------------
+
+## CHUNK 152: area_buch_1984_1984_132000
+**Type:** narrative
+**Temporal Context:** Year 1984
+**Spatial Context:** Buch
+**Source Entities:** area:buch_1984
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "buch_1984",
+  "area_name": "Buch",
+  "year": 1984,
+  "bezirk_name": "Pankow",
+  "station_count": 0,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1984, Buch (part of Pankow district). The area had no public transport stations during this period.
+--------------------------------------------------------------------------------
+
+## CHUNK 153: area_buch_1985_1985_132001
+**Type:** narrative
+**Temporal Context:** Year 1985
+**Spatial Context:** Buch
+**Source Entities:** area:buch_1985
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "buch_1985",
+  "area_name": "Buch",
+  "year": 1985,
+  "bezirk_name": "Pankow",
+  "station_count": 0,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1985, Buch (part of Pankow district). The area had no public transport stations during this period.
+--------------------------------------------------------------------------------
+
+## CHUNK 154: area_buch_1989_1989_132002
+**Type:** narrative
+**Temporal Context:** Year 1989
+**Spatial Context:** Buch
+**Source Entities:** area:buch_1989
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "buch_1989",
+  "area_name": "Buch",
+  "year": 1989,
+  "bezirk_name": "Pankow",
+  "station_count": 0,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1989, Buch (part of Pankow district). The area had no public transport stations during this period.
+--------------------------------------------------------------------------------
+
+## CHUNK 155: area_buckow_1946_1946_132003
+**Type:** narrative
+**Temporal Context:** Year 1946
+**Spatial Context:** Buckow
+**Source Entities:** area:buckow_1946
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "buckow_1946",
+  "area_name": "Buckow",
+  "year": 1946,
+  "bezirk_name": null,
+  "station_count": 2,
+  "population": 5461,
+  "area_km2": 8.62
+}
+**Content:**
+In 1946, Buckow had a population of 5,461 residents covering an area of 8.62 square kilometers. The area was served by 2 public transport stations.
+--------------------------------------------------------------------------------
+
+## CHUNK 156: area_charlottenburg_1946_1946_132004
+**Type:** narrative
+**Temporal Context:** Year 1946
+**Spatial Context:** Charlottenburg
+**Source Entities:** area:charlottenburg_1946
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "charlottenburg_1946",
+  "area_name": "Charlottenburg",
+  "year": 1946,
+  "bezirk_name": "Charlottenburg",
+  "station_count": 41,
+  "population": 208453,
+  "area_km2": 29.28
+}
+**Content:**
+In 1946, Charlottenburg (part of Charlottenburg district) had a population of 208,453 residents covering an area of 29.28 square kilometers. The area was served by 41 public transport stations.
+--------------------------------------------------------------------------------
+
+## CHUNK 157: area_charlottenburg_1951_1951_132005
+**Type:** narrative
+**Temporal Context:** Year 1951
+**Spatial Context:** Charlottenburg
+**Source Entities:** area:charlottenburg_1951
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "charlottenburg_1951",
+  "area_name": "Charlottenburg",
+  "year": 1951,
+  "bezirk_name": "Charlottenburg",
+  "station_count": 69,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1951, Charlottenburg (part of Charlottenburg district). The area was served by 69 public transport stations.
+--------------------------------------------------------------------------------
+
+## CHUNK 158: area_charlottenburg_1956_1956_132006
+**Type:** narrative
+**Temporal Context:** Year 1956
+**Spatial Context:** Charlottenburg
+**Source Entities:** area:charlottenburg_1956
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "charlottenburg_1956",
+  "area_name": "Charlottenburg",
+  "year": 1956,
+  "bezirk_name": "Charlottenburg",
+  "station_count": 87,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1956, Charlottenburg (part of Charlottenburg district). The area was served by 87 public transport stations.
+--------------------------------------------------------------------------------
+
+## CHUNK 159: area_charlottenburg_1960_1960_132007
+**Type:** narrative
+**Temporal Context:** Year 1960
+**Spatial Context:** Charlottenburg
+**Source Entities:** area:charlottenburg_1960
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "charlottenburg_1960",
+  "area_name": "Charlottenburg",
+  "year": 1960,
+  "bezirk_name": "Charlottenburg",
+  "station_count": 118,
+  "population": 224538,
+  "area_km2": 30.4
+}
+**Content:**
+In 1960, Charlottenburg (part of Charlottenburg district) had a population of 224,538 residents covering an area of 30.40 square kilometers. The area was served by 118 public transport stations.
+--------------------------------------------------------------------------------
+
+## CHUNK 160: area_charlottenburg_1961_1961_132008
+**Type:** narrative
+**Temporal Context:** Year 1961
+**Spatial Context:** Charlottenburg
+**Source Entities:** area:charlottenburg_1961
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "charlottenburg_1961",
+  "area_name": "Charlottenburg",
+  "year": 1961,
+  "bezirk_name": "Charlottenburg",
+  "station_count": 102,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1961, Charlottenburg (part of Charlottenburg district). The area was served by 102 public transport stations.
+--------------------------------------------------------------------------------
+
+## CHUNK 161: area_charlottenburg_1964_1964_132009
+**Type:** narrative
+**Temporal Context:** Year 1964
+**Spatial Context:** Charlottenburg
+**Source Entities:** area:charlottenburg_1964
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "charlottenburg_1964",
+  "area_name": "Charlottenburg",
+  "year": 1964,
+  "bezirk_name": "Charlottenburg",
+  "station_count": 124,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1964, Charlottenburg (part of Charlottenburg district). The area was served by 124 public transport stations.
+--------------------------------------------------------------------------------
+
+## CHUNK 162: area_charlottenburg_1965_1965_132010
+**Type:** narrative
+**Temporal Context:** Year 1965
+**Spatial Context:** Charlottenburg
+**Source Entities:** area:charlottenburg_1965
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "charlottenburg_1965",
+  "area_name": "Charlottenburg",
+  "year": 1965,
+  "bezirk_name": "Charlottenburg",
+  "station_count": 131,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1965, Charlottenburg (part of Charlottenburg district). The area was served by 131 public transport stations.
+--------------------------------------------------------------------------------
+
+## CHUNK 163: area_charlottenburg_1967_1967_132011
+**Type:** narrative
+**Temporal Context:** Year 1967
+**Spatial Context:** Charlottenburg
+**Source Entities:** area:charlottenburg_1967
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "charlottenburg_1967",
+  "area_name": "Charlottenburg",
+  "year": 1967,
+  "bezirk_name": "Charlottenburg",
+  "station_count": 121,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1967, Charlottenburg (part of Charlottenburg district). The area was served by 121 public transport stations.
+--------------------------------------------------------------------------------
+
+## CHUNK 164: area_charlottenburg_1971_1971_132012
+**Type:** narrative
+**Temporal Context:** Year 1971
+**Spatial Context:** Charlottenburg
+**Source Entities:** area:charlottenburg_1971
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "charlottenburg_1971",
+  "area_name": "Charlottenburg",
+  "year": 1971,
+  "bezirk_name": "Charlottenburg",
+  "station_count": 99,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1971, Charlottenburg (part of Charlottenburg district). The area was served by 99 public transport stations.
+--------------------------------------------------------------------------------
+
+## CHUNK 165: area_charlottenburg_1980_1980_132013
+**Type:** narrative
+**Temporal Context:** Year 1980
+**Spatial Context:** Charlottenburg
+**Source Entities:** area:charlottenburg_1980
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "charlottenburg_1980",
+  "area_name": "Charlottenburg",
+  "year": 1980,
+  "bezirk_name": "Charlottenburg",
+  "station_count": 0,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1980, Charlottenburg (part of Charlottenburg district). The area had no public transport stations during this period.
+--------------------------------------------------------------------------------
+
+## CHUNK 166: area_charlottenburg_1982_1982_132014
+**Type:** narrative
+**Temporal Context:** Year 1982
+**Spatial Context:** Charlottenburg
+**Source Entities:** area:charlottenburg_1982
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "charlottenburg_1982",
+  "area_name": "Charlottenburg",
+  "year": 1982,
+  "bezirk_name": "Charlottenburg",
+  "station_count": 0,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1982, Charlottenburg (part of Charlottenburg district). The area had no public transport stations during this period.
+--------------------------------------------------------------------------------
+
+## CHUNK 167: area_charlottenburg_1984_1984_132015
+**Type:** narrative
+**Temporal Context:** Year 1984
+**Spatial Context:** Charlottenburg
+**Source Entities:** area:charlottenburg_1984
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "charlottenburg_1984",
+  "area_name": "Charlottenburg",
+  "year": 1984,
+  "bezirk_name": "Charlottenburg",
+  "station_count": 0,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1984, Charlottenburg (part of Charlottenburg district). The area had no public transport stations during this period.
+--------------------------------------------------------------------------------
+
+## CHUNK 168: area_charlottenburg_1985_1985_132016
+**Type:** narrative
+**Temporal Context:** Year 1985
+**Spatial Context:** Charlottenburg
+**Source Entities:** area:charlottenburg_1985
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "charlottenburg_1985",
+  "area_name": "Charlottenburg",
+  "year": 1985,
+  "bezirk_name": "Charlottenburg",
+  "station_count": 0,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1985, Charlottenburg (part of Charlottenburg district). The area had no public transport stations during this period.
+--------------------------------------------------------------------------------
+
+## CHUNK 169: area_charlottenburg_1989_1989_132017
+**Type:** narrative
+**Temporal Context:** Year 1989
+**Spatial Context:** Charlottenburg
+**Source Entities:** area:charlottenburg_1989
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "charlottenburg_1989",
+  "area_name": "Charlottenburg",
+  "year": 1989,
+  "bezirk_name": "Charlottenburg",
+  "station_count": 0,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1989, Charlottenburg (part of Charlottenburg district). The area had no public transport stations during this period.
+--------------------------------------------------------------------------------
+
+## CHUNK 170: area_dahlem_1946_1946_132018
+**Type:** narrative
+**Temporal Context:** Year 1946
+**Spatial Context:** Dahlem
+**Source Entities:** area:dahlem_1946
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "dahlem_1946",
+  "area_name": "Dahlem",
+  "year": 1946,
+  "bezirk_name": null,
+  "station_count": 0,
+  "population": 9485,
+  "area_km2": 6.27
+}
+**Content:**
+In 1946, Dahlem had a population of 9,485 residents covering an area of 6.27 square kilometers. The area had no public transport stations during this period.
+--------------------------------------------------------------------------------
+
+## CHUNK 171: area_dahlem_1951_1951_132019
+**Type:** narrative
+**Temporal Context:** Year 1951
+**Spatial Context:** Dahlem
+**Source Entities:** area:dahlem_1951
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "dahlem_1951",
+  "area_name": "Dahlem",
+  "year": 1951,
+  "bezirk_name": null,
+  "station_count": 20,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1951, Dahlem. The area was served by 20 public transport stations.
+--------------------------------------------------------------------------------
+
+## CHUNK 172: area_dahlem_1956_1956_132020
+**Type:** narrative
+**Temporal Context:** Year 1956
+**Spatial Context:** Dahlem
+**Source Entities:** area:dahlem_1956
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "dahlem_1956",
+  "area_name": "Dahlem",
+  "year": 1956,
+  "bezirk_name": null,
+  "station_count": 29,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1956, Dahlem. The area was served by 29 public transport stations.
+--------------------------------------------------------------------------------
+
+## CHUNK 173: area_dahlem_1960_1960_132021
+**Type:** narrative
+**Temporal Context:** Year 1960
+**Spatial Context:** Dahlem
+**Source Entities:** area:dahlem_1960
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "dahlem_1960",
+  "area_name": "Dahlem",
+  "year": 1960,
+  "bezirk_name": null,
+  "station_count": 38,
+  "population": 11924,
+  "area_km2": 8.5
+}
+**Content:**
+In 1960, Dahlem had a population of 11,924 residents covering an area of 8.50 square kilometers. The area was served by 38 public transport stations.
+--------------------------------------------------------------------------------
+
+## CHUNK 174: area_dahlem_1961_1961_132022
+**Type:** narrative
+**Temporal Context:** Year 1961
+**Spatial Context:** Dahlem
+**Source Entities:** area:dahlem_1961
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "dahlem_1961",
+  "area_name": "Dahlem",
+  "year": 1961,
+  "bezirk_name": null,
+  "station_count": 37,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1961, Dahlem. The area was served by 37 public transport stations.
+--------------------------------------------------------------------------------
+
+## CHUNK 175: area_dahlem_1964_1964_132023
+**Type:** narrative
+**Temporal Context:** Year 1964
+**Spatial Context:** Dahlem
+**Source Entities:** area:dahlem_1964
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "dahlem_1964",
+  "area_name": "Dahlem",
+  "year": 1964,
+  "bezirk_name": null,
+  "station_count": 31,
+  "population": 11897,
+  "area_km2": 8.5
+}
+**Content:**
+In 1964, Dahlem had a population of 11,897 residents covering an area of 8.50 square kilometers. The area was served by 31 public transport stations.
+--------------------------------------------------------------------------------
+
+## CHUNK 176: area_dahlem_1965_1965_132024
+**Type:** narrative
+**Temporal Context:** Year 1965
+**Spatial Context:** Dahlem
+**Source Entities:** area:dahlem_1965
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "dahlem_1965",
+  "area_name": "Dahlem",
+  "year": 1965,
+  "bezirk_name": null,
+  "station_count": 31,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1965, Dahlem. The area was served by 31 public transport stations.
+--------------------------------------------------------------------------------
+
+## CHUNK 177: area_dahlem_1967_1967_132025
+**Type:** narrative
+**Temporal Context:** Year 1967
+**Spatial Context:** Dahlem
+**Source Entities:** area:dahlem_1967
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "dahlem_1967",
+  "area_name": "Dahlem",
+  "year": 1967,
+  "bezirk_name": null,
+  "station_count": 30,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1967, Dahlem. The area was served by 30 public transport stations.
+--------------------------------------------------------------------------------
+
+## CHUNK 178: area_dahlem_1971_1971_132026
+**Type:** narrative
+**Temporal Context:** Year 1971
+**Spatial Context:** Dahlem
+**Source Entities:** area:dahlem_1971
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "dahlem_1971",
+  "area_name": "Dahlem",
+  "year": 1971,
+  "bezirk_name": null,
+  "station_count": 24,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1971, Dahlem. The area was served by 24 public transport stations.
+--------------------------------------------------------------------------------
+
+## CHUNK 179: area_dahlem_1980_1980_132027
+**Type:** narrative
+**Temporal Context:** Year 1980
+**Spatial Context:** Dahlem
+**Source Entities:** area:dahlem_1980
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "dahlem_1980",
+  "area_name": "Dahlem",
+  "year": 1980,
+  "bezirk_name": null,
+  "station_count": 0,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1980, Dahlem. The area had no public transport stations during this period.
+--------------------------------------------------------------------------------
+
+## CHUNK 180: area_dahlem_1982_1982_132028
+**Type:** narrative
+**Temporal Context:** Year 1982
+**Spatial Context:** Dahlem
+**Source Entities:** area:dahlem_1982
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "dahlem_1982",
+  "area_name": "Dahlem",
+  "year": 1982,
+  "bezirk_name": null,
+  "station_count": 0,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1982, Dahlem. The area had no public transport stations during this period.
+--------------------------------------------------------------------------------
+
+## CHUNK 181: area_dahlem_1984_1984_132029
+**Type:** narrative
+**Temporal Context:** Year 1984
+**Spatial Context:** Dahlem
+**Source Entities:** area:dahlem_1984
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "dahlem_1984",
+  "area_name": "Dahlem",
+  "year": 1984,
+  "bezirk_name": null,
+  "station_count": 0,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1984, Dahlem. The area had no public transport stations during this period.
+--------------------------------------------------------------------------------
+
+## CHUNK 182: area_dahlem_1985_1985_132030
+**Type:** narrative
+**Temporal Context:** Year 1985
+**Spatial Context:** Dahlem
+**Source Entities:** area:dahlem_1985
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "dahlem_1985",
+  "area_name": "Dahlem",
+  "year": 1985,
+  "bezirk_name": null,
+  "station_count": 0,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1985, Dahlem. The area had no public transport stations during this period.
+--------------------------------------------------------------------------------
+
+## CHUNK 183: area_dahlem_1989_1989_132031
+**Type:** narrative
+**Temporal Context:** Year 1989
+**Spatial Context:** Dahlem
+**Source Entities:** area:dahlem_1989
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "dahlem_1989",
+  "area_name": "Dahlem",
+  "year": 1989,
+  "bezirk_name": null,
+  "station_count": 0,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1989, Dahlem. The area had no public transport stations during this period.
+--------------------------------------------------------------------------------
+
+## CHUNK 184: area_falkenberg_1946_1946_132032
+**Type:** narrative
+**Temporal Context:** Year 1946
+**Spatial Context:** Falkenberg
+**Source Entities:** area:falkenberg_1946
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "falkenberg_1946",
+  "area_name": "Falkenberg",
+  "year": 1946,
+  "bezirk_name": "Wei\u00dfensee",
+  "station_count": 0,
+  "population": 897,
+  "area_km2": 10.22
+}
+**Content:**
+In 1946, Falkenberg (part of Weißensee district) had a population of 897 residents covering an area of 10.22 square kilometers. The area had no public transport stations during this period.
+--------------------------------------------------------------------------------
+
+## CHUNK 185: area_falkenberg_1951_1951_132033
+**Type:** narrative
+**Temporal Context:** Year 1951
+**Spatial Context:** Falkenberg
+**Source Entities:** area:falkenberg_1951
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "falkenberg_1951",
+  "area_name": "Falkenberg",
+  "year": 1951,
+  "bezirk_name": "Wei\u00dfensee",
+  "station_count": 2,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1951, Falkenberg (part of Weißensee district). The area was served by 2 public transport stations.
+--------------------------------------------------------------------------------
+
+## CHUNK 186: area_falkenberg_1956_1956_132034
+**Type:** narrative
+**Temporal Context:** Year 1956
+**Spatial Context:** Falkenberg
+**Source Entities:** area:falkenberg_1956
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "falkenberg_1956",
+  "area_name": "Falkenberg",
+  "year": 1956,
+  "bezirk_name": "Wei\u00dfensee",
+  "station_count": 1,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1956, Falkenberg (part of Weißensee district). The area was served by 1 public transport stations.
+--------------------------------------------------------------------------------
+
+## CHUNK 187: area_falkenberg_1960_1960_132035
+**Type:** narrative
+**Temporal Context:** Year 1960
+**Spatial Context:** Falkenberg
+**Source Entities:** area:falkenberg_1960
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "falkenberg_1960",
+  "area_name": "Falkenberg",
+  "year": 1960,
+  "bezirk_name": "Wei\u00dfensee",
+  "station_count": 1,
+  "population": 1075,
+  "area_km2": 10.2
+}
+**Content:**
+In 1960, Falkenberg (part of Weißensee district) had a population of 1,075 residents covering an area of 10.20 square kilometers. The area was served by 1 public transport stations.
+--------------------------------------------------------------------------------
+
+## CHUNK 188: area_falkenberg_1961_1961_132036
+**Type:** narrative
+**Temporal Context:** Year 1961
+**Spatial Context:** Falkenberg
+**Source Entities:** area:falkenberg_1961
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "falkenberg_1961",
+  "area_name": "Falkenberg",
+  "year": 1961,
+  "bezirk_name": "Wei\u00dfensee",
+  "station_count": 1,
+  "population": 657,
+  "area_km2": 0.02
+}
+**Content:**
+In 1961, Falkenberg (part of Weißensee district) had a population of 657 residents covering an area of 0.02 square kilometers. The area was served by 1 public transport stations.
+--------------------------------------------------------------------------------
+
+## CHUNK 189: area_falkenberg_1964_1964_132037
+**Type:** narrative
+**Temporal Context:** Year 1964
+**Spatial Context:** Falkenberg
+**Source Entities:** area:falkenberg_1964
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "falkenberg_1964",
+  "area_name": "Falkenberg",
+  "year": 1964,
+  "bezirk_name": "Wei\u00dfensee",
+  "station_count": 0,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1964, Falkenberg (part of Weißensee district). The area had no public transport stations during this period.
+--------------------------------------------------------------------------------
+
+## CHUNK 190: area_falkenberg_1965_1965_132038
+**Type:** narrative
+**Temporal Context:** Year 1965
+**Spatial Context:** Falkenberg
+**Source Entities:** area:falkenberg_1965
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "falkenberg_1965",
+  "area_name": "Falkenberg",
+  "year": 1965,
+  "bezirk_name": "Wei\u00dfensee",
+  "station_count": 0,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1965, Falkenberg (part of Weißensee district). The area had no public transport stations during this period.
+--------------------------------------------------------------------------------
+
+## CHUNK 191: area_falkenberg_1967_1967_132039
+**Type:** narrative
+**Temporal Context:** Year 1967
+**Spatial Context:** Falkenberg
+**Source Entities:** area:falkenberg_1967
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "falkenberg_1967",
+  "area_name": "Falkenberg",
+  "year": 1967,
+  "bezirk_name": "Wei\u00dfensee",
+  "station_count": 1,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1967, Falkenberg (part of Weißensee district). The area was served by 1 public transport stations.
+--------------------------------------------------------------------------------
+
+## CHUNK 192: area_falkenberg_1971_1971_132040
+**Type:** narrative
+**Temporal Context:** Year 1971
+**Spatial Context:** Falkenberg
+**Source Entities:** area:falkenberg_1971
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "falkenberg_1971",
+  "area_name": "Falkenberg",
+  "year": 1971,
+  "bezirk_name": "Wei\u00dfensee",
+  "station_count": 1,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1971, Falkenberg (part of Weißensee district). The area was served by 1 public transport stations.
+--------------------------------------------------------------------------------
+
+## CHUNK 193: area_falkenberg_1980_1980_132041
+**Type:** narrative
+**Temporal Context:** Year 1980
+**Spatial Context:** Falkenberg
+**Source Entities:** area:falkenberg_1980
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "falkenberg_1980",
+  "area_name": "Falkenberg",
+  "year": 1980,
+  "bezirk_name": null,
+  "station_count": 0,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1980, Falkenberg. The area had no public transport stations during this period.
+--------------------------------------------------------------------------------
+
+## CHUNK 194: area_falkenberg_1982_1982_132042
+**Type:** narrative
+**Temporal Context:** Year 1982
+**Spatial Context:** Falkenberg
+**Source Entities:** area:falkenberg_1982
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "falkenberg_1982",
+  "area_name": "Falkenberg",
+  "year": 1982,
+  "bezirk_name": null,
+  "station_count": 0,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1982, Falkenberg. The area had no public transport stations during this period.
+--------------------------------------------------------------------------------
+
+## CHUNK 195: area_falkenberg_1984_1984_132043
+**Type:** narrative
+**Temporal Context:** Year 1984
+**Spatial Context:** Falkenberg
+**Source Entities:** area:falkenberg_1984
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "falkenberg_1984",
+  "area_name": "Falkenberg",
+  "year": 1984,
+  "bezirk_name": null,
+  "station_count": 0,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1984, Falkenberg. The area had no public transport stations during this period.
+--------------------------------------------------------------------------------
+
+## CHUNK 196: area_falkenberg_1985_1985_132044
+**Type:** narrative
+**Temporal Context:** Year 1985
+**Spatial Context:** Falkenberg
+**Source Entities:** area:falkenberg_1985
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "falkenberg_1985",
+  "area_name": "Falkenberg",
+  "year": 1985,
+  "bezirk_name": "Hohensch\u00f6nhausen",
+  "station_count": 0,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1985, Falkenberg (part of Hohenschönhausen district). The area had no public transport stations during this period.
+--------------------------------------------------------------------------------
+
+## CHUNK 197: area_falkenberg_1989_1989_132045
+**Type:** narrative
+**Temporal Context:** Year 1989
+**Spatial Context:** Falkenberg
+**Source Entities:** area:falkenberg_1989
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "falkenberg_1989",
+  "area_name": "Falkenberg",
+  "year": 1989,
+  "bezirk_name": "Hohensch\u00f6nhausen",
+  "station_count": 0,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1989, Falkenberg (part of Hohenschönhausen district). The area had no public transport stations during this period.
+--------------------------------------------------------------------------------
+
+## CHUNK 198: area_fennpfuhl_1980_1980_132046
+**Type:** narrative
+**Temporal Context:** Year 1980
+**Spatial Context:** Fennpfuhl
+**Source Entities:** area:fennpfuhl_1980
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "fennpfuhl_1980",
+  "area_name": "Fennpfuhl",
+  "year": 1980,
+  "bezirk_name": "Lichtenberg",
+  "station_count": 0,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1980, Fennpfuhl (part of Lichtenberg district). The area had no public transport stations during this period.
+--------------------------------------------------------------------------------
+
+## CHUNK 199: area_fennpfuhl_1982_1982_132047
+**Type:** narrative
+**Temporal Context:** Year 1982
+**Spatial Context:** Fennpfuhl
+**Source Entities:** area:fennpfuhl_1982
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "fennpfuhl_1982",
+  "area_name": "Fennpfuhl",
+  "year": 1982,
+  "bezirk_name": "Lichtenberg",
+  "station_count": 0,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1982, Fennpfuhl (part of Lichtenberg district). The area had no public transport stations during this period.
+--------------------------------------------------------------------------------
+
+## CHUNK 200: area_fennpfuhl_1984_1984_132048
+**Type:** narrative
+**Temporal Context:** Year 1984
+**Spatial Context:** Fennpfuhl
+**Source Entities:** area:fennpfuhl_1984
+**Metadata:** {
+  "entity_type": "administrative_area",
+  "area_id": "fennpfuhl_1984",
+  "area_name": "Fennpfuhl",
+  "year": 1984,
+  "bezirk_name": "Lichtenberg",
+  "station_count": 0,
+  "population": null,
+  "area_km2": null
+}
+**Content:**
+In 1984, Fennpfuhl (part of Lichtenberg district). The area had no public transport stations during this period.
+--------------------------------------------------------------------------------
+

@@ -57,6 +57,28 @@ class Settings(BaseSettings):
     vector_retrieval_k: int = 5
     hybrid_alpha: float = 0.7  # Weight for structured vs vector results
     
+    # Query Execution Settings
+    max_query_complexity: int = 6  # Maximum allowed query complexity (1-5 scale)
+    default_query_limit: int = 1000  # Default LIMIT for queries without one
+    
+    # Vector Pipeline Specific Settings
+    vector_chunk_size: int = 512  # Text chunk size for vectorization
+    vector_chunk_overlap: int = 50  # Overlap between chunks
+    vector_embedding_model: str = "text-embedding-3-large"  # OpenAI embedding model
+    vector_similarity_threshold: float = 0.2  # Minimum similarity for retrieval
+    vector_max_retrieved_chunks: int = 10  # Maximum chunks to retrieve
+    
+    # Graph-to-Text Conversion Settings
+    graph_to_text_strategy: str = "narrative"  # "triple", "narrative", or "hybrid"
+    include_temporal_context: bool = True
+    include_spatial_context: bool = True
+    include_relationships: bool = True
+    max_hops_per_entity: int = 2  # Maximum relationship hops for context
+    
+    # Vector Database Initialization
+    rebuild_vector_db_on_startup: bool = False  # Set to True to rebuild vector DB
+    vector_db_collection_name: str = "berlin_transport_graph"
+    
     # Historical context settings
     berlin_wall_construction_year: int = 1961
     german_reunification_year: int = 1989

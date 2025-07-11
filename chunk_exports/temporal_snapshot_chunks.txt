@@ -1,0 +1,213 @@
+# TEMPORAL_SNAPSHOT CHUNKS (14 total)
+# Generated: 2025-07-10T17:04:50.733005
+
+## CHUNK 1: temporal_snapshot_1946_131835
+**Type:** narrative
+**Temporal Context:** Year 1946
+**Spatial Context:** N/A
+**Source Entities:** year:1946
+**Metadata:** {
+  "entity_type": "temporal_snapshot",
+  "year": 1946,
+  "station_count": 779,
+  "line_count": 72
+}
+**Content:**
+In 1946, Berlin's public transport network consisted of 779 stations and 72 transit lines. This was during the unified Berlin period before the construction of the Berlin Wall.
+--------------------------------------------------------------------------------
+
+## CHUNK 2: temporal_snapshot_1951_131836
+**Type:** narrative
+**Temporal Context:** Year 1951
+**Spatial Context:** N/A
+**Source Entities:** year:1951
+**Metadata:** {
+  "entity_type": "temporal_snapshot",
+  "year": 1951,
+  "station_count": 1226,
+  "line_count": 115
+}
+**Content:**
+In 1951, Berlin's public transport network consisted of 1226 stations and 115 transit lines. This was during the unified Berlin period before the construction of the Berlin Wall.
+--------------------------------------------------------------------------------
+
+## CHUNK 3: temporal_snapshot_1956_131837
+**Type:** narrative
+**Temporal Context:** Year 1956
+**Spatial Context:** N/A
+**Source Entities:** year:1956
+**Metadata:** {
+  "entity_type": "temporal_snapshot",
+  "year": 1956,
+  "station_count": 1708,
+  "line_count": 144
+}
+**Content:**
+In 1956, Berlin's public transport network consisted of 1708 stations and 144 transit lines. This was during the unified Berlin period before the construction of the Berlin Wall.
+--------------------------------------------------------------------------------
+
+## CHUNK 4: temporal_snapshot_1960_131838
+**Type:** narrative
+**Temporal Context:** Year 1960
+**Spatial Context:** N/A
+**Source Entities:** year:1960
+**Metadata:** {
+  "entity_type": "temporal_snapshot",
+  "year": 1960,
+  "station_count": 2088,
+  "line_count": 158
+}
+**Content:**
+In 1960, Berlin's public transport network consisted of 2088 stations and 158 transit lines. This was during the unified Berlin period before the construction of the Berlin Wall.
+--------------------------------------------------------------------------------
+
+## CHUNK 5: temporal_snapshot_1961_131839
+**Type:** narrative
+**Temporal Context:** Year 1961
+**Spatial Context:** N/A
+**Source Entities:** year:1961
+**Metadata:** {
+  "entity_type": "temporal_snapshot",
+  "year": 1961,
+  "station_count": 1920,
+  "line_count": 163
+}
+**Content:**
+In 1961, Berlin's public transport network consisted of 1920 stations and 163 transit lines. This was during the divided Berlin period after the construction of the Berlin Wall in 1961.
+--------------------------------------------------------------------------------
+
+## CHUNK 6: temporal_snapshot_1964_131840
+**Type:** narrative
+**Temporal Context:** Year 1964
+**Spatial Context:** N/A
+**Source Entities:** year:1964
+**Metadata:** {
+  "entity_type": "temporal_snapshot",
+  "year": 1964,
+  "station_count": 2062,
+  "line_count": 177
+}
+**Content:**
+In 1964, Berlin's public transport network consisted of 2062 stations and 177 transit lines. This was during the divided Berlin period after the construction of the Berlin Wall in 1961.
+--------------------------------------------------------------------------------
+
+## CHUNK 7: temporal_snapshot_1965_131841
+**Type:** narrative
+**Temporal Context:** Year 1965
+**Spatial Context:** N/A
+**Source Entities:** year:1965
+**Metadata:** {
+  "entity_type": "temporal_snapshot",
+  "year": 1965,
+  "station_count": 2138,
+  "line_count": 176
+}
+**Content:**
+In 1965, Berlin's public transport network consisted of 2138 stations and 176 transit lines. This was during the divided Berlin period after the construction of the Berlin Wall in 1961.
+--------------------------------------------------------------------------------
+
+## CHUNK 8: temporal_snapshot_1967_131842
+**Type:** narrative
+**Temporal Context:** Year 1967
+**Spatial Context:** N/A
+**Source Entities:** year:1967
+**Metadata:** {
+  "entity_type": "temporal_snapshot",
+  "year": 1967,
+  "station_count": 1959,
+  "line_count": 176
+}
+**Content:**
+In 1967, Berlin's public transport network consisted of 1959 stations and 176 transit lines. This was during the divided Berlin period after the construction of the Berlin Wall in 1961.
+--------------------------------------------------------------------------------
+
+## CHUNK 9: temporal_snapshot_1971_131843
+**Type:** narrative
+**Temporal Context:** Year 1971
+**Spatial Context:** N/A
+**Source Entities:** year:1971
+**Metadata:** {
+  "entity_type": "temporal_snapshot",
+  "year": 1971,
+  "station_count": 1829,
+  "line_count": 178
+}
+**Content:**
+In 1971, Berlin's public transport network consisted of 1829 stations and 178 transit lines. This was during the divided Berlin period after the construction of the Berlin Wall in 1961.
+--------------------------------------------------------------------------------
+
+## CHUNK 10: temporal_snapshot_1980_131844
+**Type:** narrative
+**Temporal Context:** Year 1980
+**Spatial Context:** N/A
+**Source Entities:** year:1980
+**Metadata:** {
+  "entity_type": "temporal_snapshot",
+  "year": 1980,
+  "station_count": 0,
+  "line_count": 0
+}
+**Content:**
+In 1980, Berlin's public transport network consisted of 0 stations and 0 transit lines. This was during the divided Berlin period after the construction of the Berlin Wall in 1961.
+--------------------------------------------------------------------------------
+
+## CHUNK 11: temporal_snapshot_1982_131845
+**Type:** narrative
+**Temporal Context:** Year 1982
+**Spatial Context:** N/A
+**Source Entities:** year:1982
+**Metadata:** {
+  "entity_type": "temporal_snapshot",
+  "year": 1982,
+  "station_count": 0,
+  "line_count": 0
+}
+**Content:**
+In 1982, Berlin's public transport network consisted of 0 stations and 0 transit lines. This was during the divided Berlin period after the construction of the Berlin Wall in 1961.
+--------------------------------------------------------------------------------
+
+## CHUNK 12: temporal_snapshot_1984_131846
+**Type:** narrative
+**Temporal Context:** Year 1984
+**Spatial Context:** N/A
+**Source Entities:** year:1984
+**Metadata:** {
+  "entity_type": "temporal_snapshot",
+  "year": 1984,
+  "station_count": 0,
+  "line_count": 0
+}
+**Content:**
+In 1984, Berlin's public transport network consisted of 0 stations and 0 transit lines. This was during the divided Berlin period after the construction of the Berlin Wall in 1961.
+--------------------------------------------------------------------------------
+
+## CHUNK 13: temporal_snapshot_1985_131847
+**Type:** narrative
+**Temporal Context:** Year 1985
+**Spatial Context:** N/A
+**Source Entities:** year:1985
+**Metadata:** {
+  "entity_type": "temporal_snapshot",
+  "year": 1985,
+  "station_count": 0,
+  "line_count": 0
+}
+**Content:**
+In 1985, Berlin's public transport network consisted of 0 stations and 0 transit lines. This was during the divided Berlin period after the construction of the Berlin Wall in 1961.
+--------------------------------------------------------------------------------
+
+## CHUNK 14: temporal_snapshot_1989_131848
+**Type:** narrative
+**Temporal Context:** Year 1989
+**Spatial Context:** N/A
+**Source Entities:** year:1989
+**Metadata:** {
+  "entity_type": "temporal_snapshot",
+  "year": 1989,
+  "station_count": 0,
+  "line_count": 0
+}
+**Content:**
+In 1989, Berlin's public transport network consisted of 0 stations and 0 transit lines. This was during the divided Berlin period after the construction of the Berlin Wall in 1961.
+--------------------------------------------------------------------------------
+

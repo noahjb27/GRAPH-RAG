@@ -1,0 +1,352 @@
+# POLITICAL_DIVISION_DATA CHUNKS (14 total)
+# Generated: 2025-07-10T17:04:50.782176
+
+## CHUNK 1: political_division_135049
+**Type:** political_data
+**Temporal Context:** Year 1946
+**Spatial Context:** unified Berlin
+**Source Entities:** political_side:unified
+**Metadata:** {
+  "entity_type": "political_division_data",
+  "year": 1946,
+  "political_side": "unified",
+  "station_count": 779,
+  "line_count": 72,
+  "transport_types": [
+    "omnibus",
+    "ferry",
+    "s-bahn",
+    "tram",
+    "u-bahn"
+  ],
+  "divided_period": false,
+  "unified_period": true
+}
+**Content:**
+In 1946, unified Berlin had 779 public transport stations served by 72 transit lines. Transport modes included: omnibus, ferry, s-bahn, tram, u-bahn. This was during the unified Berlin period with unrestricted movement.
+--------------------------------------------------------------------------------
+
+## CHUNK 2: political_division_135050
+**Type:** political_data
+**Temporal Context:** Year 1951
+**Spatial Context:** unified Berlin
+**Source Entities:** political_side:unified
+**Metadata:** {
+  "entity_type": "political_division_data",
+  "year": 1951,
+  "political_side": "unified",
+  "station_count": 1226,
+  "line_count": 115,
+  "transport_types": [
+    "tram",
+    "u-bahn",
+    "autobus",
+    "s-bahn",
+    "ferry"
+  ],
+  "divided_period": false,
+  "unified_period": true
+}
+**Content:**
+In 1951, unified Berlin had 1226 public transport stations served by 115 transit lines. Transport modes included: tram, u-bahn, autobus, s-bahn, ferry. This was during the unified Berlin period with unrestricted movement.
+--------------------------------------------------------------------------------
+
+## CHUNK 3: political_division_135051
+**Type:** political_data
+**Temporal Context:** Year 1956
+**Spatial Context:** unified Berlin
+**Source Entities:** political_side:unified
+**Metadata:** {
+  "entity_type": "political_division_data",
+  "year": 1956,
+  "political_side": "unified",
+  "station_count": 1708,
+  "line_count": 144,
+  "transport_types": [
+    "tram",
+    "u-bahn",
+    "autobus",
+    "s-bahn",
+    "oberleitungsbus",
+    "ferry"
+  ],
+  "divided_period": false,
+  "unified_period": true
+}
+**Content:**
+In 1956, unified Berlin had 1708 public transport stations served by 144 transit lines. Transport modes included: tram, u-bahn, autobus, s-bahn, oberleitungsbus, ferry. This was during the unified Berlin period with unrestricted movement.
+--------------------------------------------------------------------------------
+
+## CHUNK 4: political_division_135052
+**Type:** political_data
+**Temporal Context:** Year 1960
+**Spatial Context:** unified Berlin
+**Source Entities:** political_side:unified
+**Metadata:** {
+  "entity_type": "political_division_data",
+  "year": 1960,
+  "political_side": "unified",
+  "station_count": 2088,
+  "line_count": 158,
+  "transport_types": [
+    "tram",
+    "autobus",
+    "oberleitungsbus",
+    "ferry",
+    "u-bahn",
+    "s-bahn"
+  ],
+  "divided_period": false,
+  "unified_period": true
+}
+**Content:**
+In 1960, unified Berlin had 2088 public transport stations served by 158 transit lines. Transport modes included: tram, autobus, oberleitungsbus, ferry, u-bahn, s-bahn. This was during the unified Berlin period with unrestricted movement.
+--------------------------------------------------------------------------------
+
+## CHUNK 5: political_division_135053
+**Type:** political_data
+**Temporal Context:** Year 1961
+**Spatial Context:** east Berlin
+**Source Entities:** political_side:east
+**Metadata:** {
+  "entity_type": "political_division_data",
+  "year": 1961,
+  "political_side": "east",
+  "station_count": 628,
+  "line_count": 71,
+  "transport_types": [
+    "tram",
+    "autobus",
+    "u-bahn",
+    "s-bahn",
+    "oberleitungsbus"
+  ],
+  "divided_period": true,
+  "unified_period": false
+}
+**Content:**
+In 1961, east Berlin had 628 public transport stations served by 71 transit lines. Transport modes included: tram, autobus, u-bahn, s-bahn, oberleitungsbus. This was during the divided Berlin period with restricted cross-boundary movement under East German administration.
+--------------------------------------------------------------------------------
+
+## CHUNK 6: political_division_135054
+**Type:** political_data
+**Temporal Context:** Year 1961
+**Spatial Context:** west Berlin
+**Source Entities:** political_side:west
+**Metadata:** {
+  "entity_type": "political_division_data",
+  "year": 1961,
+  "political_side": "west",
+  "station_count": 1292,
+  "line_count": 92,
+  "transport_types": [
+    "tram",
+    "autobus",
+    "u-bahn",
+    "s-bahn",
+    "ferry"
+  ],
+  "divided_period": true,
+  "unified_period": false
+}
+**Content:**
+In 1961, west Berlin had 1292 public transport stations served by 92 transit lines. Transport modes included: tram, autobus, u-bahn, s-bahn, ferry. This was during the divided Berlin period with restricted cross-boundary movement under West German administration.
+--------------------------------------------------------------------------------
+
+## CHUNK 7: political_division_135055
+**Type:** political_data
+**Temporal Context:** Year 1964
+**Spatial Context:** east Berlin
+**Source Entities:** political_side:east
+**Metadata:** {
+  "entity_type": "political_division_data",
+  "year": 1964,
+  "political_side": "east",
+  "station_count": 700,
+  "line_count": 77,
+  "transport_types": [
+    "tram",
+    "autobus",
+    "s-bahn",
+    "oberleitungsbus",
+    "u-bahn"
+  ],
+  "divided_period": true,
+  "unified_period": false
+}
+**Content:**
+In 1964, east Berlin had 700 public transport stations served by 77 transit lines. Transport modes included: tram, autobus, s-bahn, oberleitungsbus, u-bahn. This was during the divided Berlin period with restricted cross-boundary movement under East German administration.
+--------------------------------------------------------------------------------
+
+## CHUNK 8: political_division_135056
+**Type:** political_data
+**Temporal Context:** Year 1964
+**Spatial Context:** west Berlin
+**Source Entities:** political_side:west
+**Metadata:** {
+  "entity_type": "political_division_data",
+  "year": 1964,
+  "political_side": "west",
+  "station_count": 1362,
+  "line_count": 100,
+  "transport_types": [
+    "tram",
+    "autobus",
+    "u-bahn",
+    "s-bahn",
+    "ferry"
+  ],
+  "divided_period": true,
+  "unified_period": false
+}
+**Content:**
+In 1964, west Berlin had 1362 public transport stations served by 100 transit lines. Transport modes included: tram, autobus, u-bahn, s-bahn, ferry. This was during the divided Berlin period with restricted cross-boundary movement under West German administration.
+--------------------------------------------------------------------------------
+
+## CHUNK 9: political_division_135057
+**Type:** political_data
+**Temporal Context:** Year 1965
+**Spatial Context:** east Berlin
+**Source Entities:** political_side:east
+**Metadata:** {
+  "entity_type": "political_division_data",
+  "year": 1965,
+  "political_side": "east",
+  "station_count": 743,
+  "line_count": 74,
+  "transport_types": [
+    "u-bahn",
+    "tram",
+    "autobus",
+    "oberleitungsbus",
+    "s-bahn"
+  ],
+  "divided_period": true,
+  "unified_period": false
+}
+**Content:**
+In 1965, east Berlin had 743 public transport stations served by 74 transit lines. Transport modes included: u-bahn, tram, autobus, oberleitungsbus, s-bahn. This was during the divided Berlin period with restricted cross-boundary movement under East German administration.
+--------------------------------------------------------------------------------
+
+## CHUNK 10: political_division_135058
+**Type:** political_data
+**Temporal Context:** Year 1965
+**Spatial Context:** west Berlin
+**Source Entities:** political_side:west
+**Metadata:** {
+  "entity_type": "political_division_data",
+  "year": 1965,
+  "political_side": "west",
+  "station_count": 1395,
+  "line_count": 102,
+  "transport_types": [
+    "tram",
+    "autobus",
+    "ferry",
+    "s-bahn",
+    "u-bahn"
+  ],
+  "divided_period": true,
+  "unified_period": false
+}
+**Content:**
+In 1965, west Berlin had 1395 public transport stations served by 102 transit lines. Transport modes included: tram, autobus, ferry, s-bahn, u-bahn. This was during the divided Berlin period with restricted cross-boundary movement under West German administration.
+--------------------------------------------------------------------------------
+
+## CHUNK 11: political_division_135059
+**Type:** political_data
+**Temporal Context:** Year 1967
+**Spatial Context:** east Berlin
+**Source Entities:** political_side:east
+**Metadata:** {
+  "entity_type": "political_division_data",
+  "year": 1967,
+  "political_side": "east",
+  "station_count": 742,
+  "line_count": 74,
+  "transport_types": [
+    "tram",
+    "autobus",
+    "s-bahn",
+    "u-bahn",
+    "oberleitungsbus"
+  ],
+  "divided_period": true,
+  "unified_period": false
+}
+**Content:**
+In 1967, east Berlin had 742 public transport stations served by 74 transit lines. Transport modes included: tram, autobus, s-bahn, u-bahn, oberleitungsbus. This was during the divided Berlin period with restricted cross-boundary movement under East German administration.
+--------------------------------------------------------------------------------
+
+## CHUNK 12: political_division_135060
+**Type:** political_data
+**Temporal Context:** Year 1967
+**Spatial Context:** west Berlin
+**Source Entities:** political_side:west
+**Metadata:** {
+  "entity_type": "political_division_data",
+  "year": 1967,
+  "political_side": "west",
+  "station_count": 1214,
+  "line_count": 102,
+  "transport_types": [
+    "autobus",
+    "u-bahn",
+    "s-bahn",
+    "ferry"
+  ],
+  "divided_period": true,
+  "unified_period": false
+}
+**Content:**
+In 1967, west Berlin had 1214 public transport stations served by 102 transit lines. Transport modes included: autobus, u-bahn, s-bahn, ferry. This was during the divided Berlin period with restricted cross-boundary movement under West German administration.
+--------------------------------------------------------------------------------
+
+## CHUNK 13: political_division_135061
+**Type:** political_data
+**Temporal Context:** Year 1971
+**Spatial Context:** east Berlin
+**Source Entities:** political_side:east
+**Metadata:** {
+  "entity_type": "political_division_data",
+  "year": 1971,
+  "political_side": "east",
+  "station_count": 755,
+  "line_count": 82,
+  "transport_types": [
+    "autobus",
+    "ferry",
+    "s-bahn",
+    "tram",
+    "u-bahn"
+  ],
+  "divided_period": true,
+  "unified_period": false
+}
+**Content:**
+In 1971, east Berlin had 755 public transport stations served by 82 transit lines. Transport modes included: autobus, ferry, s-bahn, tram, u-bahn. This was during the divided Berlin period with restricted cross-boundary movement under East German administration.
+--------------------------------------------------------------------------------
+
+## CHUNK 14: political_division_135062
+**Type:** political_data
+**Temporal Context:** Year 1971
+**Spatial Context:** west Berlin
+**Source Entities:** political_side:west
+**Metadata:** {
+  "entity_type": "political_division_data",
+  "year": 1971,
+  "political_side": "west",
+  "station_count": 1074,
+  "line_count": 96,
+  "transport_types": [
+    "autobus",
+    "s-bahn",
+    "u-bahn"
+  ],
+  "divided_period": true,
+  "unified_period": false
+}
+**Content:**
+In 1971, west Berlin had 1074 public transport stations served by 96 transit lines. Transport modes included: autobus, s-bahn, u-bahn. This was during the divided Berlin period with restricted cross-boundary movement under West German administration.
+--------------------------------------------------------------------------------
+

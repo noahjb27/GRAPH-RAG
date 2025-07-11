@@ -16,11 +16,12 @@ from .llm_clients.client_factory import test_client_connectivity, get_all_client
 from .evaluation.evaluator import Evaluator
 from .evaluation.question_loader import QuestionLoader
 from .evaluation.metrics import MetricsCalculator
+from .pipelines.vector_indexing import get_vector_indexing_service
 
 # Initialize FastAPI app
 app = FastAPI(
     title=settings.app_name,
-    description="Graph-RAG Research System for Berlin Transport Networks",
+    description="Graph-RAG Research System for Berlin transport networks",
     version="1.0.0",
     docs_url="/docs",
     redoc_url="/redoc"
@@ -38,6 +39,7 @@ app.add_middleware(
 # Global instances
 evaluator = Evaluator()
 question_loader = QuestionLoader()
+vector_indexing_service = None
 
 # Pydantic models for API requests/responses
 class QueryRequest(BaseModel):
@@ -62,6 +64,11 @@ class SystemStatus(BaseModel):
     available_llm_providers: List[str]
     available_pipelines: List[str]
     total_questions: int
+    vector_pipeline_status: Optional[str] = None
+
+class VectorIndexingRequest(BaseModel):
+    force_rebuild: bool = False
+    entity_type: Optional[str] = None
 
 # API Routes
 
@@ -89,11 +96,21 @@ async def system_status():
     # Get question count
     taxonomy_summary = question_loader.get_taxonomy_summary()
     
+    # Get vector pipeline status
+    vector_status = "not_initialized"
+    if vector_indexing_service:
+        try:
+            status_info = await vector_indexing_service.get_indexing_status()
+            vector_status = status_info.get("status", "unknown")
+        except Exception:
+            vector_status = "error"
+    
     return SystemStatus(
         neo4j_connected=neo4j_connected,
         available_llm_providers=available_providers,
         available_pipelines=available_pipelines,
-        total_questions=taxonomy_summary.get("total_questions", 0)
+        total_questions=taxonomy_summary.get("total_questions", 0),
+        vector_pipeline_status=vector_status
     )
 
 @app.get("/llm-providers")
@@ -332,10 +349,202 @@ async def health_check():
     
     return health_status
 
+# Vector Pipeline Management Endpoints
+
+@app.get("/vector-pipeline/status")
+async def get_vector_pipeline_status():
+    """Get detailed status of the vector pipeline"""
+    
+    if not vector_indexing_service:
+        return {"status": "not_initialized", "error": "Vector indexing service not initialized"}
+    
+    try:
+        status = await vector_indexing_service.get_indexing_status()
+        return status
+    except Exception as e:
+        return {"status": "error", "error": str(e)}
+
+@app.post("/vector-pipeline/index")
+async def trigger_vector_indexing(request: VectorIndexingRequest, background_tasks: BackgroundTasks):
+    """Trigger vector database indexing"""
+    
+    if not vector_indexing_service:
+        raise HTTPException(status_code=503, detail="Vector indexing service not initialized")
+    
+    try:
+        if request.entity_type:
+            # Incremental update
+            background_tasks.add_task(
+                vector_indexing_service.incremental_update, 
+                request.entity_type
+            )
+            return {
+                "message": f"Started incremental indexing for entity type: {request.entity_type}",
+                "type": "incremental"
+            }
+        else:
+            # Full reindex
+            background_tasks.add_task(
+                vector_indexing_service.full_reindex,
+                request.force_rebuild
+            )
+            return {
+                "message": "Started full vector database indexing",
+                "type": "full",
+                "force_rebuild": request.force_rebuild
+            }
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.post("/vector-pipeline/test")
+async def test_vector_retrieval(query: str = "Berlin transport stations"):
+    """Test vector retrieval with a sample query"""
+    
+    if not vector_indexing_service:
+        raise HTTPException(status_code=503, detail="Vector indexing service not initialized")
+    
+    try:
+        results = await vector_indexing_service.test_retrieval(query)
+        
+        # Format results for API response
+        formatted_results = []
+        for result in results:
+            formatted_results.append({
+                "chunk_id": result.chunk_id,
+                "content": result.content[:200] + "..." if len(result.content) > 200 else result.content,
+                "similarity_score": result.similarity_score,
+                "entity_type": result.metadata.get("entity_type", "unknown"),
+                "temporal_context": result.temporal_context,
+                "spatial_context": result.spatial_context
+            })
+        
+        return {
+            "query": query,
+            "results": formatted_results,
+            "total_results": len(results)
+        }
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.post("/vector-pipeline/debug-index")
+async def debug_vector_indexing(request: VectorIndexingRequest):
+    """Debug indexing - runs synchronously to show errors"""
+    
+    if not vector_indexing_service:
+        raise HTTPException(status_code=503, detail="Vector indexing service not initialized")
+    
+    try:
+        print("Starting debug indexing...")
+        
+        if request.entity_type:
+            # Incremental update
+            stats = await vector_indexing_service.incremental_update(request.entity_type)
+        else:
+            # Full reindex
+            stats = await vector_indexing_service.full_reindex(request.force_rebuild)
+        
+        return {
+            "success": True,
+            "stats": {
+                "total_chunks_created": stats.total_chunks_created,
+                "total_chunks_indexed": stats.total_chunks_indexed,
+                "indexing_time_seconds": stats.indexing_time_seconds,
+                "chunks_per_second": stats.chunks_per_second,
+                "entity_type_breakdown": stats.entity_type_breakdown,
+                "temporal_coverage": stats.temporal_coverage,
+                "spatial_coverage": stats.spatial_coverage,
+                "errors": stats.errors
+            }
+        }
+    except Exception as e:
+        print(f"Debug indexing error: {e}")
+        import traceback
+        traceback.print_exc()
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.post("/api/vector/debug-comprehensive-index")
+async def debug_comprehensive_index():
+    """Debug endpoint: Comprehensive reindex with text file export"""
+    
+    try:
+        indexing_service = await get_vector_indexing_service(neo4j_client)
+        
+        # Perform comprehensive reindex with chunk export
+        stats = await indexing_service.full_reindex(force=True, export_chunks=True)
+        
+        return {
+            "success": True,
+            "message": "Comprehensive indexing completed with text file export",
+            "stats": {
+                "total_chunks_created": stats.total_chunks_created,
+                "total_chunks_indexed": stats.total_chunks_indexed,
+                "indexing_time_seconds": stats.indexing_time_seconds,
+                "chunks_per_second": stats.chunks_per_second,
+                "entity_type_breakdown": stats.entity_type_breakdown,
+                "temporal_coverage": stats.temporal_coverage[:10],  # First 10 years
+                "spatial_coverage": stats.spatial_coverage[:10],   # First 10 areas
+                "errors": stats.errors
+            },
+            "export_info": {
+                "export_directory": "chunk_exports",
+                "check_files": [
+                    "chunk_exports/SUMMARY.txt",
+                    "chunk_exports/station_property_chunks.txt",
+                    "chunk_exports/line_property_chunks.txt",
+                    "chunk_exports/relationship_chunks.txt",
+                    "chunk_exports/triple_chunks.txt"
+                ]
+            }
+        }
+        
+    except Exception as e:
+        return {
+            "success": False,
+            "error": str(e),
+            "message": "Failed to perform comprehensive indexing"
+        }
+
+@app.post("/api/vector/complete-indexing")
+async def complete_indexing():
+    """Complete indexing of remaining chunks without clearing existing data"""
+    
+    try:
+        indexing_service = await get_vector_indexing_service(neo4j_client)
+        
+        # Get current status
+        current_status = await indexing_service.get_indexing_status()
+        current_chunks = current_status.get("vector_db_stats", {}).get("total_chunks", 0)
+        
+        # Perform indexing without clearing existing data (force=False)
+        stats = await indexing_service.full_reindex(force=False, export_chunks=False)
+        
+        return {
+            "success": True,
+            "message": "Completed indexing of remaining chunks",
+            "before_indexing": current_chunks,
+            "stats": {
+                "total_chunks_created": stats.total_chunks_created,
+                "total_chunks_indexed": stats.total_chunks_indexed,
+                "indexing_time_seconds": stats.indexing_time_seconds,
+                "chunks_per_second": stats.chunks_per_second,
+                "entity_type_breakdown": stats.entity_type_breakdown,
+                "errors": stats.errors
+            }
+        }
+        
+    except Exception as e:
+        return {
+            "success": False,
+            "error": str(e),
+            "message": "Failed to complete indexing"
+        }
+
 # Startup event
 @app.on_event("startup")
 async def startup_event():
     """Initialize connections on startup"""
+    global vector_indexing_service
+    
     print(f"Starting {settings.app_name}")
     
     # Connect to Neo4j
@@ -344,6 +553,24 @@ async def startup_event():
         print("✓ Neo4j connection established")
     except Exception as e:
         print(f"✗ Neo4j connection failed: {e}")
+    
+    # Initialize Vector Indexing Service
+    try:
+        vector_indexing_service = await get_vector_indexing_service(neo4j_client)
+        print("✓ Vector indexing service initialized")
+        
+        # Check if vector database needs initial indexing
+        status = await vector_indexing_service.get_indexing_status()
+        if not status.get("is_indexed", False):
+            print("⚠ Vector database is empty. Run /vector-pipeline/index to populate it.")
+        else:
+            db_stats = status.get("vector_db_stats", {})
+            total_chunks = db_stats.get("total_chunks", 0)
+            print(f"✓ Vector database loaded with {total_chunks} chunks")
+            
+    except Exception as e:
+        print(f"✗ Vector indexing service initialization failed: {e}")
+        vector_indexing_service = None
     
     # Test LLM providers
     try:
@@ -360,6 +587,14 @@ async def startup_event():
 async def shutdown_event():
     """Cleanup on shutdown"""
     print("Shutting down...")
+    
+    # Cleanup vector indexing service
+    if vector_indexing_service:
+        try:
+            await vector_indexing_service.cleanup()
+            print("✓ Vector indexing service cleaned up")
+        except Exception as e:
+            print(f"✗ Error cleaning up vector service: {e}")
     
     try:
         await neo4j_client.close()

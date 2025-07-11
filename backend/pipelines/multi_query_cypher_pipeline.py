@@ -289,7 +289,7 @@ Generate the query plan:
             # Execute query safely
             result = await self.query_executor.execute_query_safely(
                 query,
-                max_complexity=4,
+                max_complexity=settings.max_query_complexity,
                 allow_write=False
             )
             

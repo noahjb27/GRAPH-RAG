@@ -4,3 +4,4 @@
 /.venv
 /.cursor
 /__pycache__
+/chroma_db

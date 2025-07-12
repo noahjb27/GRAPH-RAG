@@ -10,6 +10,7 @@ import {
   MessageSquare,
   Settings,
   Zap,
+  Bot,
 } from 'lucide-react';
 
 const navigationItems = [
@@ -18,6 +19,12 @@ const navigationItems = [
     href: '/',
     icon: Home,
     description: 'System overview and status',
+  },
+  {
+    name: 'Chat',
+    href: '/chat',
+    icon: Bot,
+    description: 'Conversational AI interface',
   },
   {
     name: 'Questions',

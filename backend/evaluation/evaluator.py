@@ -3,8 +3,11 @@ Main evaluator for Graph-RAG pipeline assessment with multi-LLM support
 """
 
 import time
+import json
+import csv
+from pathlib import Path
 from typing import List, Dict, Any, Optional, Callable
-from dataclasses import dataclass
+from dataclasses import dataclass, asdict
 from datetime import datetime
 
 from ..pipelines.base_pipeline import BasePipeline
@@ -15,6 +18,7 @@ from ..pipelines.vector_pipeline import VectorPipeline
 from ..pipelines.hybrid_pipeline import HybridPipeline
 from ..pipelines.path_traversal_pipeline import PathTraversalPipeline
 from ..pipelines.graph_embedding_pipeline import GraphEmbeddingPipeline
+from ..pipelines.graphrag_transport_pipeline import GraphRAGTransportPipeline
 from ..pipelines.chatbot_pipeline import ChatbotPipeline
 from ..config import get_available_llm_providers
 from .question_loader import QuestionLoader
@@ -71,6 +75,7 @@ class Evaluator:
             "hybrid": HybridPipeline(),
             "path_traversal": PathTraversalPipeline(),
             "graph_embedding": GraphEmbeddingPipeline(),
+            "graphrag_transport": GraphRAGTransportPipeline(),
             "chatbot": ChatbotPipeline()
         }
     
@@ -341,4 +346,161 @@ class Evaluator:
             "avg_tokens_per_second": avg_tokens_per_second,
             "by_pipeline": by_pipeline,
             "by_llm_provider": by_llm_provider
-        } 
+        }
+
+    def export_results_to_json(
+        self,
+        results: List[EvaluationResult],
+        file_path: str,
+        include_summary: bool = True
+    ) -> None:
+        """Export evaluation results to JSON file"""
+        
+        export_data = {
+            "export_timestamp": datetime.now().isoformat(),
+            "total_results": len(results),
+            "results": []
+        }
+        
+        # Convert results to dictionaries
+        for result in results:
+            result_dict = asdict(result)
+            
+            # Convert datetime to ISO string for JSON serialization
+            if result_dict.get("timestamp") and result.timestamp:
+                result_dict["timestamp"] = result.timestamp.isoformat()
+            
+            # Convert cypher_results to JSON string if present
+            if result_dict.get("cypher_results"):
+                result_dict["cypher_results"] = json.dumps(result_dict["cypher_results"])
+            
+            # Convert metadata to JSON string if present
+            if result_dict.get("metadata"):
+                result_dict["metadata"] = json.dumps(result_dict["metadata"])
+            
+            export_data["results"].append(result_dict)
+        
+        # Add summary if requested
+        if include_summary:
+            export_data["summary"] = self.get_evaluation_summary(results)
+        
+        # Ensure directory exists
+        Path(file_path).parent.mkdir(parents=True, exist_ok=True)
+        
+        # Write to file
+        with open(file_path, 'w', encoding='utf-8') as f:
+            json.dump(export_data, f, indent=2, ensure_ascii=False)
+        
+        print(f"Exported {len(results)} results to {file_path}")
+
+    def export_results_to_csv(
+        self,
+        results: List[EvaluationResult],
+        file_path: str,
+        flatten_metadata: bool = True
+    ) -> None:
+        """Export evaluation results to CSV file"""
+        
+        if not results:
+            print("No results to export")
+            return
+        
+        # Define CSV columns
+        base_columns = [
+            "question_id",
+            "question_text", 
+            "pipeline_name",
+            "llm_provider",
+            "answer",
+            "success",
+            "execution_time_seconds",
+            "cost_usd",
+            "total_tokens",
+            "tokens_per_second",
+            "generated_cypher",
+            "cypher_results",
+            "timestamp",
+            "error_message"
+        ]
+        
+        # If flattening metadata, get all unique metadata keys
+        metadata_keys = set()
+        if flatten_metadata:
+            for result in results:
+                if result.metadata:
+                    metadata_keys.update(result.metadata.keys())
+        
+        # Final column list
+        columns = base_columns + (["metadata"] if not flatten_metadata else [f"metadata_{key}" for key in sorted(metadata_keys)])
+        
+        # Ensure directory exists
+        Path(file_path).parent.mkdir(parents=True, exist_ok=True)
+        
+        # Write CSV
+        with open(file_path, 'w', newline='', encoding='utf-8') as f:
+            writer = csv.DictWriter(f, fieldnames=columns)
+            writer.writeheader()
+            
+            for result in results:
+                row = {}
+                
+                # Basic fields
+                row["question_id"] = result.question_id
+                row["question_text"] = result.question_text
+                row["pipeline_name"] = result.pipeline_name
+                row["llm_provider"] = result.llm_provider
+                row["answer"] = result.answer
+                row["success"] = result.success
+                row["execution_time_seconds"] = result.execution_time_seconds
+                row["cost_usd"] = result.cost_usd
+                row["total_tokens"] = result.total_tokens
+                row["tokens_per_second"] = result.tokens_per_second
+                row["generated_cypher"] = result.generated_cypher or ""
+                row["cypher_results"] = json.dumps(result.cypher_results) if result.cypher_results else ""
+                row["timestamp"] = result.timestamp.isoformat() if result.timestamp else ""
+                row["error_message"] = result.error_message or ""
+                
+                # Handle metadata
+                if flatten_metadata and result.metadata:
+                    for key in metadata_keys:
+                        row[f"metadata_{key}"] = result.metadata.get(key, "")
+                elif not flatten_metadata:
+                    row["metadata"] = json.dumps(result.metadata) if result.metadata else ""
+                else:
+                    # Fill empty metadata columns
+                    for key in metadata_keys:
+                        row[f"metadata_{key}"] = ""
+                
+                writer.writerow(row)
+        
+        print(f"Exported {len(results)} results to {file_path}")
+
+    def export_results_with_timestamp(
+        self,
+        results: List[EvaluationResult],
+        base_filename: str,
+        formats: List[str] = ["json", "csv"],
+        output_dir: str = "evaluation_exports"
+    ) -> List[str]:
+        """Export results with automatic timestamp in filename"""
+        
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        exported_files = []
+        
+        for format_type in formats:
+            if format_type.lower() == "json":
+                filename = f"{base_filename}_{timestamp}.json"
+                file_path = f"{output_dir}/{filename}"
+                self.export_results_to_json(results, file_path)
+                exported_files.append(file_path)
+            
+            elif format_type.lower() == "csv":
+                filename = f"{base_filename}_{timestamp}.csv"
+                file_path = f"{output_dir}/{filename}"
+                self.export_results_to_csv(results, file_path)
+                exported_files.append(file_path)
+            
+            else:
+                print(f"Warning: Unknown format '{format_type}', skipping")
+        
+        return exported_files 

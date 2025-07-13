@@ -15,6 +15,7 @@ from .vector_pipeline import VectorPipeline
 from .path_traversal_pipeline import PathTraversalPipeline
 from .graph_embedding_pipeline import GraphEmbeddingPipeline
 from .hybrid_pipeline import HybridPipeline
+from .graphrag_transport_pipeline import GraphRAGTransportPipeline
 from ..llm_clients.client_factory import create_llm_client
 from ..services.route_planning_service import (
     get_route_planning_service, 
@@ -69,6 +70,7 @@ class ChatbotPipeline(DirectCypherPipeline):
             "path_traversal": PathTraversalPipeline(),
             "graph_embedding": GraphEmbeddingPipeline(),
             "hybrid": HybridPipeline(),
+            "graphrag_transport": GraphRAGTransportPipeline(),
             "no_rag": self.no_rag_pipeline
         }
         
@@ -249,12 +251,30 @@ Analyze this query and classify it:
             return self.pipelines["graph_embedding"]
         
         elif query_type == "multi_step" or complexity == "complex":
-            # Multi-query pipeline for complex analytical questions
-            return self.pipelines["multi_query_cypher"]
+            # Check if this is a global transport network question
+            global_transport_indicators = [
+                "overall", "main", "key", "primary", "major", "most important",
+                "trends", "patterns", "development", "evolution", "changes",
+                "comparison", "compare", "differences", "similarities",
+                "network", "system", "infrastructure", "coverage",
+                "east", "west", "political", "division", "sector"
+            ]
+            
+            query_lower = query_analysis.get("question", "").lower()
+            if any(indicator in query_lower for indicator in global_transport_indicators):
+                # Use GraphRAG for global transport analysis
+                return self.pipelines["graphrag_transport"]
+            else:
+                # Multi-query pipeline for other complex analytical questions
+                return self.pipelines["multi_query_cypher"]
         
         elif query_type == "temporal" and "change" in query_analysis.get("reasoning", "").lower():
-            # Multi-query for temporal analysis
-            return self.pipelines["multi_query_cypher"]
+            # Check if this is about transport network evolution
+            if any(term in query_analysis.get("question", "").lower() for term in ["transport", "network", "development", "infrastructure"]):
+                return self.pipelines["graphrag_transport"]
+            else:
+                # Multi-query for other temporal analysis
+                return self.pipelines["multi_query_cypher"]
         
         elif query_type == "factual" and complexity == "simple":
             # Direct Cypher for simple factual queries
@@ -388,107 +408,117 @@ Analyze this query and classify it:
         llm_provider: str,
         stream: bool
     ) -> AsyncGenerator[ChatResponse, None]:
-        """Handle route planning queries with enhanced address-based routing"""
+        """Handle route planning queries using the enhanced route planning service"""
         
         # Extract addresses and year from the message
         route_info = await self._extract_route_info(message, llm_provider)
         
         if stream:
             yield ChatResponse(
-                message=f"Looking up addresses and planning route from {route_info.get('origin', 'unknown')} to {route_info.get('destination', 'unknown')} in {route_info.get('year', 'unknown year')}...",
+                message=f"Planning route from {route_info.get('origin', 'unknown')} to {route_info.get('destination', 'unknown')} in {route_info.get('year', 'current time')}...",
                 is_streaming=True,
                 query_type="route_planning",
                 used_database=True
             )
         
-        # Use the enhanced route planning service
-        route_planning_service = get_route_planning_service()
-        
-        # Create route request
-        route_request = RouteRequest(
-            origin_address=route_info.get('origin', ''),
-            destination_address=route_info.get('destination', ''),
-            year=route_info.get('year'),
-            transport_preferences=route_info.get('transport_preferences', []),
-            max_walking_distance_km=1.0,
-            max_route_options=3
-        )
-        
-        if stream:
-            yield ChatResponse(
-                message="Geocoding addresses and finding nearby stations...",
-                is_streaming=True,
-                query_type="route_planning",
-                used_database=True
+        try:
+            # Get the route planning service
+            route_service = get_route_planning_service()
+            
+            # Create route request
+            route_request = RouteRequest(
+                origin_address=route_info.get('origin', ''),
+                destination_address=route_info.get('destination', ''),
+                year=route_info.get('year'),
+                transport_preferences=route_info.get('transport_preferences', [])
             )
-        
-        # Plan the route
-        route_response = await route_planning_service.plan_route(route_request)
-        
-        if route_response.success and route_response.route_options:
-            # Format the best route option
-            best_route = route_response.route_options[0]
             
             if stream:
                 yield ChatResponse(
-                    message="Calculating optimal route through historical transit network...",
+                    message="Finding nearby stations and calculating optimal route...",
                     is_streaming=True,
                     query_type="route_planning",
                     used_database=True
                 )
             
-            # Generate detailed route description
-            route_description = await self._format_enhanced_route_response(
-                message, best_route, route_response, llm_provider
-            )
+            # Execute route planning
+            route_response = await route_service.plan_route(route_request)
             
-            yield ChatResponse(
-                message=route_description,
-                query_type="route_planning",
-                used_database=True,
-                metadata={
-                    "route_info": route_info,
-                    "execution_time": route_response.processing_time_seconds,
-                    "geocoding_success": route_response.geocoding_results,
-                    "route_options_count": len(route_response.route_options),
-                    "best_route_confidence": best_route.confidence_score,
-                    "total_distance_km": best_route.total_distance_km,
-                    "walking_distance_km": best_route.total_walking_distance_km,
-                    "estimated_time_minutes": best_route.estimated_total_time_minutes
-                }
-            )
-        else:
-            # Enhanced error handling with geocoding information
-            error_details = []
+            # Safely access routes attribute
+            routes = getattr(route_response, 'routes', None) if route_response else None
             
-            if route_response.geocoding_results:
-                origin_geocoding = route_response.geocoding_results.get('origin')
-                dest_geocoding = route_response.geocoding_results.get('destination')
+            if route_response.success and routes and len(routes) > 0:
+                # Format successful route response
+                best_route = routes[0]  # Take the best route
                 
-                if origin_geocoding and not origin_geocoding.found:
-                    error_details.append(f"Could not find origin address: {route_info.get('origin', 'unknown')}")
-                if dest_geocoding and not dest_geocoding.found:
-                    error_details.append(f"Could not find destination address: {route_info.get('destination', 'unknown')}")
-            
-            if not error_details:
-                error_details.append("No nearby stations found within walking distance")
-            
-            error_message = f"I couldn't plan a specific route: {'; '.join(error_details)}. "
-            
-            if route_info.get('year'):
-                error_message += f"The historical transport network in {route_info.get('year')} might not have had connections between those areas, or the data might not be available for that time period."
+                route_response_text = await self._format_enhanced_route_response(
+                    message, best_route, route_response, llm_provider
+                )
+                
+                yield ChatResponse(
+                    message=route_response_text,
+                    query_type="route_planning",
+                    used_database=True,
+                    metadata={
+                        "route_info": route_info,
+                        "total_routes_found": len(routes),
+                        "best_route_time": best_route.estimated_total_time_minutes,
+                        "best_route_distance": best_route.total_distance_km,
+                        "geocoding_successful": route_response.geocoding_results is not None
+                    }
+                )
             else:
-                error_message += "Try specifying a year between 1946-1989 for better historical routing."
-            
+                # Enhanced error handling with specific failure details
+                error_details = []
+                
+                if route_response.geocoding_results:
+                    origin_geocoding = route_response.geocoding_results.get('origin')
+                    dest_geocoding = route_response.geocoding_results.get('destination')
+                    
+                    if origin_geocoding and not origin_geocoding.found:
+                        error_details.append(f"Could not find origin address: {route_info.get('origin', 'unknown')}")
+                    if dest_geocoding and not dest_geocoding.found:
+                        error_details.append(f"Could not find destination address: {route_info.get('destination', 'unknown')}")
+                
+                if not error_details and route_response.error_message:
+                    error_details.append(route_response.error_message)
+                
+                if not error_details:
+                    error_details.append("No nearby stations found within walking distance")
+                
+                error_message = f"I couldn't plan a specific route: {'; '.join(error_details)}. "
+                
+                if route_info.get('year'):
+                    error_message += f"The historical transport network in {route_info.get('year')} might not have had connections between those areas, or the data might not be available for that time period."
+                else:
+                    error_message += "Try specifying a year between 1946-1989 for better historical routing."
+                
+                yield ChatResponse(
+                    message=error_message,
+                    query_type="route_planning_failed",
+                    used_database=True,
+                    suggested_questions=[
+                        f"What transport lines were available in {route_info.get('year', 'that time period')}?",
+                        f"What stations were near {route_info.get('origin', 'that area')}?",
+                        f"How did the transport network change around {route_info.get('year', 'that time')}?"
+                    ],
+                    metadata={
+                        "route_info": route_info,
+                        "error_details": error_details,
+                        "geocoding_results": route_response.geocoding_results if route_response else None
+                    }
+                )
+                
+        except Exception as e:
+            # Handle unexpected errors
             yield ChatResponse(
-                message=error_message,
-                query_type="route_planning_failed",
+                message=f"I encountered an error while planning your route: {str(e)}. Please try rephrasing your request or check if the addresses are valid Berlin locations.",
+                query_type="route_planning_error",
                 used_database=False,
-                suggested_questions=[
-                    f"What transport lines were available in {route_info.get('year', '1971')}?",
-                    f"What stations were near {route_info.get('origin', 'that area')}?",
-                    f"How did the transport network change around {route_info.get('year', '1971')}?"
-                ]
+                metadata={
+                    "error": str(e),
+                    "route_info": route_info
+                }
             )
     
     async def _extract_route_info(self, message: str, llm_provider: str) -> Dict[str, Any]:

@@ -11,6 +11,9 @@ from .hybrid_pipeline import HybridPipeline
 from .path_traversal_pipeline import PathTraversalPipeline
 from .graph_embedding_pipeline import GraphEmbeddingPipeline
 from .chatbot_pipeline import ChatbotPipeline
+from .graphrag_types import TransportCommunity
+from .graphrag_cache import GraphRAGCache, graphrag_cache
+from .graphrag_transport_pipeline import GraphRAGTransportPipeline
 
 __all__ = [
     "BasePipeline",
@@ -22,5 +25,9 @@ __all__ = [
     "HybridPipeline",
     "PathTraversalPipeline",
     "GraphEmbeddingPipeline",
-    "ChatbotPipeline"
+    "ChatbotPipeline",
+    "TransportCommunity",
+    "GraphRAGCache",
+    "graphrag_cache",
+    "GraphRAGTransportPipeline"
 ] 

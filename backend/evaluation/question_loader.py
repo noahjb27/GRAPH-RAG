@@ -13,14 +13,14 @@ sys.path.append(str(project_root))
 # Import the existing question taxonomy
 try:
     from question_taxonomy.initial_question_taxonomy import (
-        FinalBerlinTransportQuestionTaxonomy,
+        ExtendedBerlinTransportQuestionTaxonomy,
         EvaluationQuestion
     )
     TAXONOMY_AVAILABLE = True
 except ImportError as e:
     print(f"Warning: Could not import question taxonomy: {e}")
     EvaluationQuestion = Any  # Fallback type
-    FinalBerlinTransportQuestionTaxonomy = None
+    ExtendedBerlinTransportQuestionTaxonomy = None
     TAXONOMY_AVAILABLE = False
 
 class QuestionLoader:
@@ -33,8 +33,8 @@ class QuestionLoader:
     
     def _load_questions(self):
         """Load questions from the taxonomy"""
-        if FinalBerlinTransportQuestionTaxonomy:
-            self.taxonomy = FinalBerlinTransportQuestionTaxonomy()
+        if ExtendedBerlinTransportQuestionTaxonomy:
+            self.taxonomy = ExtendedBerlinTransportQuestionTaxonomy()
             self.questions = self.taxonomy.get_all_questions()
         else:
             print("Warning: Question taxonomy not available, using empty question set")

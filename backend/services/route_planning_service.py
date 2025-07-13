@@ -10,7 +10,7 @@ import asyncio
 
 from .geocoding_service import GeocodingService, GeocodeResult, get_geocoding_service
 from .station_finder_service import StationFinderService, StationMatch, get_station_finder_service
-from ..database.neo4j_client import neo4j_client
+from ..database.neo4j_client import Neo4jClient
 from ..database.query_executor import QueryExecutor
 
 logger = logging.getLogger(__name__)
@@ -71,7 +71,7 @@ class RoutePlanningService:
     def __init__(self):
         self.geocoding_service = get_geocoding_service()
         self.station_finder_service = get_station_finder_service()
-        self.query_executor = QueryExecutor(neo4j_client)
+        # Don't store query_executor - create fresh clients to avoid event loop conflicts
         
     async def plan_route(self, route_request: RouteRequest) -> RouteResponse:
         """
@@ -150,36 +150,40 @@ class RoutePlanningService:
             route_options.sort(key=lambda x: x.confidence_score, reverse=True)
             route_options = route_options[:route_request.max_route_options]
             
-            # If no routes found, provide detailed feedback
-            if not route_options:
-                error_message = f"No transit connections found between stations. "
-                error_message += f"Tried {len(station_pairs)} station pairs but found no viable routes. "
+            if route_options:
+                return RouteResponse(
+                    request=route_request,
+                    route_options=route_options,
+                    geocoding_results=geocoding_results,
+                    success=True,
+                    processing_time_seconds=time.time() - start_time
+                )
+            else:
+                # No viable routes found
+                error_msg = f"No transit connections found between stations. Tried {len(station_pairs)} station pairs but found no viable routes"
                 
-                if route_request.year and route_request.year < 1989:
-                    error_message += "This may be due to limited connections in the divided Berlin transport network. "
-                    if any(station.political_side == 'west' for station, _ in station_pairs) and \
-                       any(station.political_side == 'east' for _, station in station_pairs):
-                        error_message += "Cross-sector travel between East and West Berlin was heavily restricted during this period."
+                # Add historical context if cross-sector routing in divided Berlin
+                if route_request.year and route_request.year <= 1989:
+                    error_msg += ". This may be due to limited connections in the divided Berlin transport network"
+                    
+                    # Check if trying to route between East and West
+                    origin_political = getattr(station_pairs[0][0], 'political_side', '') if station_pairs else ''
+                    dest_political = getattr(station_pairs[0][1], 'political_side', '') if station_pairs else ''
+                    
+                    if origin_political and dest_political and origin_political != dest_political:
+                        error_msg += ". Cross-sector travel between East and West Berlin was heavily restricted during this period"
                 
                 return RouteResponse(
                     request=route_request,
                     route_options=[],
                     geocoding_results=geocoding_results,
                     success=False,
-                    error_message=error_message,
+                    error_message=error_msg,
                     processing_time_seconds=time.time() - start_time
                 )
-            
-            return RouteResponse(
-                request=route_request,
-                route_options=route_options,
-                geocoding_results=geocoding_results,
-                success=True,
-                processing_time_seconds=time.time() - start_time
-            )
-            
+                
         except Exception as e:
-            logger.error(f"Route planning failed: {str(e)}")
+            logger.error(f"Route planning error: {str(e)}")
             return RouteResponse(
                 request=route_request,
                 route_options=[],
@@ -188,7 +192,7 @@ class RoutePlanningService:
                 error_message=f"Route planning failed: {str(e)}",
                 processing_time_seconds=time.time() - start_time
             )
-    
+
     async def _geocode_addresses(self, route_request: RouteRequest) -> Dict[str, GeocodeResult]:
         """Geocode origin and destination addresses"""
         
@@ -210,9 +214,9 @@ class RoutePlanningService:
         origin_station: StationMatch,
         dest_station: StationMatch
     ) -> Optional[RouteOption]:
-        """Calculate a single route option"""
+        """Calculate a specific route option using given station pair"""
         
-        # Step 1: Find path between stations
+        # Step 1: Find transit path between stations
         transit_path = await self._find_transit_path(
             origin_station, dest_station, route_request.year
         )
@@ -222,9 +226,9 @@ class RoutePlanningService:
         
         # Step 2: Build route steps
         steps = []
+        origin_geocode = geocoding_results['origin']
         
         # Walking step from origin to station
-        origin_geocode = geocoding_results['origin']
         walk_to_station = RouteStep(
             step_type='walk',
             description=f"Walk from {origin_geocode.display_name} to {origin_station.station_name}",
@@ -245,8 +249,8 @@ class RoutePlanningService:
                 description=transit_step['description'],
                 from_location=transit_step['from_station'],
                 to_location=transit_step['to_station'],
-                distance_km=transit_step.get('distance_km'),
-                estimated_time_minutes=transit_step.get('travel_time_minutes'),
+                distance_km=None,  # Will be calculated if needed
+                estimated_time_minutes=transit_step['travel_time_minutes'],
                 transport_type=transit_step.get('transport_type'),
                 line_name=transit_step.get('line_name'),
                 distance_meters=transit_step.get('distance_meters')
@@ -301,84 +305,135 @@ class RoutePlanningService:
     ) -> Optional[Dict[str, Any]]:
         """Find transit path between two stations"""
         
-        # Build year filter
-        year_clause = ""
-        if year_filter:
-            year_clause = f"""
-            AND ALL(node IN nodes(path) WHERE 
-                NOT EXISTS(node.year) OR 
-                EXISTS((node)-[:IN_YEAR]->(:Year {{year: {year_filter}}}))
-            )
-            """
-        
-        # Try multiple path finding strategies
-        
-        # Strategy 1: Direct connections + walking connections
-        mixed_query = f"""
-        MATCH (origin:Station {{stop_id: '{origin_station.station_id}'}})
-        MATCH (dest:Station {{stop_id: '{dest_station.station_id}'}})
-        
-        MATCH path = shortestPath((origin)-[:CONNECTS_TO|WALKING_CONNECTION*1..4]-(dest))
-        WHERE origin <> dest {year_clause}
-        
-        WITH path, length(path) as path_length,
-             [rel IN relationships(path) | type(rel)] as rel_types,
-             reduce(walkTime = 0, rel IN relationships(path) | 
-                walkTime + CASE WHEN type(rel) = 'WALKING_CONNECTION' 
-                THEN COALESCE(rel.walking_time_minutes, 2.5) ELSE 0 END) as total_walk_time
-        ORDER BY path_length, total_walk_time
-        LIMIT 3
-        
-        RETURN 
-            path,
-            path_length,
-            rel_types,
-            total_walk_time,
-            [node IN nodes(path) | {{
-                name: COALESCE(node.name, node.line_id, 'unknown'),
-                type: labels(node)[0],
-                id: COALESCE(node.stop_id, node.line_id, id(node)),
-                transport_type: node.type,
-                latitude: node.latitude,
-                longitude: node.longitude
-            }}] as nodes,
-            [rel IN relationships(path) | {{
-                type: type(rel),
-                properties: properties(rel)
-            }}] as relationships
-        """
-        
-        # If no direct path, try through shared lines
-        line_query = f"""
-        MATCH (origin:Station {{stop_id: '{origin_station.station_id}'}})
-        MATCH (dest:Station {{stop_id: '{dest_station.station_id}'}})
-        
-        MATCH (origin)<-[:SERVES]-(line:Line)-[:SERVES]->(dest)
-        WHERE origin <> dest {year_clause.replace('node', 'line') if year_clause else ''}
-        
-        RETURN 
-            line.name as line_name,
-            line.type as line_type,
-            line.line_id as line_id,
-            1 as path_length
-        LIMIT 1
-        """
-        
-        # Try mixed connections first (direct + walking)
-        query = mixed_query
+        # Create fresh client for this request to avoid event loop conflicts
+        client = Neo4jClient()
+        query_executor = QueryExecutor(client)
         
         try:
-            result = await self.query_executor.execute_query_safely(query)
+            await client.connect()
             
-            if not result.success or not result.records:
-                # Try the line-based query if direct connections failed
-                result = await self.query_executor.execute_query_safely(line_query)
+            # Strategy 1: Try simple direct connection first (CONNECTS_TO only)
+            simple_query = f"""
+            MATCH (origin:Station {{stop_id: '{origin_station.station_id}'}})
+            MATCH (dest:Station {{stop_id: '{dest_station.station_id}'}})
+            
+            MATCH path = shortestPath((origin)-[:CONNECTS_TO*1..3]-(dest))
+            WHERE origin <> dest
+            
+            RETURN 
+                path,
+                length(path) as path_length,
+                [node IN nodes(path) | {{
+                    name: node.name,
+                    transport_type: node.type,
+                    stop_id: node.stop_id
+                }}] as nodes
+            LIMIT 1
+            """
+            
+            result = await query_executor.execute_query_safely(simple_query)
+            
+            if result.success and result.records:
+                # Process simple path
+                path_record = result.records[0]
+                nodes = path_record['nodes']
+                path_length = path_record['path_length']
                 
-                if not result.success or not result.records:
-                    return None
+                if len(nodes) >= 2:
+                    # Create transit step
+                    from_node = nodes[0]
+                    to_node = nodes[-1]
                     
+                    steps = [{
+                        'description': f"Take {from_node['transport_type']} from {from_node['name']} to {to_node['name']}",
+                        'from_station': from_node['name'],
+                        'to_station': to_node['name'],
+                        'transport_type': from_node['transport_type'],
+                        'travel_time_minutes': self._estimate_travel_time_by_type(from_node['transport_type']) * path_length
+                    }]
+                    
+                    return {
+                        'steps': steps,
+                        'total_distance_km': 0.0,
+                        'total_time_minutes': steps[0]['travel_time_minutes'],
+                        'description': f"Direct {from_node['transport_type']} connection",
+                        'path_length': path_length
+                    }
+            
+            # Strategy 2: Try walking connections separately
+            walking_query = f"""
+            MATCH (origin:Station {{stop_id: '{origin_station.station_id}'}})
+            MATCH (dest:Station {{stop_id: '{dest_station.station_id}'}})
+            
+            MATCH path = shortestPath((origin)-[:WALKING_CONNECTION]-(dest))
+            WHERE origin <> dest
+            
+            RETURN 
+                path,
+                [node IN nodes(path) | {{
+                    name: node.name,
+                    transport_type: node.type,
+                    stop_id: node.stop_id
+                }}] as nodes,
+                [rel IN relationships(path) | {{
+                    distance_meters: rel.distance_meters,
+                    walking_time_minutes: rel.walking_time_minutes
+                }}] as walking_rels
+            LIMIT 1
+            """
+            
+            walking_result = await query_executor.execute_query_safely(walking_query)
+            
+            if walking_result.success and walking_result.records:
+                # Process walking connection
+                walk_record = walking_result.records[0]
+                nodes = walk_record['nodes']
+                walking_rels = walk_record['walking_rels']
+                
+                if len(nodes) >= 2 and walking_rels:
+                    from_node = nodes[0]
+                    to_node = nodes[1]
+                    walk_rel = walking_rels[0]
+                    
+                    distance_m = walk_rel.get('distance_meters', 50)
+                    walk_time = walk_rel.get('walking_time_minutes', 1.0)
+                    
+                    steps = [{
+                        'description': f"Walk {distance_m:.0f}m from {from_node['name']} to {to_node['name']}",
+                        'from_station': from_node['name'],
+                        'to_station': to_node['name'],
+                        'transport_type': 'walking',
+                        'travel_time_minutes': walk_time,
+                        'distance_meters': distance_m
+                    }]
+                    
+                    return {
+                        'steps': steps,
+                        'total_distance_km': distance_m / 1000.0,
+                        'total_time_minutes': walk_time,
+                        'description': f"Walking connection ({distance_m:.0f}m)",
+                        'path_length': 1
+                    }
+            
+            # Strategy 3: Try shared line connection
+            line_query = f"""
+            MATCH (origin:Station {{stop_id: '{origin_station.station_id}'}})
+            MATCH (dest:Station {{stop_id: '{dest_station.station_id}'}})
+            
+            MATCH (origin)<-[:SERVES]-(line:Line)-[:SERVES]->(dest)
+            WHERE origin <> dest
+            
+            RETURN 
+                line.name as line_name,
+                line.type as line_type
+            LIMIT 1
+            """
+            
+            line_result = await query_executor.execute_query_safely(line_query)
+            
+            if line_result.success and line_result.records:
                 # Handle line-based result
-                line_record = result.records[0]
+                line_record = line_result.records[0]
                 line_name = line_record['line_name']
                 line_type = line_record['line_type']
                 
@@ -393,105 +448,85 @@ class RoutePlanningService:
                 
                 return {
                     'steps': steps,
-                    'total_distance_km': 0.0,  # Unknown distance
+                    'total_distance_km': 0.0,
                     'total_time_minutes': steps[0]['travel_time_minutes'],
                     'description': f"Direct {line_type} connection via {line_name}",
                     'path_length': 1
                 }
             
-            # Use the first (shortest) path from mixed connections
-            path_record = result.records[0]
-            nodes = path_record['nodes']
-            relationships = path_record['relationships']
-            rel_types = path_record.get('rel_types', [])
-            total_walk_time = path_record.get('total_walk_time', 0)
+            # Strategy 4: Try multi-hop with walking (simplified)
+            multihop_query = f"""
+            MATCH (origin:Station {{stop_id: '{origin_station.station_id}'}})
+            MATCH (dest:Station {{stop_id: '{dest_station.station_id}'}})
             
-            # Build transit steps with walking awareness
-            steps = []
-            total_distance = 0.0
-            total_time = total_walk_time  # Start with walking time
+            MATCH (origin)-[:WALKING_CONNECTION]-(intermediate:Station)-[:CONNECTS_TO]-(dest)
+            WHERE origin <> dest AND origin <> intermediate AND intermediate <> dest
             
-            # Process each connection in the path
-            for i in range(len(relationships)):
-                current_node = nodes[i]
-                next_node = nodes[i + 1]
-                relationship = relationships[i]
-                rel_type = relationship['type']
+            RETURN 
+                intermediate.name as intermediate_name,
+                intermediate.type as intermediate_type,
+                intermediate.stop_id as intermediate_id
+            LIMIT 1
+            """
+            
+            multihop_result = await query_executor.execute_query_safely(multihop_query)
+            
+            if multihop_result.success and multihop_result.records:
+                # Process multi-hop connection
+                hop_record = multihop_result.records[0]
+                intermediate_name = hop_record['intermediate_name']
+                intermediate_type = hop_record['intermediate_type']
                 
-                if rel_type == 'WALKING_CONNECTION':
-                    # Walking connection
-                    distance_m = relationship['properties'].get('distance_meters', 0)
-                    walk_time = relationship['properties'].get('walking_time_minutes', 2.5)
-                    
-                    step_description = f"Walk {distance_m:.0f}m from {current_node['name']} to {next_node['name']}"
-                    
-                    steps.append({
-                        'description': step_description,
-                        'from_station': current_node['name'],
-                        'to_station': next_node['name'],
+                steps = [
+                    {
+                        'description': f"Walk from {origin_station.station_name} to {intermediate_name}",
+                        'from_station': origin_station.station_name,
+                        'to_station': intermediate_name,
                         'transport_type': 'walking',
-                        'travel_time_minutes': walk_time,
-                        'distance_meters': distance_m
-                    })
-                    
-                else:
-                    # Transit connection
-                    step_description = f"Take transit from {current_node['name']} to {next_node['name']}"
-                    
-                    # Estimate travel time based on transport type
-                    travel_time = self._estimate_travel_time(current_node, next_node)
-                    
-                    steps.append({
-                        'description': step_description,
-                        'from_station': current_node['name'],
-                        'to_station': next_node['name'],
-                        'transport_type': current_node.get('transport_type', 'transit'),
-                        'travel_time_minutes': travel_time
-                    })
-                    
-                    total_time += travel_time
+                        'travel_time_minutes': 2.0,
+                        'distance_meters': 100
+                    },
+                    {
+                        'description': f"Take {intermediate_type} from {intermediate_name} to {dest_station.station_name}",
+                        'from_station': intermediate_name,
+                        'to_station': dest_station.station_name,
+                        'transport_type': intermediate_type,
+                        'travel_time_minutes': self._estimate_travel_time_by_type(intermediate_type)
+                    }
+                ]
+                
+                total_time = sum(step['travel_time_minutes'] for step in steps)
+                
+                return {
+                    'steps': steps,
+                    'total_distance_km': 0.1,  # Estimate
+                    'total_time_minutes': total_time,
+                    'description': f"Route via {intermediate_name}",
+                    'path_length': 2
+                }
             
-            # Generate description based on connection types
-            has_walking = 'WALKING_CONNECTION' in rel_types
-            connection_count = len(steps)
-            
-            if has_walking:
-                description = f"Route with {connection_count} connections including walking transfers"
-            else:
-                description = f"Direct transit route with {connection_count} connections"
-            
-            return {
-                'steps': steps,
-                'total_distance_km': total_distance,
-                'total_time_minutes': total_time,
-                'description': description,
-                'path_length': path_record['path_length'],
-                'includes_walking': has_walking,
-                'total_walking_time': total_walk_time
-            }
-            
-        except Exception as e:
-            logger.error(f"Error finding transit path: {str(e)}")
+            # No path found
             return None
+            
+        finally:
+            await client.close()
     
     def _estimate_travel_time(self, from_node: Dict, to_node: Dict) -> float:
         """Estimate travel time between two nodes"""
-        
-        # Simple heuristic based on transport type
+        # Simple estimation based on transport type
         transport_type = from_node.get('transport_type', 'unknown')
         return self._estimate_travel_time_by_type(transport_type)
     
     def _estimate_travel_time_by_type(self, transport_type: str) -> float:
         """Estimate travel time based on transport type"""
-        
-        if transport_type in ['u-bahn', 's-bahn']:
-            return 15.0  # 15 minutes for longer distance connections
-        elif transport_type in ['tram']:
-            return 12.0  # 12 minutes for tram connections
-        elif transport_type in ['bus', 'autobus', 'omnibus']:
-            return 20.0  # 20 minutes for bus connections
-        else:
-            return 15.0  # Default
+        time_estimates = {
+            's-bahn': 3.0,     # 3 minutes between S-Bahn stations
+            'u-bahn': 2.5,     # 2.5 minutes between U-Bahn stations
+            'tram': 4.0,       # 4 minutes between tram stops
+            'omnibus': 3.5,    # 3.5 minutes between bus stops
+            'autobus': 3.5,    # Same as omnibus
+        }
+        return time_estimates.get(transport_type.lower(), 3.0)  # Default 3 minutes
     
     def _calculate_confidence_score(
         self,
@@ -504,53 +539,48 @@ class RoutePlanningService:
         
         score = 1.0
         
-        # Penalize longer walking distances
-        if total_walking_distance > 0.5:
-            score *= (0.5 / total_walking_distance)
+        # Penalize long walking distances
+        if total_walking_distance > 0.5:  # More than 500m total walking
+            score *= 0.8
+        elif total_walking_distance > 1.0:  # More than 1km total walking
+            score *= 0.6
         
-        # Penalize longer transit paths
+        # Penalize complex routes (many transfers)
         path_length = transit_path.get('path_length', 1)
         if path_length > 2:
-            score *= (2.0 / path_length)
+            score *= 0.9 ** (path_length - 2)
         
-        # Boost score for better transport types
-        if origin_station.transport_type in ['u-bahn', 's-bahn']:
+        # Boost direct connections
+        if path_length == 1:
             score *= 1.2
-        elif origin_station.transport_type in ['tram']:
-            score *= 1.1
         
-        # Ensure score is between 0 and 1
-        return min(1.0, max(0.0, score))
+        # Consider station proximity to addresses
+        avg_station_distance = (origin_station.distance_km + dest_station.distance_km) / 2
+        if avg_station_distance < 0.2:  # Very close stations
+            score *= 1.1
+        elif avg_station_distance > 0.8:  # Distant stations
+            score *= 0.8
+        
+        return min(score, 1.0)  # Cap at 1.0
     
     async def get_route_summary(self, route_option: RouteOption) -> str:
-        """Generate a human-readable summary of a route option"""
+        """Generate a text summary of a route option"""
         
-        summary_parts = []
+        steps_text = []
+        for step in route_option.steps:
+            if step.step_type == 'walk':
+                steps_text.append(f"Walk {step.distance_km:.1f}km to {step.to_location}")
+            else:
+                steps_text.append(f"Take {step.transport_type} to {step.to_location}")
         
-        # Origin information
-        summary_parts.append(f"Starting from {route_option.origin_address}")
+        summary = f"Route from {route_option.origin_address} to {route_option.destination_address}:\n"
+        summary += "\n".join(f"{i+1}. {step}" for i, step in enumerate(steps_text))
+        summary += f"\n\nTotal: {route_option.total_distance_km:.1f}km, {route_option.estimated_total_time_minutes:.0f} minutes"
+        summary += f"\nWalking: {route_option.total_walking_distance_km:.1f}km"
+        summary += f"\nConfidence: {route_option.confidence_score:.2f}"
         
-        # Walking to station
-        summary_parts.append(f"Walk {route_option.origin_station.distance_km:.1f}km to {route_option.origin_station.station_name} ({route_option.origin_station.transport_type})")
-        
-        # Transit description
-        if route_option.path_description:
-            summary_parts.append(route_option.path_description)
-        
-        # Walking from station
-        summary_parts.append(f"Walk {route_option.destination_station.distance_km:.1f}km from {route_option.destination_station.station_name} to {route_option.destination_address}")
-        
-        # Total summary
-        summary_parts.append(f"Total: {route_option.total_distance_km:.1f}km, ~{route_option.estimated_total_time_minutes:.0f} minutes")
-        
-        return " → ".join(summary_parts)
-
-# Global instance
-_route_planning_service = None
+        return summary
 
 def get_route_planning_service() -> RoutePlanningService:
-    """Get the singleton route planning service instance"""
-    global _route_planning_service
-    if _route_planning_service is None:
-        _route_planning_service = RoutePlanningService()
-    return _route_planning_service 
+    """Get the route planning service instance"""
+    return RoutePlanningService() 

@@ -20,6 +20,8 @@ from .evaluation.question_loader import QuestionLoader
 from .evaluation.metrics import MetricsCalculator
 from .pipelines.vector_indexing import get_vector_indexing_service
 from .pipelines.chatbot_pipeline import ChatbotPipeline
+from .pipelines.graphrag_transport_pipeline import GraphRAGTransportPipeline
+from .pipelines.graphrag_cache import graphrag_cache
 
 # Initialize FastAPI app
 app = FastAPI(
@@ -87,6 +89,16 @@ class ChatMessage(BaseModel):
     used_database: bool = False
     suggested_questions: Optional[List[str]] = None
     metadata: Optional[Dict[str, Any]] = None
+
+class GraphRAGRequest(BaseModel):
+    question: str
+    llm_provider: Optional[str] = "openai"
+    year_filter: Optional[int] = None
+    community_types: Optional[List[str]] = None
+
+class GraphRAGCacheRequest(BaseModel):
+    action: str  # "warm", "clear", "stats", "validate"
+    cache_type: Optional[str] = "all"  # "all", "communities", "summaries"
 
 # API Routes
 
@@ -367,7 +379,110 @@ async def health_check():
     
     return health_status
 
-# Vector Pipeline Management Endpoints
+    # GraphRAG Transport Pipeline Endpoints
+
+@app.post("/graphrag/query")
+async def graphrag_query(request: GraphRAGRequest):
+    """Process a question using GraphRAG transport pipeline"""
+    try:
+        pipeline = GraphRAGTransportPipeline()
+        
+        result = await pipeline.process_query(
+            question=request.question,
+            llm_provider=request.llm_provider or "openai",
+            year_filter=request.year_filter,
+            community_types=request.community_types
+        )
+        
+        return {
+            "success": result.success,
+            "answer": result.answer,
+            "approach": result.approach,
+            "execution_time_seconds": result.execution_time_seconds,
+            "communities_analyzed": result.metadata.get("communities_analyzed", 0) if result.metadata else 0,
+            "question_type": result.metadata.get("question_type", "unknown") if result.metadata else "unknown",
+            "year_filter": request.year_filter,
+            "community_types": request.community_types,
+            "context_summaries_count": len(result.retrieved_context) if result.retrieved_context else 0,
+            "metadata": result.metadata
+        }
+    
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"GraphRAG query failed: {str(e)}")
+
+@app.get("/graphrag/cache/stats")
+async def get_graphrag_cache_stats():
+    """Get GraphRAG cache statistics"""
+    try:
+        stats = await graphrag_cache.get_cache_stats()
+        return {
+            "success": True,
+            "cache_stats": stats
+        }
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Failed to get cache stats: {str(e)}")
+
+@app.post("/graphrag/cache/manage")
+async def manage_graphrag_cache(request: GraphRAGCacheRequest, background_tasks: BackgroundTasks):
+    """Manage GraphRAG cache (warm, clear, validate)"""
+    try:
+        if request.action == "stats":
+            stats = await graphrag_cache.get_cache_stats()
+            return {"success": True, "action": "stats", "result": stats}
+        
+        elif request.action == "clear":
+            await graphrag_cache.clear_cache(request.cache_type or "all")
+            return {"success": True, "action": "clear", "cache_type": request.cache_type}
+        
+        elif request.action == "validate":
+            # Run validation in background to avoid timeout
+            background_tasks.add_task(validate_cache_background)
+            return {"success": True, "action": "validate", "message": "Cache validation started in background"}
+        
+        elif request.action == "warm":
+            # Run cache warming in background to avoid timeout
+            background_tasks.add_task(warm_cache_background)
+            return {"success": True, "action": "warm", "message": "Cache warming started in background"}
+        
+        else:
+            raise HTTPException(status_code=400, detail=f"Unknown action: {request.action}")
+    
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Cache management failed: {str(e)}")
+
+async def warm_cache_background():
+    """Background task for cache warming"""
+    try:
+        from .pipelines.graphrag_transport_pipeline import (
+            TransportCommunityDetector, 
+            TransportCommunitySummarizer
+        )
+        
+        detector = TransportCommunityDetector(neo4j_client)
+        summarizer = TransportCommunitySummarizer("openai")
+        
+        # Warm cache with common queries
+        year_filters = [None, 1961, 1970, 1989]
+        community_type_combinations = [None, ["geographic"], ["temporal"]]
+        llm_providers = ["openai"]
+        
+        await graphrag_cache.warm_cache(
+            detector, summarizer, year_filters, community_type_combinations, llm_providers
+        )
+        print("✅ GraphRAG cache warming completed in background")
+    
+    except Exception as e:
+        print(f"❌ GraphRAG cache warming failed: {e}")
+
+async def validate_cache_background():
+    """Background task for cache validation"""
+    try:
+        stats = await graphrag_cache.get_cache_stats()
+        print(f"✅ GraphRAG cache validation completed: {stats}")
+    except Exception as e:
+        print(f"❌ GraphRAG cache validation failed: {e}")
+
+    # Vector Pipeline Management Endpoints
 
 @app.get("/vector-pipeline/status")
 async def get_vector_pipeline_status():

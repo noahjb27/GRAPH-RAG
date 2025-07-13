@@ -29,7 +29,7 @@ class GeocodingService:
     def __init__(self, user_agent: str = "BerlinTransportBot/1.0"):
         self.base_url = "https://nominatim.openstreetmap.org/search"
         self.user_agent = user_agent
-        self.session = None
+        # Don't store session - create fresh ones to avoid event loop conflicts
         
         # Focus on Berlin area for better results
         self.berlin_bounds = {
@@ -39,13 +39,13 @@ class GeocodingService:
         
     async def __aenter__(self):
         """Async context manager entry"""
-        self.session = aiohttp.ClientSession()
+        # No need to create persistent session
         return self
         
     async def __aexit__(self, exc_type, exc_val, exc_tb):
         """Async context manager exit"""
-        if self.session:
-            await self.session.close()
+        # No persistent session to close
+        pass
     
     async def geocode_address(self, address: str) -> GeocodeResult:
         """
@@ -85,30 +85,39 @@ class GeocodingService:
         }
         
         try:
-            if not self.session:
-                self.session = aiohttp.ClientSession()
-                
-            async with self.session.get(
-                self.base_url,
-                params=params,
-                headers=headers,
-                timeout=aiohttp.ClientTimeout(total=10)
-            ) as response:
-                
-                if response.status == 200:
-                    results = await response.json()
+            # Create fresh session for each request to avoid event loop conflicts
+            async with aiohttp.ClientSession() as session:
+                async with session.get(
+                    self.base_url,
+                    params=params,
+                    headers=headers,
+                    timeout=aiohttp.ClientTimeout(total=10)
+                ) as response:
                     
-                    if results and len(results) > 0:
-                        result = results[0]
+                    if response.status == 200:
+                        results = await response.json()
                         
-                        return GeocodeResult(
-                            address=address,
-                            latitude=float(result['lat']),
-                            longitude=float(result['lon']),
-                            display_name=result.get('display_name', ''),
-                            confidence=float(result.get('importance', 0.5)),
-                            found=True
-                        )
+                        if results and len(results) > 0:
+                            result = results[0]
+                            
+                            return GeocodeResult(
+                                address=address,
+                                latitude=float(result['lat']),
+                                longitude=float(result['lon']),
+                                display_name=result.get('display_name', ''),
+                                confidence=float(result.get('importance', 0.5)),
+                                found=True
+                            )
+                        else:
+                            return GeocodeResult(
+                                address=address,
+                                latitude=0.0,
+                                longitude=0.0,
+                                display_name="",
+                                confidence=0.0,
+                                found=False,
+                                error_message="No results found for address"
+                            )
                     else:
                         return GeocodeResult(
                             address=address,
@@ -117,18 +126,8 @@ class GeocodingService:
                             display_name="",
                             confidence=0.0,
                             found=False,
-                            error_message="No results found for address"
+                            error_message=f"Geocoding API returned status {response.status}"
                         )
-                else:
-                    return GeocodeResult(
-                        address=address,
-                        latitude=0.0,
-                        longitude=0.0,
-                        display_name="",
-                        confidence=0.0,
-                        found=False,
-                        error_message=f"Geocoding API returned status {response.status}"
-                    )
                     
         except asyncio.TimeoutError:
             return GeocodeResult(
@@ -151,7 +150,7 @@ class GeocodingService:
                 found=False,
                 error_message=f"Geocoding failed: {str(e)}"
             )
-    
+
     async def geocode_multiple_addresses(self, addresses: List[str]) -> List[GeocodeResult]:
         """
         Geocode multiple addresses concurrently
@@ -160,24 +159,28 @@ class GeocodingService:
             addresses: List of addresses to geocode
             
         Returns:
-            List of GeocodeResult objects
+            List of GeocodeResult objects in same order as input
         """
-        # Add rate limiting - max 3 concurrent requests
-        semaphore = asyncio.Semaphore(3)
+        # Use semaphore to limit concurrent requests
+        semaphore = asyncio.Semaphore(5)  # Max 5 concurrent requests
         
         async def _geocode_with_semaphore(address: str) -> GeocodeResult:
             async with semaphore:
-                # Add small delay to respect rate limits
+                # Add small delay to be respectful to the API
                 await asyncio.sleep(0.1)
                 return await self.geocode_address(address)
         
-        tasks = [_geocode_with_semaphore(addr) for addr in addresses]
+        # Create tasks for all addresses
+        tasks = [_geocode_with_semaphore(address) for address in addresses]
+        
+        # Wait for all tasks to complete
         results = await asyncio.gather(*tasks, return_exceptions=True)
         
         # Handle any exceptions
         geocode_results = []
         for i, result in enumerate(results):
             if isinstance(result, Exception):
+                logger.error(f"Exception geocoding address '{addresses[i]}': {str(result)}")
                 geocode_results.append(GeocodeResult(
                     address=addresses[i],
                     latitude=0.0,
@@ -185,7 +188,7 @@ class GeocodingService:
                     display_name="",
                     confidence=0.0,
                     found=False,
-                    error_message=f"Exception during geocoding: {str(result)}"
+                    error_message=f"Exception: {str(result)}"
                 ))
             else:
                 geocode_results.append(result)
@@ -194,7 +197,7 @@ class GeocodingService:
     
     def _enhance_address_for_berlin(self, address: str) -> str:
         """
-        Enhance address with Berlin context for better geocoding results
+        Enhance address with Berlin context if not already included
         
         Args:
             address: Original address
@@ -202,10 +205,10 @@ class GeocodingService:
         Returns:
             Enhanced address with Berlin context
         """
-        address = address.strip()
+        address_lower = address.lower()
         
-        # If already contains Berlin, return as is
-        if any(keyword in address.lower() for keyword in ['berlin', 'deutschland', 'germany']):
+        # If Berlin is already mentioned, return as-is
+        if 'berlin' in address_lower or 'deutschland' in address_lower or 'germany' in address_lower:
             return address
         
         # Add Berlin, Germany context
@@ -236,22 +239,22 @@ class GeocodingService:
         }
         
         try:
-            if not self.session:
-                self.session = aiohttp.ClientSession()
-                
-            async with self.session.get(
-                reverse_url,
-                params=params,
-                headers=headers,
-                timeout=aiohttp.ClientTimeout(total=10)
-            ) as response:
-                
-                if response.status == 200:
-                    result = await response.json()
-                    return result.get('display_name')
-                else:
-                    return None
+            # Create fresh session for each request to avoid event loop conflicts
+            async with aiohttp.ClientSession() as session:
+                async with session.get(
+                    reverse_url,
+                    params=params,
+                    headers=headers,
+                    timeout=aiohttp.ClientTimeout(total=10)
+                ) as response:
                     
+                    if response.status == 200:
+                        result = await response.json()
+                        return result.get('display_name')
+                    else:
+                        logger.warning(f"Reverse geocoding failed with status {response.status}")
+                        return None
+                        
         except Exception as e:
             logger.error(f"Reverse geocoding error for {latitude}, {longitude}: {str(e)}")
             return None

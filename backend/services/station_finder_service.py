@@ -8,7 +8,7 @@ from typing import Dict, Any, List, Optional, Tuple
 from dataclasses import dataclass
 import math
 
-from ..database.neo4j_client import neo4j_client
+from ..database.neo4j_client import Neo4jClient
 from ..database.query_executor import QueryExecutor
 
 logger = logging.getLogger(__name__)
@@ -31,7 +31,8 @@ class StationFinderService:
     """Service for finding closest stations to coordinates"""
     
     def __init__(self):
-        self.query_executor = QueryExecutor(neo4j_client)
+        # Don't store client - create fresh ones to avoid event loop conflicts
+        pass
         
     def _haversine_distance(self, lat1: float, lon1: float, lat2: float, lon2: float) -> float:
         """
@@ -54,11 +55,11 @@ class StationFinderService:
         a = math.sin(dlat/2)**2 + math.cos(lat1) * math.cos(lat2) * math.sin(dlon/2)**2
         c = 2 * math.asin(math.sqrt(a))
         
-        # Radius of earth in kilometers
+        # Radius of Earth in kilometers
         r = 6371
         
         return c * r
-    
+
     async def find_closest_stations(
         self,
         latitude: float,
@@ -74,113 +75,99 @@ class StationFinderService:
         Args:
             latitude: Target latitude
             longitude: Target longitude
-            max_distance_km: Maximum distance to search (default 2km)
+            max_distance_km: Maximum distance in kilometers
             max_results: Maximum number of results to return
-            year_filter: Optional year filter (e.g., 1971)
-            transport_types: Optional list of transport types to filter
+            year_filter: Optional year to filter stations
+            transport_types: Optional list of transport types to include
             
         Returns:
-            List of StationMatch objects sorted by distance
+            List of StationMatch objects ordered by distance
         """
         
-        # Build year filter clause
-        year_clause = ""
-        if year_filter:
-            year_clause = f"AND EXISTS((s)-[:IN_YEAR]->(:Year {{year: {year_filter}}}))"
-        
-        # Build transport type filter clause
-        transport_clause = ""
-        if transport_types:
-            transport_types_str = "', '".join(transport_types)
-            transport_clause = f"AND s.type IN ['{transport_types_str}']"
-        
-        # Query to find stations with approximate distance filtering
-        # Using rough lat/lon bounds first for efficiency
-        lat_range = max_distance_km / 111.0  # Approximate km to degrees
-        lon_range = max_distance_km / (111.0 * math.cos(math.radians(latitude)))
-        
-        query = f"""
-        MATCH (s:Station)
-        WHERE s.latitude > {latitude - lat_range} 
-          AND s.latitude < {latitude + lat_range}
-          AND s.longitude > {longitude - lon_range}
-          AND s.longitude < {longitude + lon_range}
-          AND s.latitude IS NOT NULL 
-          AND s.longitude IS NOT NULL
-          {year_clause}
-          {transport_clause}
-        
-        OPTIONAL MATCH (s)-[:IN_YEAR]->(y:Year)
-        OPTIONAL MATCH (s)-[:LOCATED_IN]->(area:HistoricalOrtsteil)
-        OPTIONAL MATCH (area)-[:PART_OF]->(bezirk:HistoricalBezirk)
-        
-        RETURN 
-            s.stop_id as station_id,
-            s.name as station_name,
-            s.type as transport_type,
-            s.latitude as latitude,
-            s.longitude as longitude,
-            s.east_west as political_side,
-            y.year as year,
-            area.name as area_name,
-            bezirk.name as bezirk_name
-        
-        ORDER BY 
-            (s.latitude - {latitude}) * (s.latitude - {latitude}) + 
-            (s.longitude - {longitude}) * (s.longitude - {longitude})
-        LIMIT {max_results * 3}
-        """
+        # Create fresh client for this request to avoid event loop conflicts
+        client = Neo4jClient()
+        query_executor = QueryExecutor(client)
         
         try:
-            result = await self.query_executor.execute_query_safely(query)
+            await client.connect()
+            
+            # Build transport type filter
+            transport_filter = ""
+            if transport_types:
+                types_str = "', '".join(transport_types)
+                transport_filter = f"AND s.type IN ['{types_str}']"
+            
+            # Build year filter
+            year_filter_clause = ""
+            if year_filter:
+                year_filter_clause = f"""
+                AND (
+                    s.year IS NULL OR 
+                    EXISTS((s)-[:IN_YEAR]->(:Year {{year: {year_filter}}}))
+                )
+                """
+            
+            query = f"""
+            MATCH (s:Station)
+            WHERE s.latitude IS NOT NULL 
+            AND s.longitude IS NOT NULL
+            {transport_filter}
+            {year_filter_clause}
+            
+            WITH s, 
+                 point({{longitude: s.longitude, latitude: s.latitude}}) as station_point,
+                 point({{longitude: {longitude}, latitude: {latitude}}}) as target_point
+            
+            WITH s, station_point, target_point,
+                 point.distance(station_point, target_point) / 1000.0 as distance_km
+            
+            WHERE distance_km <= {max_distance_km}
+            
+            RETURN 
+                s.stop_id as station_id,
+                s.name as station_name,
+                s.type as transport_type,
+                s.latitude as latitude,
+                s.longitude as longitude,
+                distance_km,
+                COALESCE(s.east_west, 'unknown') as political_side,
+                s.year as year
+            
+            ORDER BY distance_km
+            LIMIT {max_results}
+            """
+            
+            result = await query_executor.execute_query_safely(query)
             
             if not result.success:
                 logger.error(f"Station finder query failed: {result.error_message}")
                 return []
             
-            # Calculate exact distances and filter
-            station_matches = []
-            
+            stations = []
             for record in result.records:
-                station_lat = record.get('latitude')
-                station_lon = record.get('longitude')
-                
-                if station_lat is None or station_lon is None:
-                    continue
-                
-                # Calculate exact distance
-                distance = self._haversine_distance(
-                    latitude, longitude, 
-                    station_lat, station_lon
+                # Use Haversine distance as fallback if Neo4j distance is not available
+                calculated_distance = self._haversine_distance(
+                    latitude, longitude,
+                    record['latitude'], record['longitude']
                 )
                 
-                # Filter by max distance
-                if distance > max_distance_km:
-                    continue
-                
-                station_match = StationMatch(
-                    station_id=record.get('station_id', ''),
-                    station_name=record.get('station_name', ''),
-                    transport_type=record.get('transport_type', ''),
-                    latitude=station_lat,
-                    longitude=station_lon,
-                    distance_km=distance,
-                    political_side=record.get('political_side', ''),
+                station = StationMatch(
+                    station_id=record['station_id'],
+                    station_name=record['station_name'],
+                    transport_type=record['transport_type'],
+                    latitude=record['latitude'],
+                    longitude=record['longitude'],
+                    distance_km=record.get('distance_km', calculated_distance),
+                    political_side=record['political_side'],
                     year=record.get('year'),
-                    area_name=record.get('area_name'),
-                    bezirk_name=record.get('bezirk_name')
                 )
-                
-                station_matches.append(station_match)
+                stations.append(station)
             
-            # Sort by distance and return top results
-            station_matches.sort(key=lambda x: x.distance_km)
-            return station_matches[:max_results]
+            return stations
             
-        except Exception as e:
-            logger.error(f"Error finding closest stations: {str(e)}")
-            return []
-    
+        finally:
+            await client.close()
+
     async def find_stations_in_area(
         self,
         center_latitude: float,
@@ -189,25 +176,25 @@ class StationFinderService:
         year_filter: Optional[int] = None
     ) -> List[StationMatch]:
         """
-        Find all stations within a circular area
+        Find all stations within a given radius
         
         Args:
-            center_latitude: Center latitude
-            center_longitude: Center longitude
-            radius_km: Radius in kilometers
+            center_latitude: Center point latitude
+            center_longitude: Center point longitude
+            radius_km: Search radius in kilometers
             year_filter: Optional year filter
             
         Returns:
-            List of all stations within the area
+            List of stations within the area
         """
         return await self.find_closest_stations(
             center_latitude,
             center_longitude,
             max_distance_km=radius_km,
-            max_results=100,  # Get all stations in area
+            max_results=100,  # Higher limit for area searches
             year_filter=year_filter
         )
-    
+
     async def find_best_station_pairs(
         self,
         origin_lat: float,
@@ -274,78 +261,78 @@ class StationFinderService:
         
         # Return tuples without score
         return [(pair[0], pair[1]) for pair in station_pairs[:max_pairs]]
-    
+
     async def get_station_details(self, station_id: str, year_filter: Optional[int] = None) -> Optional[Dict[str, Any]]:
         """
         Get detailed information about a specific station
         
         Args:
-            station_id: Station ID to lookup
+            station_id: Station identifier
             year_filter: Optional year filter
             
         Returns:
-            Dictionary with station details or None if not found
+            Station details dictionary or None if not found
         """
-        year_clause = ""
-        if year_filter:
-            year_clause = f"AND EXISTS((s)-[:IN_YEAR]->(:Year {{year: {year_filter}}}))"
         
-        query = f"""
-        MATCH (s:Station {{stop_id: '{station_id}'}})
-        WHERE s.latitude IS NOT NULL AND s.longitude IS NOT NULL
-        {year_clause}
-        
-        OPTIONAL MATCH (s)-[:IN_YEAR]->(y:Year)
-        OPTIONAL MATCH (s)-[:LOCATED_IN]->(area:HistoricalOrtsteil)
-        OPTIONAL MATCH (area)-[:PART_OF]->(bezirk:HistoricalBezirk)
-        OPTIONAL MATCH (s)<-[:SERVES]-(l:Line)
-        
-        RETURN 
-            s.stop_id as station_id,
-            s.name as station_name,
-            s.type as transport_type,
-            s.latitude as latitude,
-            s.longitude as longitude,
-            s.east_west as political_side,
-            collect(DISTINCT y.year) as years,
-            area.name as area_name,
-            bezirk.name as bezirk_name,
-            collect(DISTINCT l.name) as lines
-        
-        LIMIT 1
-        """
+        # Create fresh client for this request
+        client = Neo4jClient()
+        query_executor = QueryExecutor(client)
         
         try:
-            result = await self.query_executor.execute_query_safely(query)
+            await client.connect()
+            
+            year_filter_clause = ""
+            if year_filter:
+                year_filter_clause = f"""
+                AND (
+                    s.year IS NULL OR 
+                    EXISTS((s)-[:IN_YEAR]->(:Year {{year: {year_filter}}}))
+                )
+                """
+            
+            query = f"""
+            MATCH (s:Station {{stop_id: '{station_id}'}})
+            WHERE 1=1 {year_filter_clause}
+            
+            OPTIONAL MATCH (s)-[:IN_AREA]->(area:AdministrativeArea)
+            OPTIONAL MATCH (s)-[:IN_BEZIRK]->(bezirk:HistoricalBezirk)
+            OPTIONAL MATCH (s)<-[:SERVES]-(line:Line)
+            
+            RETURN 
+                s.stop_id as station_id,
+                s.name as station_name,
+                s.type as transport_type,
+                s.latitude as latitude,
+                s.longitude as longitude,
+                s.east_west as political_side,
+                s.year as year,
+                collect(DISTINCT area.name) as areas,
+                collect(DISTINCT bezirk.name) as bezirke,
+                collect(DISTINCT line.name) as lines
+            """
+            
+            result = await query_executor.execute_query_safely(query)
             
             if not result.success or not result.records:
                 return None
             
             record = result.records[0]
-            
             return {
-                'station_id': record.get('station_id'),
-                'station_name': record.get('station_name'),
-                'transport_type': record.get('transport_type'),
-                'latitude': record.get('latitude'),
-                'longitude': record.get('longitude'),
-                'political_side': record.get('political_side'),
-                'years': record.get('years', []),
-                'area_name': record.get('area_name'),
-                'bezirk_name': record.get('bezirk_name'),
-                'lines': record.get('lines', [])
+                'station_id': record['station_id'],
+                'station_name': record['station_name'],
+                'transport_type': record['transport_type'],
+                'latitude': record['latitude'],
+                'longitude': record['longitude'],
+                'political_side': record['political_side'],
+                'year': record['year'],
+                'areas': [area for area in record['areas'] if area],
+                'bezirke': [bezirk for bezirk in record['bezirke'] if bezirk],
+                'lines': [line for line in record['lines'] if line]
             }
             
-        except Exception as e:
-            logger.error(f"Error getting station details for {station_id}: {str(e)}")
-            return None
-
-# Global instance
-_station_finder_service = None
+        finally:
+            await client.close()
 
 def get_station_finder_service() -> StationFinderService:
-    """Get the singleton station finder service instance"""
-    global _station_finder_service
-    if _station_finder_service is None:
-        _station_finder_service = StationFinderService()
-    return _station_finder_service 
+    """Get the station finder service instance"""
+    return StationFinderService() 

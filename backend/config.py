@@ -84,6 +84,29 @@ class Settings(BaseSettings):
     german_reunification_year: int = 1989
     available_years: List[int] = [1946, 1951, 1956, 1960, 1961, 1964, 1965, 1967, 1971, 1980, 1982, 1984, 1985, 1989]
     
+    # GraphRAG Transport Pipeline Settings
+    graphrag_cache_dir: str = "graphrag_cache"
+    graphrag_cache_enabled: bool = True
+    graphrag_summary_max_tokens: int = 1000
+    graphrag_summary_temperature: float = 0.3
+    graphrag_global_question_threshold: int = 3  # Number of entities to trigger global analysis
+    graphrag_community_min_size: int = 5  # Minimum community size for analysis
+    graphrag_temporal_analysis_enabled: bool = True
+    graphrag_operational_analysis_enabled: bool = True
+    graphrag_geographic_analysis_enabled: bool = True
+    graphrag_service_type_analysis_enabled: bool = True
+    
+    # GraphRAG Cache Warming Settings
+    graphrag_cache_warm_on_startup: bool = False
+    graphrag_cache_warm_years: List[int] = [1961, 1970, 1989]
+    graphrag_cache_warm_community_types: List[str] = ["geographic", "temporal"]
+    graphrag_cache_warm_llm_providers: List[str] = ["openai"]
+    
+    # GraphRAG Performance Settings
+    graphrag_max_communities_per_query: int = 100
+    graphrag_parallel_summary_generation: bool = True
+    graphrag_max_parallel_summaries: int = 5
+    
     model_config = {
         "env_file": ".env",
         "env_file_encoding": "utf-8",

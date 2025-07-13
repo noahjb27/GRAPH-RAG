@@ -16,6 +16,12 @@ from .path_traversal_pipeline import PathTraversalPipeline
 from .graph_embedding_pipeline import GraphEmbeddingPipeline
 from .hybrid_pipeline import HybridPipeline
 from ..llm_clients.client_factory import create_llm_client
+from ..services.route_planning_service import (
+    get_route_planning_service, 
+    RouteRequest, 
+    RouteResponse,
+    RouteOption
+)
 
 @dataclass
 class ConversationContext:
@@ -382,49 +388,106 @@ Analyze this query and classify it:
         llm_provider: str,
         stream: bool
     ) -> AsyncGenerator[ChatResponse, None]:
-        """Handle route planning queries like the user's example"""
+        """Handle route planning queries with enhanced address-based routing"""
         
         # Extract addresses and year from the message
         route_info = await self._extract_route_info(message, llm_provider)
         
         if stream:
             yield ChatResponse(
-                message=f"Analyzing route from {route_info.get('origin', 'unknown')} to {route_info.get('destination', 'unknown')} in {route_info.get('year', 'unknown year')}...",
+                message=f"Looking up addresses and planning route from {route_info.get('origin', 'unknown')} to {route_info.get('destination', 'unknown')} in {route_info.get('year', 'unknown year')}...",
                 is_streaming=True,
                 query_type="route_planning",
                 used_database=True
             )
         
-        # Generate specialized route planning query
-        route_query = await self._generate_route_planning_query(route_info, llm_provider)
+        # Use the enhanced route planning service
+        route_planning_service = get_route_planning_service()
         
-        # Execute the route planning query
-        result = await self.process_query(route_query, llm_provider)
+        # Create route request
+        route_request = RouteRequest(
+            origin_address=route_info.get('origin', ''),
+            destination_address=route_info.get('destination', ''),
+            year=route_info.get('year'),
+            transport_preferences=route_info.get('transport_preferences', []),
+            max_walking_distance_km=1.0,
+            max_route_options=3
+        )
         
-        if result.success:
-            # Format as conversational route description
-            route_response = await self._format_route_response(
-                message, result, route_info, llm_provider
+        if stream:
+            yield ChatResponse(
+                message="Geocoding addresses and finding nearby stations...",
+                is_streaming=True,
+                query_type="route_planning",
+                used_database=True
+            )
+        
+        # Plan the route
+        route_response = await route_planning_service.plan_route(route_request)
+        
+        if route_response.success and route_response.route_options:
+            # Format the best route option
+            best_route = route_response.route_options[0]
+            
+            if stream:
+                yield ChatResponse(
+                    message="Calculating optimal route through historical transit network...",
+                    is_streaming=True,
+                    query_type="route_planning",
+                    used_database=True
+                )
+            
+            # Generate detailed route description
+            route_description = await self._format_enhanced_route_response(
+                message, best_route, route_response, llm_provider
             )
             
             yield ChatResponse(
-                message=route_response,
+                message=route_description,
                 query_type="route_planning",
                 used_database=True,
                 metadata={
                     "route_info": route_info,
-                    "execution_time": result.execution_time_seconds
+                    "execution_time": route_response.processing_time_seconds,
+                    "geocoding_success": route_response.geocoding_results,
+                    "route_options_count": len(route_response.route_options),
+                    "best_route_confidence": best_route.confidence_score,
+                    "total_distance_km": best_route.total_distance_km,
+                    "walking_distance_km": best_route.total_walking_distance_km,
+                    "estimated_time_minutes": best_route.estimated_total_time_minutes
                 }
             )
         else:
+            # Enhanced error handling with geocoding information
+            error_details = []
+            
+            if route_response.geocoding_results:
+                origin_geocoding = route_response.geocoding_results.get('origin')
+                dest_geocoding = route_response.geocoding_results.get('destination')
+                
+                if origin_geocoding and not origin_geocoding.found:
+                    error_details.append(f"Could not find origin address: {route_info.get('origin', 'unknown')}")
+                if dest_geocoding and not dest_geocoding.found:
+                    error_details.append(f"Could not find destination address: {route_info.get('destination', 'unknown')}")
+            
+            if not error_details:
+                error_details.append("No nearby stations found within walking distance")
+            
+            error_message = f"I couldn't plan a specific route: {'; '.join(error_details)}. "
+            
+            if route_info.get('year'):
+                error_message += f"The historical transport network in {route_info.get('year')} might not have had connections between those areas, or the data might not be available for that time period."
+            else:
+                error_message += "Try specifying a year between 1946-1989 for better historical routing."
+            
             yield ChatResponse(
-                message=f"I couldn't find specific route information for that journey. The data might not be available for that time period or those locations. However, I can tell you about the general transport network in {route_info.get('year', 'that era')}.",
+                message=error_message,
                 query_type="route_planning_failed",
                 used_database=False,
                 suggested_questions=[
-                    f"What transport lines were available in {route_info.get('year', 'that time period')}?",
+                    f"What transport lines were available in {route_info.get('year', '1971')}?",
                     f"What stations were near {route_info.get('origin', 'that area')}?",
-                    f"How did the transport network change around {route_info.get('year', 'that time')}?"
+                    f"How did the transport network change around {route_info.get('year', '1971')}?"
                 ]
             )
     
@@ -491,6 +554,9 @@ Return JSON with:
         
         llm_client = create_llm_client(llm_provider)
         
+        if not llm_client:
+            return database_answer  # Return original answer if LLM not available
+        
         system_prompt = """You are a friendly, knowledgeable assistant discussing historical Berlin transport.
         
 Make the response conversational and engaging while keeping all factual information accurate.
@@ -525,6 +591,9 @@ Please reformat this as a natural, conversational response:
         
         llm_client = create_llm_client(llm_provider)
         
+        if not llm_client:
+            return no_rag_answer  # Return original answer if LLM not available
+        
         system_prompt = """You are responding to a general question, but you also have access to a historical Berlin transport database (1946-1989).
         
 Provide the general answer, then suggest how the user might explore related information from the transport database.
@@ -558,6 +627,9 @@ Please enhance this response by suggesting relevant transport database queries:
         
         llm_client = create_llm_client(llm_provider)
         
+        if not llm_client:
+            return result.answer  # Return original answer if LLM not available
+        
         system_prompt = """You are helping someone understand historical Berlin transport routes.
         
 Format the database results as a helpful route planning response.
@@ -579,6 +651,77 @@ Please format this as a helpful route planning response:
             system_prompt=system_prompt,
             temperature=0.3,
             max_tokens=400
+        )
+        
+        return response.text.strip()
+    
+    async def _format_enhanced_route_response(
+        self,
+        original_message: str,
+        best_route: RouteOption,
+        route_response: RouteResponse,
+        llm_provider: str
+    ) -> str:
+        """Format the enhanced route response with detailed information"""
+        
+        llm_client = create_llm_client(llm_provider)
+        
+        # Build detailed route information
+        route_summary = []
+        
+        # Add geocoding results
+        origin_geocoding = route_response.geocoding_results.get('origin')
+        dest_geocoding = route_response.geocoding_results.get('destination')
+        
+        if origin_geocoding and origin_geocoding.found:
+            route_summary.append(f"Origin: {origin_geocoding.display_name}")
+        if dest_geocoding and dest_geocoding.found:
+            route_summary.append(f"Destination: {dest_geocoding.display_name}")
+        
+        # Add station information
+        route_summary.append(f"Nearest origin station: {best_route.origin_station.station_name} ({best_route.origin_station.transport_type}, {best_route.origin_station.distance_km:.1f}km walk)")
+        route_summary.append(f"Nearest destination station: {best_route.destination_station.station_name} ({best_route.destination_station.transport_type}, {best_route.destination_station.distance_km:.1f}km walk)")
+        
+        # Add route steps
+        route_summary.append("\nRoute steps:")
+        for i, step in enumerate(best_route.steps, 1):
+            if step.step_type == 'walk':
+                route_summary.append(f"{i}. Walk {step.distance_km:.1f}km from {step.from_location} to {step.to_location} (~{step.estimated_time_minutes:.0f} min)")
+            elif step.step_type == 'transit':
+                route_summary.append(f"{i}. {step.description} (~{step.estimated_time_minutes:.0f} min)")
+        
+        # Add totals
+        route_summary.append(f"\nTotal distance: {best_route.total_distance_km:.1f}km")
+        route_summary.append(f"Total walking: {best_route.total_walking_distance_km:.1f}km")
+        route_summary.append(f"Estimated time: {best_route.estimated_total_time_minutes:.0f} minutes")
+        
+        if best_route.year:
+            route_summary.append(f"Historical context: {best_route.year}")
+        
+        route_info_text = "\n".join(route_summary)
+        
+        if not llm_client:
+            return f"Here's your route for {original_message}:\n\n{route_info_text}"
+        
+        system_prompt = """You are a helpful assistant providing historical Berlin transport route planning.
+        
+Format the route information in a conversational, helpful way. Include practical details and historical context.
+Make it engaging and easy to understand, while preserving all the important routing information."""
+        
+        user_prompt = f"""
+Original request: {original_message}
+
+Detailed route information:
+{route_info_text}
+
+Please format this as a helpful, conversational route planning response:
+"""
+        
+        response = await llm_client.generate(
+            prompt=user_prompt,
+            system_prompt=system_prompt,
+            temperature=0.3,
+            max_tokens=500
         )
         
         return response.text.strip()

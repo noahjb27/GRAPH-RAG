@@ -28,6 +28,30 @@ This folder contains comprehensive documentation for the Graph-RAG Research Syst
 
 **Target audience:** Database administrators, data analysts, researchers working with the graph data
 
+### 🔗 [Path Traversal Pipeline Guide](path_traversal_pipeline_guide.md)
+**Neighborhood and path-based retrieval** - Connect entities through graph traversal
+
+**Contents:**
+- Anchor detection and entity recognition
+- Path finding algorithms and traversal strategies
+- Ranking, pruning, and result optimization
+- Usage examples and performance considerations
+- Integration with temporal filtering
+
+**Target audience:** Developers, researchers interested in relationship discovery and multi-hop connections
+
+### 🧠 [Graph Embedding Pipeline Guide](graph_embedding_pipeline_guide.md)
+**Topological similarity retrieval** - Find structurally similar entities using Node2Vec embeddings
+
+**Contents:**
+- Node2Vec training and graph preprocessing
+- FAISS vector indexing and similarity search
+- Hybrid semantic-structural search strategies
+- Performance optimization and caching
+- Use cases for structural pattern discovery
+
+**Target audience:** Developers, researchers interested in structural similarity and topological analysis
+
 ## 🔗 External Documentation
 
 ### Interactive API Reference
@@ -65,9 +89,11 @@ This folder contains comprehensive documentation for the Graph-RAG Research Syst
 
 ## 🆕 Recent Updates
 
+- **Graph Embedding Pipeline**: New pipeline for topological similarity retrieval using Node2Vec embeddings and FAISS search
+- **Path Traversal Pipeline**: Pipeline for discovering connections between entities through graph traversal
 - **Application Guide**: Comprehensive system documentation reflecting current state
 - **README.md**: Updated project overview and quick start guide
-- **Pipeline Status**: Direct Cypher and No-RAG pipelines fully functional
+- **Pipeline Status**: Direct Cypher, No-RAG, Path Traversal, and Graph Embedding pipelines fully functional
 
 ## 📝 Contributing to Documentation
 

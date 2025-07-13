@@ -2,7 +2,7 @@
 Client factory for managing and creating LLM clients
 """
 
-from typing import Dict, List, Optional, Union
+from typing import Dict, Optional
 from .base_client import BaseLLMClient
 from .mistral_client import MistralClient
 from .openai_client import OpenAIClient

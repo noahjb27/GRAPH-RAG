@@ -5,7 +5,7 @@ Extracts and analyzes schema information for Cypher generation
 
 from typing import Dict, List, Set, Any, Optional
 from dataclasses import dataclass, field
-from .neo4j_client import Neo4jClient, Neo4jQueryResult
+from .neo4j_client import Neo4jClient
 
 @dataclass
 class NodeTypeInfo:

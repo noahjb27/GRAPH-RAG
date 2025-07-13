@@ -7,8 +7,10 @@ import asyncio
 from typing import List, Dict, Any, Optional
 from fastapi import FastAPI, HTTPException, BackgroundTasks
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import StreamingResponse
 from pydantic import BaseModel
 import uvicorn
+import json
 
 from .config import settings, get_available_llm_providers
 from .database.neo4j_client import neo4j_client
@@ -17,6 +19,7 @@ from .evaluation.evaluator import Evaluator
 from .evaluation.question_loader import QuestionLoader
 from .evaluation.metrics import MetricsCalculator
 from .pipelines.vector_indexing import get_vector_indexing_service
+from .pipelines.chatbot_pipeline import ChatbotPipeline
 
 # Initialize FastAPI app
 app = FastAPI(
@@ -40,6 +43,7 @@ app.add_middleware(
 evaluator = Evaluator()
 question_loader = QuestionLoader()
 vector_indexing_service = None
+chatbot_pipeline = ChatbotPipeline()
 
 # Pydantic models for API requests/responses
 class QueryRequest(BaseModel):
@@ -69,6 +73,20 @@ class SystemStatus(BaseModel):
 class VectorIndexingRequest(BaseModel):
     force_rebuild: bool = False
     entity_type: Optional[str] = None
+
+class ChatRequest(BaseModel):
+    message: str
+    session_id: Optional[str] = "default"
+    llm_provider: Optional[str] = "openai"
+    stream: Optional[bool] = False
+
+class ChatMessage(BaseModel):
+    message: str
+    is_streaming: bool = False
+    query_type: str = "unknown"
+    used_database: bool = False
+    suggested_questions: Optional[List[str]] = None
+    metadata: Optional[Dict[str, Any]] = None
 
 # API Routes
 
@@ -538,6 +556,115 @@ async def complete_indexing():
             "error": str(e),
             "message": "Failed to complete indexing"
         }
+
+# Chat endpoints
+@app.post("/chat")
+async def chat_endpoint(request: ChatRequest):
+    """Non-streaming chat endpoint"""
+    
+    try:
+        # Get single response from chatbot
+        response_generator = chatbot_pipeline.chat_response(
+            message=request.message,
+            session_id=request.session_id or "default",
+            llm_provider=request.llm_provider or "openai",
+            stream=False
+        )
+        
+        # Get the final response
+        final_response = None
+        async for response in response_generator:
+            final_response = response
+        
+        if final_response is None:
+            raise HTTPException(status_code=500, detail="No response generated")
+        
+        return ChatMessage(
+            message=final_response.message,
+            is_streaming=False,
+            query_type=final_response.query_type,
+            used_database=final_response.used_database,
+            suggested_questions=final_response.suggested_questions,
+            metadata=final_response.metadata
+        )
+        
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.post("/chat/stream")
+async def chat_stream_endpoint(request: ChatRequest):
+    """Streaming chat endpoint using Server-Sent Events"""
+    
+    async def generate_stream():
+        """Generate streaming response"""
+        try:
+            response_generator = chatbot_pipeline.chat_response(
+                message=request.message,
+                session_id=request.session_id or "default",
+                llm_provider=request.llm_provider or "openai",
+                stream=True
+            )
+            
+            async for response in response_generator:
+                # Format as Server-Sent Event
+                chat_data = {
+                    "message": response.message,
+                    "is_streaming": response.is_streaming,
+                    "query_type": response.query_type,
+                    "used_database": response.used_database,
+                    "suggested_questions": response.suggested_questions,
+                    "metadata": response.metadata
+                }
+                
+                # Send as SSE format
+                yield f"data: {json.dumps(chat_data)}\n\n"
+            
+            # Send end marker
+            yield f"data: {json.dumps({'type': 'end'})}\n\n"
+            
+        except Exception as e:
+            # Send error
+            error_data = {
+                "type": "error",
+                "message": f"Error: {str(e)}",
+                "query_type": "error",
+                "used_database": False
+            }
+            yield f"data: {json.dumps(error_data)}\n\n"
+    
+    return StreamingResponse(
+        generate_stream(),
+        media_type="text/event-stream",
+        headers={
+            "Cache-Control": "no-cache",
+            "Connection": "keep-alive",
+            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Allow-Headers": "*",
+        }
+    )
+
+@app.get("/chat/sessions/{session_id}")
+async def get_chat_session(session_id: str):
+    """Get conversation history for a session"""
+    
+    context = chatbot_pipeline.get_conversation_context(session_id)
+    if not context:
+        raise HTTPException(status_code=404, detail="Session not found")
+    
+    return {
+        "session_id": session_id,
+        "message_count": len(context.history),
+        "history": context.history[-10:],  # Last 10 messages
+        "last_query_type": context.last_query_type,
+        "last_entities": context.last_entities
+    }
+
+@app.delete("/chat/sessions/{session_id}")
+async def clear_chat_session(session_id: str):
+    """Clear conversation history for a session"""
+    
+    chatbot_pipeline.clear_conversation_context(session_id)
+    return {"message": f"Session {session_id} cleared"}
 
 # Startup event
 @app.on_event("startup")

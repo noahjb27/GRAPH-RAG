@@ -3,10 +3,9 @@ Base LLM client interface for unified multi-provider support
 """
 
 from abc import ABC, abstractmethod
-from typing import Optional, Dict, Any, List
+from typing import Optional, Dict, Any
 from dataclasses import dataclass
 from datetime import datetime
-import time
 
 @dataclass
 class LLMResponse:

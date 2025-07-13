@@ -2,18 +2,20 @@
 Main evaluator for Graph-RAG pipeline assessment with multi-LLM support
 """
 
-import asyncio
 import time
 from typing import List, Dict, Any, Optional, Callable
 from dataclasses import dataclass
 from datetime import datetime
 
-from ..pipelines.base_pipeline import BasePipeline, PipelineResult
+from ..pipelines.base_pipeline import BasePipeline
 from ..pipelines.direct_cypher_pipeline import DirectCypherPipeline
 from ..pipelines.multi_query_cypher_pipeline import MultiQueryCypherPipeline
 from ..pipelines.no_rag_pipeline import NoRAGPipeline
 from ..pipelines.vector_pipeline import VectorPipeline
 from ..pipelines.hybrid_pipeline import HybridPipeline
+from ..pipelines.path_traversal_pipeline import PathTraversalPipeline
+from ..pipelines.graph_embedding_pipeline import GraphEmbeddingPipeline
+from ..pipelines.chatbot_pipeline import ChatbotPipeline
 from ..config import get_available_llm_providers
 from .question_loader import QuestionLoader
 
@@ -66,7 +68,10 @@ class Evaluator:
             "multi_query_cypher": MultiQueryCypherPipeline(),
             "no_rag": NoRAGPipeline(),
             "vector": VectorPipeline(),
-            "hybrid": HybridPipeline()
+            "hybrid": HybridPipeline(),
+            "path_traversal": PathTraversalPipeline(),
+            "graph_embedding": GraphEmbeddingPipeline(),
+            "chatbot": ChatbotPipeline()
         }
     
     async def evaluate_single_question(

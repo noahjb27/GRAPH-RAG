@@ -52,6 +52,18 @@ This folder contains comprehensive documentation for the Graph-RAG Research Syst
 
 **Target audience:** Developers, researchers interested in structural similarity and topological analysis
 
+### 🌐 [GraphRAG Transport Pipeline Guide](graphrag_transport_pipeline_guide.md)
+**Hierarchical community-based transport analysis** - System-wide transport network analysis inspired by Microsoft's GraphRAG
+
+**Contents:**
+- Multi-dimensional community detection (geographic, operational, temporal, service-type)
+- LLM-based hierarchical summarization of transport communities
+- Global vs local question routing and map-reduce processing
+- Integration with existing pipeline architecture
+- Historical transport network analysis for divided Berlin
+
+**Target audience:** Researchers, transport analysts, developers working with complex network analysis
+
 ## 🔗 External Documentation
 
 ### Interactive API Reference
@@ -91,9 +103,11 @@ This folder contains comprehensive documentation for the Graph-RAG Research Syst
 
 - **Graph Embedding Pipeline**: New pipeline for topological similarity retrieval using Node2Vec embeddings and FAISS search
 - **Path Traversal Pipeline**: Pipeline for discovering connections between entities through graph traversal
+- **GraphRAG Transport Pipeline**: Hierarchical community-based transport network analysis inspired by Microsoft's GraphRAG
 - **Application Guide**: Comprehensive system documentation reflecting current state
 - **README.md**: Updated project overview and quick start guide
-- **Pipeline Status**: Direct Cypher, No-RAG, Path Traversal, and Graph Embedding pipelines fully functional
+- **GraphRAG Production Deployment**: Full production deployment with 137MB+ cached communities and summaries
+- **Pipeline Status**: All pipelines fully functional including GraphRAG Transport (production-ready)
 
 ## 📝 Contributing to Documentation
 

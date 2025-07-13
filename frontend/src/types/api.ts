@@ -175,4 +175,51 @@ export interface QuestionFilters {
   category?: string;
   difficulty?: DifficultyLevel;
   limit?: number;
+}
+
+// GraphRAG Types
+export interface GraphRAGRequest {
+  question: string;
+  llm_provider?: string;
+  year_filter?: number;
+  community_types?: string[];
+}
+
+export interface GraphRAGResponse {
+  success: boolean;
+  answer: string;
+  approach: string;
+  execution_time_seconds: number;
+  communities_analyzed: number;
+  question_type: string;
+  year_filter?: number;
+  community_types?: string[];
+  context_summaries_count: number;
+  metadata: Record<string, any>;
+}
+
+export interface GraphRAGCacheStats {
+  community_caches: number;
+  summary_caches: number;
+  total_cached_communities: number;
+  cache_dir_size_mb: number;
+  community_cache_details: Array<{
+    cache_key: string;
+    timestamp: number;
+    year_filter?: number;
+    total_communities: number;
+  }>;
+}
+
+export interface GraphRAGCacheRequest {
+  action: "warm" | "clear" | "stats" | "validate";
+  cache_type?: "all" | "communities" | "summaries";
+}
+
+export interface GraphRAGCacheResponse {
+  success: boolean;
+  action: string;
+  message?: string;
+  cache_type?: string;
+  result?: GraphRAGCacheStats;
 } 

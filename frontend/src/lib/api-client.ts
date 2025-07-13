@@ -12,6 +12,11 @@ import {
   BatchEvaluationRequest,
   QuestionFilters,
   APIResponse,
+  GraphRAGRequest,
+  GraphRAGResponse,
+  GraphRAGCacheRequest,
+  GraphRAGCacheResponse,
+  GraphRAGCacheStats,
 } from '@/types/api';
 
 class APIError extends Error {
@@ -147,6 +152,25 @@ class APIClient {
     });
   }
 
+  // GraphRAG Methods
+  async graphragQuery(request: GraphRAGRequest): Promise<APIResponse<GraphRAGResponse>> {
+    return await this.makeRequest<GraphRAGResponse>('/graphrag/query', {
+      method: 'POST',
+      body: JSON.stringify(request),
+    });
+  }
+
+  async getGraphRAGCacheStats(): Promise<APIResponse<{ cache_stats: GraphRAGCacheStats }>> {
+    return await this.makeRequest<{ cache_stats: GraphRAGCacheStats }>('/graphrag/cache/stats');
+  }
+
+  async manageGraphRAGCache(request: GraphRAGCacheRequest): Promise<APIResponse<GraphRAGCacheResponse>> {
+    return await this.makeRequest<GraphRAGCacheResponse>('/graphrag/cache/manage', {
+      method: 'POST',
+      body: JSON.stringify(request),
+    });
+  }
+
   // Utility methods
   async ping(): Promise<boolean> {
     try {
@@ -181,6 +205,7 @@ export const fetchers = {
   pipelines: () => apiClient.getPipelines(),
   questions: (filters?: QuestionFilters) => apiClient.getQuestions(filters),
   questionDetails: (questionId: string) => apiClient.getQuestionDetails(questionId),
+  graphragCacheStats: () => apiClient.getGraphRAGCacheStats(),
 };
 
 // Utility function to handle API responses

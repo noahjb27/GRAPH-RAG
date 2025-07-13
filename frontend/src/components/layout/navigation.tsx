@@ -5,6 +5,7 @@ import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
 import {
   BarChart3,
+  Brain,
   Database,
   Home,
   MessageSquare,
@@ -37,6 +38,12 @@ const navigationItems = [
     href: '/evaluation',
     icon: Zap,
     description: 'Run evaluations and tests',
+  },
+  {
+    name: 'GraphRAG',
+    href: '/graphrag',
+    icon: Brain,
+    description: 'Hierarchical community analysis',
   },
   {
     name: 'Results',

@@ -6,15 +6,20 @@ A comprehensive platform for evaluating and comparing different approaches to qu
 
 This system enables comparative evaluation of different RAG approaches:
 - **Direct Cypher Generation**: LLM-to-Cypher translation for precise graph queries
-- **No-RAG Baseline**: Pure LLM knowledge without database access  
-- **Vector-based RAG**: Semantic search with embeddings
-- **Community Summarisation**: Hierarchied community-based summarisation
-- **Traversal Algorithms**: Retrieving relevant nodes and running algorithms for graph routing
+- **GraphRAG Transport Pipeline**: Microsoft GraphRAG-inspired hierarchical community analysis
+- **Path Traversal Pipeline**: Graph-based relationship discovery and multi-hop connections
+- **Graph Embedding Pipeline**: Node2Vec-based topological similarity search
+- **Vector Pipeline**: Semantic search with embeddings
+- **Hybrid RAG**: Multi-modal approach combining strategies
+- **No-RAG Baseline**: Pure LLM knowledge without database access
 
 ## ✨ Key Features
 
 ### 🏗️ **Multi-Pipeline Architecture**
-- Four distinct question-answering approaches
+- Seven distinct question-answering approaches
+- Microsoft GraphRAG-inspired hierarchical community analysis
+- Path traversal for relationship discovery
+- Graph embedding for topological similarity
 - Standardized evaluation framework
 - Performance comparison and analysis
 
@@ -31,15 +36,23 @@ This system enables comparative evaluation of different RAG approaches:
 - Transport network with stations, lines, and administrative areas
 
 ### 🎓 **Research-Grade Evaluation**
-- 60 crafted questions across 12 categories
+- 25 carefully crafted questions across 5 categories
 - 4 difficulty levels from simple facts to complex analysis
 - Comprehensive metrics: success rate, cost, performance, token usage
+
+### 🧠 **GraphRAG Community Analysis**
+- Multi-dimensional community detection (geographic, operational, temporal, service-type)
+- Hierarchical LLM-based summarization of transport communities
+- Global question answering through map-reduce processing
+- Production-ready caching system (137MB+ cached communities and summaries)
+- Historical transport network analysis for divided Berlin
 
 ### 🖥️ **Modern Web Interface**
 - Next.js TypeScript frontend
 - Real-time evaluation and monitoring
 - Interactive results visualization
 - Pipeline performance comparison
+- Dedicated GraphRAG analysis interface
 
 ## 📁 Project Structure
 
@@ -47,6 +60,9 @@ This system enables comparative evaluation of different RAG approaches:
 GRAPH-RAG/
 ├── backend/               # FastAPI backend
 │   ├── pipelines/        # Question-answering pipelines
+│   │   ├── graphrag_transport_pipeline.py  # GraphRAG implementation
+│   │   ├── graphrag_types.py               # GraphRAG data structures
+│   │   └── graphrag_cache.py               # GraphRAG caching system
 │   ├── llm_clients/      # LLM provider integrations
 │   ├── database/         # Neo4j client and schema analysis
 │   └── evaluation/       # Evaluation framework
@@ -54,7 +70,10 @@ GRAPH-RAG/
 │   └── src/app/         # Dashboard, evaluation, results pages
 ├── question_taxonomy/    # Research questions and expected answers
 ├── docs/                # Comprehensive documentation
-└── db_testing/          # Database exploration and testing
+├── db_testing/          # Database exploration and testing
+├── graphrag_cache/      # GraphRAG community and summary cache (137MB+)
+├── deploy_graphrag_production.py  # Production deployment script
+└── graphrag_cache_manager.py     # Cache management utilities
 ```
 
 ## 🚀 Quick Start

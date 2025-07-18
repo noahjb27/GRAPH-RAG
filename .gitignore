@@ -3,5 +3,8 @@
 .env
 /.venv
 /.cursor
-/__pycache__
 /chroma_db
+/embeddings_cache
+__pycache__
+/graphrag_cache
+/vector_index_cache

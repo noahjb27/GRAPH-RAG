@@ -1,0 +1,126 @@
+{
+  "deployment_timestamp": 1752423845.9099152,
+  "cache_statistics": {
+    "community_caches": 15,
+    "summary_caches": 119,
+    "total_cached_communities": 1143,
+    "cache_dir_size_mb": 136.9342861175537,
+    "community_cache_details": [
+      {
+        "cache_key": "06fd201fe8f6aee1e7231f88cad6b8aa",
+        "timestamp": 1752418233.3304012,
+        "year_filter": 1965,
+        "total_communities": 120
+      },
+      {
+        "cache_key": "0f51343e7337e540bd0ee1edfb829bd0",
+        "timestamp": 1752418226.0506527,
+        "year_filter": 1956,
+        "total_communities": 115
+      },
+      {
+        "cache_key": "15313d7f0f72695e9dd40d04a16b36aa",
+        "timestamp": 1752418235.2626278,
+        "year_filter": 1967,
+        "total_communities": 112
+      },
+      {
+        "cache_key": "24a5942af621ef1428617872a52bc967",
+        "timestamp": 1752418244.2877998,
+        "year_filter": 1989,
+        "total_communities": 8
+      },
+      {
+        "cache_key": "380195d152b3d9e5489ccf7bb606e5d1",
+        "timestamp": 1752418237.047259,
+        "year_filter": 1971,
+        "total_communities": 110
+      },
+      {
+        "cache_key": "42e79bf05d75c318ae054c92f602a1af",
+        "timestamp": 1752418220.0438507,
+        "year_filter": null,
+        "total_communities": 116
+      },
+      {
+        "cache_key": "52a41c9a2557d1dc0d140dab6b608833",
+        "timestamp": 1752418241.752675,
+        "year_filter": 1984,
+        "total_communities": 8
+      },
+      {
+        "cache_key": "5a5fda3949bdb4c305e9a43bf20719e5",
+        "timestamp": 1752418240.2454996,
+        "year_filter": 1982,
+        "total_communities": 8
+      },
+      {
+        "cache_key": "6023ff3ff7f09aefce217ddc2f27b59a",
+        "timestamp": 1752418231.6238492,
+        "year_filter": 1964,
+        "total_communities": 117
+      },
+      {
+        "cache_key": "74ad5cd9a695d922a019c3763c2a17c5",
+        "timestamp": 1752418229.7659705,
+        "year_filter": 1961,
+        "total_communities": 111
+      },
+      {
+        "cache_key": "89003de3ab4167a2bcd0b274af27c31d",
+        "timestamp": 1752418243.041945,
+        "year_filter": 1985,
+        "total_communities": 8
+      },
+      {
+        "cache_key": "a1ec541039f6ff9a74350c961ff4090c",
+        "timestamp": 1752418224.1803706,
+        "year_filter": 1951,
+        "total_communities": 111
+      },
+      {
+        "cache_key": "a93ac0306fb4af84ecda0bc5d715e513",
+        "timestamp": 1752418238.9793177,
+        "year_filter": 1980,
+        "total_communities": 8
+      },
+      {
+        "cache_key": "e48025716cd04251be555389520235e2",
+        "timestamp": 1752418222.337155,
+        "year_filter": 1946,
+        "total_communities": 79
+      },
+      {
+        "cache_key": "fc3214438c9bcef51b4fa8d40a3183f4",
+        "timestamp": 1752418227.9086556,
+        "year_filter": 1960,
+        "total_communities": 112
+      }
+    ]
+  },
+  "configuration": {
+    "cache_enabled": true,
+    "cache_directory": "graphrag_cache",
+    "summary_max_tokens": 1000,
+    "warm_llm_providers": [
+      "openai"
+    ],
+    "supported_years": [
+      1946,
+      1951,
+      1956,
+      1960,
+      1961,
+      1964,
+      1965,
+      1967,
+      1971,
+      1980,
+      1982,
+      1984,
+      1985,
+      1989
+    ]
+  },
+  "system_status": "deployed"
+}

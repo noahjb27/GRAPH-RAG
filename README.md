@@ -7,8 +7,9 @@ A comprehensive platform for evaluating and comparing different approaches to qu
 This system enables comparative evaluation of different RAG approaches:
 - **Direct Cypher Generation**: LLM-to-Cypher translation for precise graph queries
 - **No-RAG Baseline**: Pure LLM knowledge without database access  
-- **Vector-based RAG**: Semantic search with embeddings *(planned)*
-- **Hybrid RAG**: Multi-modal approach combining strategies *(planned)*
+- **Vector-based RAG**: Semantic search with embeddings
+- **Community Summarisation**: Hierarchied community-based summarisation
+- **Traversal Algorithms**: Retrieving relevant nodes and running algorithms for graph routing
 
 ## ✨ Key Features
 
@@ -30,7 +31,7 @@ This system enables comparative evaluation of different RAG approaches:
 - Transport network with stations, lines, and administrative areas
 
 ### 🎓 **Research-Grade Evaluation**
-- 25 carefully crafted questions across 5 categories
+- 60 crafted questions across 12 categories
 - 4 difficulty levels from simple facts to complex analysis
 - Comprehensive metrics: success rate, cost, performance, token usage
 
